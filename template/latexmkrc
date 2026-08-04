@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+#  Doc Math DZ Book Series -- canonical latexmk configuration for a volume.
+#
+#  Copy this file to books/<volume>/.latexmkrc (scripts/new-book.sh does it).
+#
+#  Its only real job: tell LaTeX where the shared template lives, so the
+#  design system is stored once in template/ instead of being duplicated in
+#  every book.
+#
+#  IMPORTANT: the separator inside TEXINPUTS is platform dependent.
+#    Windows (MiKTeX / TeX Live for Windows) -> semicolon  ;
+#    Linux, macOS, WSL, Git Bash             -> colon      :
+#  Using the wrong one makes the whole variable a single meaningless path and
+#  produces "File `docmathdz.cls' not found", even though the file is there.
+#  The line below detects the platform, so the same repository builds
+#  everywhere.
+#
+#  The trailing // means "search this directory recursively".
+# ---------------------------------------------------------------------------
+
+my $sep = ($^O =~ /^(MSWin|msys|cygwin|dos|os2)/i) ? ';' : ':';
+
+my @texinputs = ('.', '../../template//');
+$ENV{'TEXINPUTS'} = join($sep, @texinputs) . $sep . ($ENV{'TEXINPUTS'} || '');
+$ENV{'BIBINPUTS'} = '.' . $sep . ($ENV{'BIBINPUTS'} || '');
+$ENV{'TEXFORMATS'} = $ENV{'TEXFORMATS'} || '';
+
+$pdf_mode   = 1;
+$pdflatex   = 'pdflatex -interaction=nonstopmode -file-line-error -synctex=1 %O %S';
+$bibtex_use = 2;
+$max_repeat = 6;
+
+@default_files = ('book.tex');
+
+# Files that latexmk -c / -C should also remove.
+$clean_ext = 'bbl idx ilg ind run.xml synctex.gz nav snm xdv';

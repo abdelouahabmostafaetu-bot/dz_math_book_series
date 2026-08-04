@@ -1,8 +1,10 @@
 {
   "//": "Doc Math DZ Book Series -- shared VS Code / LaTeX Workshop setup.",
-  "//1": "TEXINPUTS is what lets each book find the shared template/ folder.",
-  "//2": "latexmk is always run from the directory of the root file, so the",
-  "//3": "relative path ../../template// resolves to <repo>/template.",
+  "//1": "TEXINPUTS is NOT set here on purpose: the separator differs between",
+  "//2": "Windows (;) and Unix (:), and VS Code settings cannot branch on the",
+  "//3": "platform. Each volume's .latexmkrc detects it and sets the variable,",
+  "//4": "so the only requirement is that latexmk runs in the file's directory,",
+  "//5": "which LaTeX Workshop already does.",
 
   "latex-workshop.latex.tools": [
     {
@@ -14,36 +16,14 @@
         "-file-line-error",
         "-pdf",
         "%DOC%"
-      ],
-      "env": {
-        "TEXINPUTS": ".:../../template//:",
-        "BIBINPUTS": ".:"
-      }
-    },
-    {
-      "name": "latexmk-template",
-      "command": "latexmk",
-      "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
-        "-pdf",
-        "%DOC%"
-      ],
-      "env": {
-        "TEXINPUTS": ".:../..//:"
-      }
+      ]
     }
   ],
 
   "latex-workshop.latex.recipes": [
     {
-      "name": "Build book (latexmk)",
+      "name": "Build (latexmk)",
       "tools": ["latexmk"]
-    },
-    {
-      "name": "Build template example",
-      "tools": ["latexmk-template"]
     }
   ],
 
