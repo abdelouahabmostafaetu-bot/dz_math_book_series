@@ -1,0 +1,98 @@
+{
+  "//": "Doc Math DZ Book Series -- shared VS Code / LaTeX Workshop setup.",
+  "//1": "TEXINPUTS is what lets each book find the shared template/ folder.",
+  "//2": "latexmk is always run from the directory of the root file, so the",
+  "//3": "relative path ../../template// resolves to <repo>/template.",
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ],
+      "env": {
+        "TEXINPUTS": ".:../../template//:",
+        "BIBINPUTS": ".:"
+      }
+    },
+    {
+      "name": "latexmk-template",
+      "command": "latexmk",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "%DOC%"
+      ],
+      "env": {
+        "TEXINPUTS": ".:../..//:"
+      }
+    }
+  ],
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "Build book (latexmk)",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "Build template example",
+      "tools": ["latexmk-template"]
+    }
+  ],
+
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.latex.rootFile.useSubFile": false,
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.message.log.show": false,
+  "latex-workshop.latex.watch.files.ignore": [
+    "**/*.bbl",
+    "**/*.aux",
+    "**/*.idx",
+    "**/*.ind"
+  ],
+
+  "[latex]": {
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "same",
+    "editor.rulers": [88],
+    "editor.tabSize": 2,
+    "editor.formatOnSave": false,
+    "files.trimTrailingWhitespace": true
+  },
+
+  "[bibtex]": {
+    "editor.tabSize": 2
+  },
+
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+
+  "search.exclude": {
+    "**/*.aux": true,
+    "**/*.bbl": true,
+    "**/*.bcf": true,
+    "**/*.blg": true,
+    "**/*.fdb_latexmk": true,
+    "**/*.fls": true,
+    "**/*.idx": true,
+    "**/*.ilg": true,
+    "**/*.ind": true,
+    "**/*.log": true,
+    "**/*.out": true,
+    "**/*.run.xml": true,
+    "**/*.synctex.gz": true,
+    "**/*.toc": true
+  }
+}
