@@ -1,0 +1,104 @@
+%% ===================================================================
+%%  minimal-example.tex -- smallest compilable document of the series
+%%  Build:  TEXINPUTS=.:../..//: latexmk -pdf minimal-example.tex
+%%  Purpose: check the template after any change to class or styles.
+%% ===================================================================
+\documentclass[print]{docmathdz}
+
+\dmzset{
+  title    = Template Test,
+  subtitle = Checking every environment of the series,
+  subject  = Template,
+  tagline  = Definitions * Theorems * Examples * Exercises,
+  author   = Abdelouahab Mostafa,
+  volume   = 0,
+  accent   = dmzteal,
+  year     = 2026,
+}
+
+\addbibresource{../../books/01-linear-algebra/references.bib}
+
+\begin{document}
+\dmzmakecover
+\dmztitlepage
+\tableofcontents
+\mainmatter
+
+\chapter{Every environment at a glance}
+
+\begin{intuition}
+An informal picture comes first: a linear map stretches and rotates space
+without bending it.
+\end{intuition}
+
+\begin{definition}{Vector space}{vs-test}
+A \term{vector space} over a field $\K$ is a set $V$ with an addition and a
+scalar multiplication satisfying the eight usual axioms.
+\end{definition}
+
+\begin{theorem}{Rank--nullity}{rn-test}
+If $u\colon V\To W$ is linear and $\dim V<\infty$, then
+$\dim V=\rank u+\dim\Ker u$.
+\end{theorem}
+
+\begin{proof}
+Extend a basis of $\Ker u$ to a basis of $V$ and check that the images of the
+added vectors form a basis of $\im u$.
+\end{proof}
+
+\begin{lemma}{}{lem-test}
+A statement without a name uses an empty title argument.
+\end{lemma}
+
+\begin{proposition}{}{prop-test}Propositions look like this.\end{proposition}
+\begin{corollary}{}{cor-test}Corollaries look like this.\end{corollary}
+
+\begin{example}{A concrete computation}{ex-test}
+The matrix $A=\begin{pmatrix}1&2\\2&4\end{pmatrix}$ has $\rank A=1$, hence
+$\dim\Ker A=1$ by \cref{thm:rn-test}.
+\end{example}
+
+\begin{remark}{}{rem-test}Remarks are numbered in the same sequence.\end{remark}
+
+\begin{note}
+Notes and warnings are not numbered.
+\end{note}
+
+\begin{warning}
+A frequent trap: $\rank(AB)\neq\rank A\cdot\rank B$ in general.
+\end{warning}
+
+\begin{mistakes}
+\begin{itemize}
+  \item Confusing $\Ker u=\set{0}$ with $\Ker u=\emptyset$.
+  \item Forgetting that a basis must be free \emph{and} generating.
+\end{itemize}
+\end{mistakes}
+
+\begin{keypoints}
+\begin{itemize}
+  \item Dimension counts degrees of freedom.
+  \item Rank measures how much information a map keeps.
+\end{itemize}
+\end{keypoints}
+
+\begin{exercise}{Kernel of a projection}{proj}
+Let $p$ be a projection. Show that $V=\Ker p\oplus\im p$.
+\end{exercise}
+
+\begin{problem}{University of Constantine, Analysis, 2016}{constantine-2016}
+Let $A\in\Mat{n}{\R}$ with $A^{2}=A$. Determine $\spec(A)$ and show that $A$ is
+diagonalisable.
+\end{problem}
+
+\begin{solution}{Exercise 1.1}
+If $x\in\Ker p\cap\im p$ then $x=p(y)$ and $p(x)=0$, so $x=p(y)=p^{2}(y)=p(x)=0$.
+Moreover $x=(x-p(x))+p(x)$ for every $x\in V$.
+\end{solution}
+
+\begin{summarybox}
+The template provides every environment required by the editorial guide.
+\end{summarybox}
+
+\printindex
+\end{document}

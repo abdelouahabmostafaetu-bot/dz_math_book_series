@@ -1,0 +1,148 @@
+%% ===================================================================
+%%  docmath-theorems.sty -- the mathematical environments of the series
+%%
+%%  Numbered environments (one shared counter per chapter, so that the
+%%  reader sees Definition 2.1, Theorem 2.2, Example 2.3, ...):
+%%      definition theorem lemma proposition corollary example
+%%      remark exercise problem
+%%  Syntax (tcolorbox theorem syntax -- title, then label):
+%%      \begin{theorem}{Rank--nullity}{rank-nullity} ... \end{theorem}
+%%      \cref{thm:rank-nullity}
+%%  Leave the title empty with {} if the statement has no name.
+%%
+%%  Unnumbered boxes:
+%%      intuition note warning keypoints mistakes summarybox solution
+%% ===================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{docmath-theorems}[2026/08/04 v1.0 Doc Math DZ environments]
+\RequirePackage{amsthm}
+\RequirePackage[most]{tcolorbox}
+\RequirePackage{docmath-colors}
+
+%% ------------------------------------------------------------------
+%% Counters
+%% ------------------------------------------------------------------
+\newcounter{dmzthm}[chapter]
+\renewcommand{\thedmzthm}{\thechapter.\arabic{dmzthm}}
+\newcounter{dmzexo}[chapter]
+\renewcommand{\thedmzexo}{\thechapter.\arabic{dmzexo}}
+\newcounter{dmzprob}[chapter]
+\renewcommand{\thedmzprob}{\thechapter.\arabic{dmzprob}}
+
+%% ------------------------------------------------------------------
+%% Shared visual style: thin frame, thick coloured left rule,
+%% very light tinted background, boxed title. Print-safe.
+%% ------------------------------------------------------------------
+\tcbset{%
+  dmzboxbase/.style={%
+    enhanced,breakable,
+    before skip=10pt,after skip=10pt,
+    boxrule=0.4pt,leftrule=2.4pt,arc=1pt,outer arc=1pt,
+    left=8pt,right=8pt,top=7pt,bottom=7pt,
+    fonttitle=\sffamily\bfseries\small,
+    coltitle=dmzink,
+    attach boxed title to top left={xshift=9pt,yshift=-\tcboxedtitleheight/2},
+    boxed title style={boxrule=0pt,arc=0pt,outer arc=0pt,
+                       left=5pt,right=5pt,top=1.5pt,bottom=1.5pt},
+  },
+  dmzthmbase/.style={%
+    dmzboxbase,
+    separator sign dash,
+    description delimiters parenthesis,
+    description font=\sffamily\bfseries\small,
+  },
+}
+
+%% ------------------------------------------------------------------
+%% Factory for numbered theorem-like environments
+%%   #1 environment  #2 singular name  #3 plural name
+%%   #4 colour       #5 label prefix   #6 extra options
+%% ------------------------------------------------------------------
+\newcommand{\dmznewtheorem}[6]{%
+  \newtcbtheorem[use counter=dmzthm]{#1}{#2}{%
+    dmzthmbase,
+    colframe=#4,
+    colback=#4!4!dmzpaper,
+    colbacktitle=#4!14!white,
+    coltitle=#4!45!dmzink,
+    #6,
+  }{#5}%
+  \crefname{#5}{#2}{#3}%
+  \Crefname{#5}{#2}{#3}%
+}
+
+\dmznewtheorem{definition}{Definition}{Definitions}{dmzdefinition}{def}{}
+\dmznewtheorem{theorem}{Theorem}{Theorems}{dmztheorem}{thm}{fontupper=\itshape}
+\dmznewtheorem{lemma}{Lemma}{Lemmas}{dmzlemma}{lem}{fontupper=\itshape}
+\dmznewtheorem{proposition}{Proposition}{Propositions}{dmzproposition}{prop}{fontupper=\itshape}
+\dmznewtheorem{corollary}{Corollary}{Corollaries}{dmzcorollary}{cor}{fontupper=\itshape}
+\dmznewtheorem{example}{Example}{Examples}{dmzexample}{ex}{}
+\dmznewtheorem{remark}{Remark}{Remarks}{dmzremark}{rem}{}
+
+%% Practice exercises (own counter)
+\newtcbtheorem[use counter=dmzexo]{exercise}{Exercise}{%
+  dmzthmbase,colframe=dmzexercise,colback=dmzexercise!4!dmzpaper,
+  colbacktitle=dmzexercise!14!white,coltitle=dmzexercise!45!dmzink,
+}{exo}
+\crefname{exo}{Exercise}{Exercises}
+\Crefname{exo}{Exercise}{Exercises}
+
+%% Doctoral entrance problems (own counter; the source must be given as title)
+\newtcbtheorem[use counter=dmzprob]{problem}{Doctoral Problem}{%
+  dmzthmbase,colframe=dmzproblem,colback=dmzproblem!5!dmzpaper,
+  colbacktitle=dmzproblem!16!white,coltitle=dmzproblem!45!dmzink,
+  leftrule=3pt,
+}{prob}
+\crefname{prob}{Doctoral Problem}{Doctoral Problems}
+\Crefname{prob}{Doctoral Problem}{Doctoral Problems}
+
+%% ------------------------------------------------------------------
+%% Unnumbered pedagogical boxes
+%% ------------------------------------------------------------------
+\newtcolorbox{intuition}[1][Intuition]{%
+  dmzboxbase,colframe=dmzintuition,colback=dmzintuition!4!dmzpaper,
+  colbacktitle=dmzintuition!14!white,coltitle=dmzintuition!45!dmzink,title={#1}}
+
+\newtcolorbox{note}[1][Note]{%
+  dmzboxbase,colframe=dmznote,colback=dmznote!4!dmzpaper,
+  colbacktitle=dmznote!12!white,coltitle=dmznote!45!dmzink,title={#1}}
+
+\newtcolorbox{warning}[1][Warning]{%
+  dmzboxbase,colframe=dmzwarning,colback=dmzwarning!5!dmzpaper,
+  colbacktitle=dmzwarning!16!white,coltitle=dmzwarning!45!dmzink,title={#1}}
+
+\newtcolorbox{keypoints}[1][Key points]{%
+  dmzboxbase,colframe=dmzaccent,colback=dmzaccent!4!dmzpaper,
+  colbacktitle=dmzaccent!14!white,coltitle=dmzaccent!45!dmzink,title={#1}}
+
+\newtcolorbox{mistakes}[1][Common mistakes]{%
+  dmzboxbase,colframe=dmzwarning,colback=dmzpaper,
+  colbacktitle=dmzwarning!14!white,coltitle=dmzwarning!45!dmzink,title={#1}}
+
+\newtcolorbox{summarybox}[1][Chapter summary]{%
+  dmzboxbase,colframe=dmzsummary,colback=dmzsummary!4!dmzpaper,
+  colbacktitle=dmzsummary!14!white,coltitle=dmzsummary!45!dmzink,title={#1}}
+
+%% Solutions: always state what is being solved, e.g.
+%%   \begin{solution}{Exercise 2.3} ... \end{solution}
+\newtcolorbox{solution}[1]{%
+  dmzboxbase,colframe=dmzsolution,colback=dmzpaper,
+  colbacktitle=dmzsolution!12!white,coltitle=dmzink,
+  title={Solution \textmd{\textnormal{(#1)}}}}
+
+%% ------------------------------------------------------------------
+%% Proofs
+%% ------------------------------------------------------------------
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newtheoremstyle{dmzproof}{9pt}{9pt}{\normalfont}{0pt}%
+  {\sffamily\bfseries\small\color{dmzaccent!60!dmzink}}{.}{0.6em}{}
+\theoremstyle{dmzproof}
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}\normalfont\topsep6pt\relax
+  \trivlist\item[\hskip\labelsep
+    {\sffamily\bfseries\small\color{dmzaccent!60!dmzink}#1.}]\ignorespaces
+}{\popQED\endtrivlist\@endpefalse}
+
+\newcommand{\proofsketch}{\proof[Sketch of proof]}
+
+\endinput

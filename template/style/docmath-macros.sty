@@ -1,0 +1,75 @@
+%% ===================================================================
+%%  docmath-macros.sty -- the notation of the series
+%%
+%%  Use these macros instead of ad hoc definitions inside chapters:
+%%  consistent notation across all volumes is an editorial requirement.
+%% ===================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{docmath-macros}[2026/08/04 v1.0 Doc Math DZ macros]
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{mathtools}
+
+%% --- number systems and common sets -------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}          % arbitrary field
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Exp}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Cov}{\operatorname{Cov}}
+
+%% --- delimiters ---------------------------------------------------
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\DeclarePairedDelimiterX{\inner}[2]{\langle}{\rangle}{#1,#2}
+\DeclarePairedDelimiterX{\set}[1]{\lbrace}{\rbrace}{#1}
+\newcommand{\setst}{\;\middle|\;}
+
+%% --- linear algebra ----------------------------------------------
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\nullity}{nullity}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\adj}{adj}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\spec}{Sp}
+\newcommand{\transpose}[1]{#1^{\mathsf{T}}}
+\newcommand{\adjoint}[1]{#1^{*}}
+\newcommand{\Mat}[2]{\mathcal{M}_{#1}(#2)}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\vect}[1]{\bm{#1}}
+
+%% --- analysis and topology ---------------------------------------
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\interior}[1]{\operatorname{int}(#1)}
+\newcommand{\closure}[1]{\overline{#1}}
+\newcommand{\dd}{\mathop{}\!\mathrm{d}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\To}{\longrightarrow}
+\newcommand{\mapsToo}{\longmapsto}
+\newcommand{\restr}[2]{#1\!\restriction_{#2}}
+
+%% --- editorial helpers -------------------------------------------
+% index a term and print it in italics at its first occurrence
+\newcommand{\term}[1]{\emph{#1}\index{#1}}
+% record the origin of a doctoral problem
+\newcommand{\source}[1]{\par\smallskip{\footnotesize\sffamily\color{dmzsoft}Source: #1}}
+
+\endinput
