@@ -1,0 +1,36 @@
+## LaTeX build artefacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+*.nav
+*.snm
+*.vrb
+*.auxlock
+*.figlist
+*.makefile
+*.pgf-plot.gnuplot
+*.pgf-plot.table
+
+## build output (PDFs are published as releases, not committed)
+build/
+*.pdf
+!assets/**/*.pdf
+
+## editors / OS
+.vscode/
+.DS_Store
+Thumbs.db

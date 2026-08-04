@@ -1,0 +1,31 @@
+name: Build books
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile every volume
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: books/*/book.tex
+          glob_root_file: true
+          latexmk_use_lualatex: false
+          args: -pdf -interaction=nonstopmode -halt-on-error -file-line-error
+          extra_system_packages: ""
+          pre_compile: "export TEXINPUTS=.:$GITHUB_WORKSPACE/template//:"
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v4
+        with:
+          name: docmathdz-pdfs
+          path: books/*/*.pdf
+          if-no-files-found: warn
