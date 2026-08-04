@@ -1,0 +1,15 @@
+% Orthogonal projection onto a line: the geometric picture behind p^2 = p.
+\begin{tikzpicture}[scale=1.05,>=Stealth,font=\small]
+  \draw[dmzrule,line width=0.4pt] (-0.6,0) -- (4.4,0);
+  \draw[dmzrule,line width=0.4pt] (0,-0.6) -- (0,3.1);
+  % the line D = im p
+  \draw[dmzaccent,line width=1pt] (-0.4,-0.2) -- (4.2,2.1) node[right,text=dmzaccent] {$D=\im p$};
+  % vector x and its projection
+  \draw[->,dmzink,line width=0.9pt] (0,0) -- (1.6,2.6) node[above left] {$x$};
+  \draw[->,dmztheorem,line width=0.9pt] (0,0) -- (2.65,1.33) node[below right,text=dmztheorem] {$p(x)$};
+  \draw[dmzsoft,dashed] (1.6,2.6) -- (2.65,1.33);
+  \draw[dmzsoft,line width=0.4pt] (2.65,1.33) ++(-0.18,0.09) -- ++(0.09,0.18) -- ++(0.18,-0.09);
+  % the kernel direction
+  \draw[->,dmzgreen,line width=0.8pt] (0,0) -- (-1.05,1.27) node[above,text=dmzgreen] {$\Ker p$};
+  \node[dmzsoft,anchor=north west,font=\footnotesize,text=dmzsoft] at (0.15,-0.15) {$0$};
+\end{tikzpicture}

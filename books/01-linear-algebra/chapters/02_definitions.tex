@@ -1,0 +1,183 @@
+\chapter{Core Definitions}
+\label{ch:definitions}
+
+\section{Motivation}
+
+We want a framework in which \emph{addition} and \emph{scaling} make sense and
+nothing else is assumed. The gain is uniformity: one theorem proved in that
+framework applies simultaneously to tuples of numbers, to polynomials, to
+matrices and to functions.
+
+\section{Vector spaces}
+
+\begin{definition}{Vector space}{vector-space}
+Let $\K$ be a field. A \term{vector space} over $\K$ is a set $E$ equipped with
+an addition $E\times E\to E$ and a scalar multiplication $\K\times E\to E$ such
+that $(E,+)$ is an abelian group and, for all $\lambda,\mu\in\K$ and
+$x,y\in E$,
+\[
+  \lambda(x+y)=\lambda x+\lambda y,\qquad
+  (\lambda+\mu)x=\lambda x+\mu x,\qquad
+  (\lambda\mu)x=\lambda(\mu x),\qquad
+  1\cdot x=x.
+\]
+The elements of $E$ are called vectors, those of $\K$ scalars.
+\end{definition}
+
+\begin{example}{The four standard examples}{standard-spaces}
+\begin{enumerate}
+  \item $\K^{n}$ with componentwise operations.
+  \item $\K[X]$, and its subspace $\K_{n}[X]$ of polynomials of degree at most $n$.
+  \item $\Mat{m,n}{\K}$, the $m\times n$ matrices.
+  \item $\mathcal{F}(X,\K)$, all maps from a set $X$ to $\K$.
+\end{enumerate}
+Every example met in this book is one of these four, or a subspace of one of them.
+\end{example}
+
+\begin{example}{Three non-examples}{non-examples}
+\begin{enumerate}
+  \item $\N^{2}$ is not a vector space over $\R$: it is not stable under
+        multiplication by $-1$.
+  \item $\set{(x,y)\in\R^{2}\setst xy=0}$ is stable under scaling but not under
+        addition: $(1,0)+(0,1)=(1,1)$.
+  \item The set of polynomials of degree \emph{exactly} $n$ is not a subspace:
+        it does not contain $0$, and $X^{n}+(-X^{n}+1)$ has degree $0$.
+\end{enumerate}
+\end{example}
+
+\begin{definition}{Subspace}{subspace}
+A subset $F\subseteq E$ is a \term{linear subspace} if $0\in F$ and
+$\lambda x+\mu y\in F$ for all $x,y\in F$ and $\lambda,\mu\in\K$. A subspace is
+itself a vector space for the restricted operations.
+\end{definition}
+
+\begin{proposition}{Intersections and sums}{sum-intersection}
+If $F$ and $G$ are subspaces of $E$, then $F\cap G$ and
+$F+G=\set{x+y\setst x\in F,\ y\in G}$ are subspaces, and $F+G$ is the smallest
+subspace containing $F\cup G$. In general $F\cup G$ is \emph{not} a subspace.
+\end{proposition}
+
+\begin{proof}
+Stability of $F\cap G$ and of $F+G$ is immediate. Any subspace $H$ containing
+$F\cup G$ contains every sum $x+y$ with $x\in F$, $y\in G$, hence contains
+$F+G$; and $F+G$ contains $F\cup G$. The last assertion is \cref{exo:union}.
+\end{proof}
+
+\begin{definition}{Direct sum}{direct-sum}
+The sum $F+G$ is \term{direct}, written $F\oplus G$, if $F\cap G=\set{0}$.
+Equivalently, every $x\in F+G$ has a unique decomposition $x=y+z$ with $y\in F$
+and $z\in G$.
+\end{definition}
+
+\begin{intuition}
+A direct sum is a coordinate system: to say $E=F\oplus G$ is to say that each
+vector of $E$ has exactly one address, one component in $F$ and one in $G$.
+Uniqueness is what makes projections well defined.
+\end{intuition}
+
+\section{Families of vectors}
+
+\begin{definition}{Linear combination, span}{span}
+Let $(x_i)_{i\in I}$ be a family of vectors of $E$. Its \term{span}, written
+$\Span(x_i)_{i\in I}$, is the set of finite linear combinations
+$\sum_{i\in J}\lambda_i x_i$ with $J\subseteq I$ finite and $\lambda_i\in\K$. It
+is the smallest subspace containing the family.
+\end{definition}
+
+\begin{definition}{Free family, generating family, basis}{basis}
+A family $(x_i)_{i\in I}$ is
+\begin{itemize}
+  \item \term{free} (or linearly independent) if every finite relation
+        $\sum_{i\in J}\lambda_i x_i=0$ forces $\lambda_i=0$ for all $i\in J$;
+  \item \term{generating} if $\Span(x_i)_{i\in I}=E$;
+  \item a \term{basis} if it is both free and generating.
+\end{itemize}
+\end{definition}
+
+\begin{proposition}{Characterisation of a basis}{basis-unique}
+A family $\mathcal{B}=(e_i)_{i\in I}$ is a basis of $E$ if and only if every
+vector of $E$ is a linear combination of $\mathcal{B}$ in exactly one way.
+\end{proposition}
+
+\begin{proof}
+If $\mathcal{B}$ is a basis, existence follows from generation, and if
+$\sum\lambda_i e_i=\sum\mu_i e_i$ then $\sum(\lambda_i-\mu_i)e_i=0$, so
+$\lambda_i=\mu_i$ by freeness. Conversely, existence of a decomposition gives
+generation, and uniqueness applied to $0=\sum 0\cdot e_i$ gives freeness.
+\end{proof}
+
+\begin{definition}{Dimension}{dimension}
+If $E$ admits a finite basis, all its bases have the same cardinality
+(\cref{thm:dimension-well-defined}); this common number is the \term{dimension}
+$\dim E$. Otherwise $E$ is said to be infinite-dimensional.
+\end{definition}
+
+\section{Linear maps}
+
+\begin{definition}{Linear map}{linear-map}
+A map $u\colon E\To F$ is \term{linear} if $u(\lambda x+\mu y)=\lambda u(x)+\mu u(y)$
+for all $x,y\in E$ and $\lambda,\mu\in\K$. The set of such maps is written
+$\Hom(E,F)$, and $\End(E)=\Hom(E,E)$. An \term{endomorphism} is an element of
+$\End(E)$, an \term{isomorphism} is a bijective linear map.
+\end{definition}
+
+\begin{definition}{Kernel, image, rank}{kernel-image}
+For $u\in\Hom(E,F)$ one sets
+\[
+  \Ker u=\set{x\in E\setst u(x)=0},\qquad
+  \im u=\set{u(x)\setst x\in E},\qquad
+  \rank u=\dim\im u .
+\]
+$\Ker u$ is a subspace of $E$ and $\im u$ a subspace of $F$.
+\end{definition}
+
+\begin{proposition}{Injectivity and the kernel}{injective-kernel}
+A linear map $u$ is injective if and only if $\Ker u=\set{0}$.
+\end{proposition}
+
+\begin{proof}
+If $u$ is injective and $u(x)=0=u(0)$ then $x=0$. Conversely, if
+$\Ker u=\set{0}$ and $u(x)=u(y)$, then $u(x-y)=0$, so $x-y=0$.
+\end{proof}
+
+\begin{definition}{Projection}{projection}
+An endomorphism $p\in\End(E)$ with $p^{2}=p$ is called a \term{projection}.
+\end{definition}
+
+\Cref{fig:projection} shows the geometric content of the identity $p^2=p$:
+projecting a second time changes nothing.
+
+\begin{figure}[htbp]
+  \centering
+  \input{figures/projection}
+  \caption{A projection $p$ decomposes the plane as $\Ker p\oplus\im p$.}
+  \label{fig:projection}
+\end{figure}
+
+\section{Eigenvalues}
+
+\begin{definition}{Eigenvalue, eigenvector, spectrum}{eigenvalue}
+Let $u\in\End(E)$. A scalar $\lambda\in\K$ is an \term{eigenvalue} of $u$ if
+$\Ker(u-\lambda\id)\neq\set{0}$; a nonzero element of that kernel is an
+\term{eigenvector}, and $E_\lambda=\Ker(u-\lambda\id)$ is the associated
+\term{eigenspace}. The set of eigenvalues is the \term{spectrum} $\spec(u)$.
+\end{definition}
+
+\begin{definition}{Diagonalisable endomorphism}{diagonalisable}
+An endomorphism $u$ of a finite-dimensional space $E$ is \term{diagonalisable}
+if $E$ admits a basis of eigenvectors of $u$; equivalently, if
+$E=\bigoplus_{\lambda\in\spec(u)}E_\lambda$.
+\end{definition}
+
+\begin{definition}{Annihilating polynomial}{annihilating}
+A polynomial $P\in\K[X]$ \term{annihilates} $u$ if $P(u)=0$. The monic
+generator of the ideal of annihilating polynomials is the \term{minimal
+polynomial} $\pi_u$.
+\end{definition}
+
+\begin{warning}
+A definition is not a criterion. \Cref{def:diagonalisable} says what
+diagonalisable means; it gives no method. The usable criteria are
+\cref{thm:diagonalisable-criterion} and its corollary on split annihilating
+polynomials with simple roots.
+\end{warning}

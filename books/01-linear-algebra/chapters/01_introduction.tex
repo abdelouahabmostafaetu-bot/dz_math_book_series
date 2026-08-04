@@ -1,0 +1,81 @@
+\chapter{Introduction and Orientation}
+\label{ch:introduction}
+
+\section{Motivation}
+
+Consider a system of linear equations
+\begin{equation}\label{eq:system}
+  \left\{\;\begin{aligned}
+    a_{11}x_1+\dots+a_{1n}x_n &= b_1,\\
+                              &\;\;\vdots\\
+    a_{m1}x_1+\dots+a_{mn}x_n &= b_m.
+  \end{aligned}\right.
+\end{equation}
+Every student can solve such a system by elimination. But elimination answers
+only the question \emph{what are the solutions?}. It does not answer the
+questions an examiner actually asks: for how many right-hand sides $b$ does a
+solution exist? When is it unique? If the data $a_{ij}$ are perturbed slightly,
+does the answer change? What is common to \eqref{eq:system}, to a linear
+differential equation, and to a recurrence relation?
+
+Linear algebra is the theory that replaces the computation by a structural
+answer. The set of solutions of \eqref{eq:system} with $b=0$ is a vector space;
+its dimension is $n-\rank A$; the system with $b\neq0$ is solvable exactly when
+$b$ lies in the image of the associated map. Three notions -- space, map, rank --
+absorb the whole question.
+
+\begin{intuition}
+Linear algebra studies the transformations of space that send straight lines to
+straight lines and fix the origin. Such a transformation may stretch, rotate,
+shear or flatten space, but it never bends it. Because the deformation is
+uniform, the whole transformation is determined by what it does to finitely many
+vectors: that is why the subject is computable, and also why it is everywhere.
+\end{intuition}
+
+\section{Historical background}
+
+Determinants appear before matrices: Leibniz uses them in 1693, Cramer publishes
+his rule in 1750. The matrix as an object in its own right is due to Cayley
+(1858), who also states the theorem that bears his name with Hamilton. The
+axiomatic notion of a vector space, freed from coordinates, is much later: it is
+made explicit by Peano (1888) and becomes standard only with the treatises of
+the 1930s, notably van der Waerden and Banach for the infinite-dimensional case.
+The modern teaching order -- spaces first, matrices as a representation -- thus
+reverses the historical order. Keep this in mind: coordinates were the beginning
+of the subject, not its content.
+
+\section{How to use this book}
+
+The volume follows the fixed structure of the series.
+
+\begin{itemize}
+  \item \Cref{ch:definitions} contains the core definitions with their examples
+        and, just as importantly, their non-examples.
+  \item \Cref{ch:theorems} contains the fundamental theorems with complete proofs.
+  \item \Cref{ch:examples} works out detailed computations, with figures.
+  \item \Cref{ch:summary} gathers the common mistakes, a summary, and the
+        practice exercises.
+  \item \Cref{ch:problems} contains doctoral entrance problems, and
+        \cref{ch:solutions} their fully worked solutions, together with the
+        solutions of the exercises.
+\end{itemize}
+
+A reasonable working method: read a section, close the book, reconstruct the
+statements from memory, and only then look at the proofs. Solve the exercises of
+\cref{ch:summary} before reading any solution; a solution read is worth roughly
+a tenth of a solution found.
+
+\begin{note}[Notation]
+Throughout, $\K$ denotes an arbitrary field, $E$ and $F$ are $\K$-vector spaces,
+and $u,v$ denote linear maps. $\Mat{n}{\K}$ is the algebra of $n\times n$
+matrices over $\K$, $\id$ the identity map, $\transpose{A}$ the transpose of $A$,
+and $\spec(u)$ the set of eigenvalues of $u$.
+\end{note}
+
+\section{Further reading}
+
+For a coordinate-free treatment close in spirit to this volume, see
+\textcite{axler2015}. For the matrix-analytic point of view, \textcite{horn2013}
+is the standard reference. Readers preparing Algerian doctoral examinations will
+recognise the style of exercises in \textcite{gourdon2009} and
+\textcite{grifone2011}.

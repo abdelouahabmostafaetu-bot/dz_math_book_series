@@ -1,0 +1,208 @@
+\chapter{Fundamental Theorems and Proofs}
+\label{ch:theorems}
+
+\section{Bases and dimension}
+
+\begin{theorem}{Exchange lemma (Steinitz)}{steinitz}
+Let $E$ be a vector space, $L=(x_1,\dots,x_p)$ a free family and
+$G=(y_1,\dots,y_q)$ a generating family of $E$. Then $p\leq q$, and one may
+complete $L$ into a basis of $E$ using vectors of $G$.
+\end{theorem}
+
+\begin{proof}
+We prove by induction on $k\in\set{0,\dots,p}$ that, after renumbering $G$, the
+family $(x_1,\dots,x_k,y_{k+1},\dots,y_q)$ is generating. For $k=0$ this is the
+hypothesis on $G$. Assume it for some $k<p$. Since the family
+$(x_1,\dots,x_k,y_{k+1},\dots,y_q)$ generates $E$, we may write
+\[
+  x_{k+1}=\sum_{i\leq k}\alpha_i x_i+\sum_{j>k}\beta_j y_j .
+\]
+If all $\beta_j$ vanished, $x_{k+1}$ would be a combination of $x_1,\dots,x_k$,
+contradicting the freeness of $L$; in particular $k<q$, which already gives
+$p\leq q$. Choose $j_0>k$ with $\beta_{j_0}\neq0$ and renumber so that $j_0=k+1$.
+Then
+\[
+  y_{k+1}=\beta_{k+1}^{-1}\Bigl(x_{k+1}-\sum_{i\leq k}\alpha_i x_i-\sum_{j>k+1}\beta_j y_j\Bigr),
+\]
+so $y_{k+1}$ belongs to the span of $(x_1,\dots,x_{k+1},y_{k+2},\dots,y_q)$,
+which is therefore generating. This completes the induction. For $k=p$ we obtain
+a generating family $(x_1,\dots,x_p,y_{p+1},\dots,y_q)$ containing $L$; deleting
+one by one the vectors $y_j$ that are combinations of the previous ones yields a
+basis containing $L$.
+\end{proof}
+
+\begin{theorem}{Dimension is well defined}{dimension-well-defined}
+In a vector space admitting a finite generating family, all bases are finite and
+have the same number of elements.
+\end{theorem}
+
+\begin{proof}
+Let $\mathcal{B}$ and $\mathcal{B}'$ be two bases, with $\mathcal{B}'$ finite of
+cardinality $q$ (such a basis exists by extracting one from a finite generating
+family, as at the end of the previous proof). Every finite subfamily of
+$\mathcal{B}$ is free, hence has at most $q$ elements by \cref{thm:steinitz};
+therefore $\mathcal{B}$ is finite, say of cardinality $p$, and $p\leq q$.
+Exchanging the roles of $\mathcal{B}$ and $\mathcal{B}'$ gives $q\leq p$.
+\end{proof}
+
+\begin{corollary}{}{dim-subspace}
+If $\dim E=n<\infty$ and $F$ is a subspace of $E$, then $\dim F\leq n$, with
+equality if and only if $F=E$. Moreover every free family of $n$ vectors and
+every generating family of $n$ vectors is a basis.
+\end{corollary}
+
+\begin{proof}
+A free family of $F$ is free in $E$, so has at most $n$ elements by
+\cref{thm:steinitz}; a maximal one is a basis of $F$, whence $\dim F\leq n$. If
+$\dim F=n$, a basis of $F$ is a free family of $n$ vectors of $E$; completing it
+into a basis of $E$ (\cref{thm:steinitz}) adds nothing, so it is a basis of $E$
+and $F=E$. The last statement follows by the same completion and extraction
+arguments.
+\end{proof}
+
+\section{Rank}
+
+\begin{theorem}{Rank--nullity}{rank-nullity}
+Let $u\in\Hom(E,F)$ with $\dim E=n<\infty$. Then
+\[
+  \dim E=\rank u+\dim\Ker u .
+\]
+\end{theorem}
+
+\begin{proof}
+Let $(e_1,\dots,e_k)$ be a basis of $\Ker u$ and complete it into a basis
+$(e_1,\dots,e_n)$ of $E$ by \cref{thm:steinitz}. We claim that
+$(u(e_{k+1}),\dots,u(e_n))$ is a basis of $\im u$.
+
+It is generating: for $x=\sum_{i=1}^{n}\lambda_i e_i$ we get
+$u(x)=\sum_{i>k}\lambda_i u(e_i)$, because $u(e_i)=0$ for $i\leq k$.
+
+It is free: if $\sum_{i>k}\lambda_i u(e_i)=0$, then
+$z=\sum_{i>k}\lambda_i e_i\in\Ker u$, so $z=\sum_{i\leq k}\mu_i e_i$ for some
+scalars $\mu_i$. The family $(e_1,\dots,e_n)$ being free, all $\lambda_i$ (and
+all $\mu_i$) vanish.
+
+Hence $\rank u=n-k=\dim E-\dim\Ker u$.
+\end{proof}
+
+\begin{corollary}{}{iso-criterion}
+If $\dim E=\dim F<\infty$ and $u\in\Hom(E,F)$, the following are equivalent:
+$u$ is injective; $u$ is surjective; $u$ is an isomorphism.
+\end{corollary}
+
+\begin{proof}
+By \cref{thm:rank-nullity}, $\Ker u=\set{0}$ if and only if $\rank u=\dim E=\dim F$,
+which by \cref{cor:dim-subspace} holds if and only if $\im u=F$.
+\end{proof}
+
+\begin{proposition}{Rank inequalities}{rank-inequalities}
+For $u,v$ composable linear maps between finite-dimensional spaces,
+\[
+  \rank(u\circ v)\leq\min(\rank u,\rank v),\qquad
+  \rank(u+v)\leq\rank u+\rank v .
+\]
+\end{proposition}
+
+\begin{proof}
+Since $\im(u\circ v)=u(\im v)\subseteq\im u$, we get $\rank(u\circ v)\leq\rank u$;
+and $u$ restricted to $\im v$ has rank at most $\dim\im v=\rank v$. For the sum,
+$\im(u+v)\subseteq\im u+\im v$ and $\dim(\im u+\im v)\leq\rank u+\rank v$.
+\end{proof}
+
+\section{Reduction of endomorphisms}
+
+\begin{theorem}{Eigenspaces are independent}{eigen-independent}
+Eigenvectors associated with pairwise distinct eigenvalues form a free family;
+equivalently, the sum $\sum_{\lambda\in\spec(u)}E_\lambda$ is direct.
+\end{theorem}
+
+\begin{proof}
+Suppose, for a contradiction, that some nontrivial relation
+$\sum_{i=1}^{r}x_i=0$ holds with $x_i\in E_{\lambda_i}\setminus\set{0}$ and the
+$\lambda_i$ pairwise distinct, and take $r$ minimal. Applying $u-\lambda_r\id$
+kills $x_r$ and gives $\sum_{i=1}^{r-1}(\lambda_i-\lambda_r)x_i=0$, a relation
+with $r-1$ nonzero terms since $\lambda_i\neq\lambda_r$. This contradicts
+minimality (and for $r=1$ it contradicts $x_1\neq0$).
+\end{proof}
+
+\begin{theorem}{Diagonalisability criterion}{diagonalisable-criterion}
+Let $\dim E=n<\infty$ and $u\in\End(E)$. Then $u$ is diagonalisable if and only
+if $\sum_{\lambda\in\spec(u)}\dim E_\lambda=n$.
+\end{theorem}
+
+\begin{proof}
+If $u$ is diagonalisable, a basis of eigenvectors splits into bases of the
+eigenspaces, so the dimensions add up to $n$. Conversely, by
+\cref{thm:eigen-independent} the sum of the eigenspaces is direct, hence of
+dimension $\sum_\lambda\dim E_\lambda=n$, so it equals $E$ by
+\cref{cor:dim-subspace}; concatenating bases of the eigenspaces gives a basis of
+eigenvectors.
+\end{proof}
+
+\begin{theorem}{Split annihilating polynomial with simple roots}{split-simple}
+Let $u\in\End(E)$ with $\dim E<\infty$. If there is a polynomial
+$P=\prod_{i=1}^{r}(X-\lambda_i)$ with pairwise distinct $\lambda_i\in\K$ such
+that $P(u)=0$, then $u$ is diagonalisable and
+$E=\bigoplus_{i=1}^{r}\Ker(u-\lambda_i\id)$.
+\end{theorem}
+
+\begin{proof}
+Set $P_i=\prod_{j\neq i}(X-\lambda_j)$. The polynomials $P_1,\dots,P_r$ have no
+common root, hence $\gcd(P_1,\dots,P_r)=1$ and B\'ezout gives $Q_i\in\K[X]$ with
+$\sum_i Q_iP_i=1$. Evaluating at $u$,
+\[
+  \id=\sum_{i=1}^{r}Q_i(u)P_i(u).
+\]
+For $x\in E$ put $x_i=Q_i(u)P_i(u)(x)$, so that $x=\sum_i x_i$. Since
+$(X-\lambda_i)P_i=P$ and $P(u)=0$, we get $(u-\lambda_i\id)(x_i)=0$, that is
+$x_i\in\Ker(u-\lambda_i\id)$. Hence $E=\sum_i\Ker(u-\lambda_i\id)$, and the sum
+is direct by \cref{thm:eigen-independent}. Any concatenation of bases of these
+kernels is a basis of eigenvectors.
+\end{proof}
+
+\begin{note}
+\Cref{thm:split-simple} is the single most profitable theorem of this chapter in
+an examination: an identity such as $u^{2}=u$, $u^{2}=\id$ or $u^{3}=u$
+immediately produces diagonalisability, with no computation of a characteristic
+polynomial.
+\end{note}
+
+\begin{theorem}{Spectral theorem, real symmetric case}{spectral}
+Let $A\in\Mat{n}{\R}$ be symmetric. Then $A$ is diagonalisable in an orthonormal
+basis: there exist an orthogonal matrix $Q$ and a real diagonal matrix $D$ with
+$A=QD\transpose{Q}$. In particular $\spec(A)\subseteq\R$ and eigenspaces
+associated with distinct eigenvalues are orthogonal.
+\end{theorem}
+
+\begin{proof}
+First, the eigenvalues are real: if $Az=\lambda z$ with $z\in\C^{n}$ nonzero,
+then $\adjoint{z}Az=\lambda\adjoint{z}z$ and, taking conjugate transposes and
+using $\transpose{A}=A$ with real entries, $\adjoint{z}Az=\bar\lambda\adjoint{z}z$;
+since $\adjoint{z}z>0$, $\lambda=\bar\lambda$.
+
+Now argue by induction on $n$, the case $n=1$ being trivial. The characteristic
+polynomial of $A$ has a root $\lambda_1\in\R$ by the previous paragraph and the
+fundamental theorem of algebra, with a real eigenvector $q_1$, normalised so
+that $\norm{q_1}=1$. Let $H=q_1^{\perp}$. For $x\in H$,
+\[
+  \inner{Ax}{q_1}=\inner{x}{Aq_1}=\lambda_1\inner{x}{q_1}=0,
+\]
+so $A(H)\subseteq H$. The restriction of $A$ to $H$ is symmetric for the induced
+inner product, and $\dim H=n-1$, so by induction $H$ has an orthonormal basis
+$(q_2,\dots,q_n)$ of eigenvectors. Then $(q_1,\dots,q_n)$ is an orthonormal
+basis of $\R^{n}$ made of eigenvectors of $A$, and $Q=(q_1|\cdots|q_n)$ is
+orthogonal with $\transpose{Q}AQ=D$ diagonal.
+\end{proof}
+
+\begin{corollary}{}{spd-eigen}
+A symmetric matrix $A\in\Mat{n}{\R}$ is positive definite if and only if all its
+eigenvalues are positive; in that case $A$ is invertible and $A^{-1}$ is
+symmetric positive definite with eigenvalues the inverses of those of $A$.
+\end{corollary}
+
+\begin{proof}
+Write $A=QD\transpose{Q}$ as in \cref{thm:spectral} and put $y=\transpose{Q}x$;
+then $\transpose{x}Ax=\sum_i\lambda_i y_i^{2}$, which is positive for all
+$x\neq0$ exactly when every $\lambda_i>0$. Then $D$ is invertible and
+$A^{-1}=QD^{-1}\transpose{Q}$.
+\end{proof}
