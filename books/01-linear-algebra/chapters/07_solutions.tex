@@ -1,0 +1,195 @@
+\chapter{Fully Worked Solutions}
+\label{ch:solutions}
+
+\section{Solutions of the practice exercises}
+
+\begin{solution}{\Cref{exo:poly-dim}}
+$\K_{n}[X]$ contains $0$ and is stable under linear combinations, since
+$\deg(\lambda P+\mu Q)\leq\max(\deg P,\deg Q)\leq n$; it is therefore a subspace
+of $\K[X]$. The family $(1,X,\dots,X^{n})$ generates it by definition of a
+polynomial of degree at most $n$. It is free: a relation
+$\sum_{k=0}^{n}\lambda_kX^{k}=0$ is an equality of polynomials, so all
+coefficients vanish. Hence it is a basis and $\dim\K_{n}[X]=n+1$.
+\end{solution}
+
+\begin{solution}{\Cref{exo:union}}
+If $F\subseteq G$ then $F\cup G=G$ is a subspace, and symmetrically.
+
+Conversely, assume $F\cup G$ is a subspace and that neither inclusion holds.
+Choose $x\in F\setminus G$ and $y\in G\setminus F$. Then $x+y\in F\cup G$.
+If $x+y\in F$, then $y=(x+y)-x\in F$, a contradiction; if $x+y\in G$, then
+$x=(x+y)-y\in G$, again a contradiction. Hence one of the inclusions holds.
+\end{solution}
+
+\begin{solution}{\Cref{exo:rank-sum}}
+The upper bound is \cref{prop:rank-inequalities}. For the lower bound, apply it
+to $u=(u+v)+(-v)$:
+\[
+  \rank u\leq\rank(u+v)+\rank(-v)=\rank(u+v)+\rank v,
+\]
+so $\rank u-\rank v\leq\rank(u+v)$. Exchanging $u$ and $v$ gives
+$\rank v-\rank u\leq\rank(u+v)$, and the two inequalities together give the
+stated bound with the absolute value.
+\end{solution}
+
+\begin{solution}{\Cref{exo:kernel-square}}
+The inclusion $\Ker u\subseteq\Ker u^{2}$ always holds.
+
+\emph{Suppose $\Ker u=\Ker u^{2}$.} Let $x\in\Ker u\cap\im u$, say $x=u(y)$ and
+$u(x)=0$. Then $u^{2}(y)=0$, so $y\in\Ker u^{2}=\Ker u$, hence $x=u(y)=0$.
+
+\emph{Suppose $\Ker u\cap\im u=\set{0}$.} Let $x\in\Ker u^{2}$. Then
+$u(x)\in\Ker u\cap\im u=\set{0}$, so $x\in\Ker u$.
+
+Finally, in finite dimension, $\dim\Ker u+\rank u=\dim E$ by
+\cref{thm:rank-nullity}; hence $\Ker u\cap\im u=\set{0}$ is equivalent to
+$E=\Ker u\oplus\im u$, the dimensions already matching.
+\end{solution}
+
+\begin{solution}{\Cref{exo:projection-exo}}
+For every $x\in E$ write $x=(x-p(x))+p(x)$. The first term lies in $\Ker p$
+because $p(x-p(x))=p(x)-p^{2}(x)=0$, and the second lies in $\im p$; hence
+$E=\Ker p+\im p$. If $x\in\Ker p\cap\im p$, say $x=p(y)$ with $p(x)=0$, then
+$x=p(y)=p^{2}(y)=p(x)=0$, so the sum is direct.
+
+If $x\in\im p$, $x=p(y)$, then $p(x)=p^{2}(y)=p(y)=x$, so $\im p\subseteq\Ker(p-\id)$;
+the reverse inclusion is clear since $x=p(x)$ implies $x\in\im p$.
+
+Choosing a basis of $\im p$ followed by a basis of $\Ker p$, the matrix of $p$ is
+$\diag(1,\dots,1,0,\dots,0)$ with $r=\rank p$ ones. Hence $\tr p=r=\rank p$; the
+trace does not depend on the basis by \cref{exo:similar}.
+\end{solution}
+
+\begin{solution}{\Cref{exo:similar}}
+With $B=P^{-1}AP$,
+\[
+  \det(B-\lambda I)=\det\bigl(P^{-1}(A-\lambda I)P\bigr)
+  =\det(P)^{-1}\det(A-\lambda I)\det(P)=\det(A-\lambda I),
+\]
+so the characteristic polynomials coincide, and with them the determinant
+(value at $0$ up to sign) and the trace (coefficient of $\lambda^{n-1}$ up to
+sign). Equality of ranks holds because $P$ and $P^{-1}$ are isomorphisms:
+$\rank(P^{-1}AP)=\rank A$.
+
+The converse fails: $I_2$ and $\begin{pmatrix}1&1\\0&1\end{pmatrix}$ have the
+same characteristic polynomial $(X-1)^{2}$, the same trace, determinant and
+rank, but they are not similar, since $I_2$ is diagonal while the second matrix
+is not diagonalisable (\cref{ex:jordan-block} applied to $N=B-I_2$).
+\end{solution}
+
+\section{Solutions of the doctoral problems}
+
+\begin{solution}{\Cref{prob:idempotent}}
+\textbf{(1)} If $\lambda\in\spec(u)$ with eigenvector $x\neq0$, then
+$u^{2}(x)=\lambda^{2}x$ and $u(x)=\lambda x$ give $\lambda^{2}=\lambda$, so
+$\lambda\in\set{0,1}$. If $u=0$ then $\spec(u)=\set{0}$; if $u=\id$ then
+$\spec(u)=\set{1}$; otherwise $\Ker u\neq\set{0}$ and
+$\Ker(u-\id)=\im u\neq\set{0}$, so $\spec(u)=\set{0,1}$.
+
+\textbf{(2)} The polynomial $X^{2}-X=X(X-1)$ annihilates $u$ and is split with
+simple roots, so $u$ is diagonalisable by \cref{thm:split-simple} and
+$E=\Ker u\oplus\Ker(u-\id)$. In a basis adapted to this decomposition, with
+$r=\dim\Ker(u-\id)$ first,
+\[
+  \mathrm{Mat}(u)=\begin{pmatrix} I_r & 0\\ 0 & 0\end{pmatrix}.
+\]
+
+\textbf{(3)} From that matrix, $\tr u=r$ and $\rank u=r$, since
+$\im u=\Ker(u-\id)$ by \cref{exo:projection-exo}. Hence $\tr u=\rank u$.
+
+\textbf{(4)} $(\id-u)^{2}=\id-2u+u^{2}=\id-u$, so $\id-u$ is a projection. Its
+image is $\Ker u$ and its kernel is $\im u$; therefore
+$\rank u+\rank(\id-u)=\dim\im u+\dim\Ker u=n$ by \cref{thm:rank-nullity}.
+\end{solution}
+
+\begin{solution}{\Cref{prob:nilpotent}}
+\textbf{(1)} If $Ax=\lambda x$ with $x\neq0$, then $0=A^{p}x=\lambda^{p}x$, so
+$\lambda^{p}=0$ and $\lambda=0$; conversely $A$ is not invertible (otherwise
+$A^{p}$ would be), so $0$ is an eigenvalue and $\spec(A)=\set{0}$. Over $\C$ the
+characteristic polynomial is split, $\chi_A=\prod_{i}(X-\lambda_i)$ with all
+$\lambda_i=0$, hence $\chi_A=X^{n}$.
+
+\textbf{(2)} Since $A^{p}=0$,
+\[
+  (I_n-A)\bigl(I_n+A+\dots+A^{p-1}\bigr)=I_n-A^{p}=I_n,
+\]
+so $I_n-A$ is invertible with $(I_n-A)^{-1}=\sum_{k=0}^{p-1}A^{k}$.
+
+\textbf{(3)} The eigenvalues of $I_n+A$ are $1+\lambda_i=1$ counted with
+multiplicity, and the determinant is their product, so $\det(I_n+A)=1$. Likewise
+$A^{k}$ is nilpotent, so all its eigenvalues are $0$ and
+$\tr(A^{k})=\sum_i\lambda_i(A^{k})=0$.
+
+\textbf{(4)} If $A$ is diagonalisable then $A$ is similar to $\diag(0,\dots,0)=0$
+by (1), hence $A=0$. Conversely $A=0$ is diagonal.
+\end{solution}
+
+\begin{solution}{\Cref{prob:cubic}}
+\textbf{(1)} The polynomial $X^{3}-X=X(X-1)(X+1)$ annihilates $u$, is split over
+$\R$ and has simple roots, so \cref{thm:split-simple} gives
+\[
+  E=\Ker u\oplus\Ker(u-\id)\oplus\Ker(u+\id).
+\]
+
+\textbf{(2)} Concatenating bases of the three kernels gives a basis of
+eigenvectors, so $u$ is diagonalisable and $\spec(u)$ is any nonempty subset of
+$\set{-1,0,1}$; each subset is realised, for instance by a diagonal matrix with
+the corresponding entries.
+
+\textbf{(3)} In such a basis, $u$ has matrix $\diag(0,\dots,0,1,\dots,1,-1,\dots,-1)$.
+Its rank is the number of nonzero diagonal entries, that is
+$\dim\Ker(u-\id)+\dim\Ker(u+\id)$.
+
+\textbf{(4)} For $\dim E=2$, the possible matrices up to similarity are the
+diagonal matrices with entries in $\set{-1,0,1}$, namely
+\[
+  \diag(0,0),\quad\diag(1,0),\quad\diag(-1,0),\quad
+  \diag(1,1),\quad\diag(-1,-1),\quad\diag(1,-1),
+\]
+six classes in all (the order of the diagonal entries does not change the
+similarity class).
+\end{solution}
+
+\begin{solution}{\Cref{prob:trace-inequality}}
+\textbf{(1)} By \cref{thm:spectral}, $A=QD\transpose{Q}$ with $Q$ orthogonal and
+$D=\diag(\lambda_1,\dots,\lambda_n)$; by \cref{cor:spd-eigen} all
+$\lambda_i>0$, so $\det A=\prod\lambda_i\neq0$ and
+$A^{-1}=QD^{-1}\transpose{Q}$, which is symmetric with eigenvalues
+$1/\lambda_i>0$, hence positive definite.
+
+\textbf{(2)} Traces are invariant under similarity (\cref{exo:similar}), so
+$\tr A=\sum_i\lambda_i$ and $\tr A^{-1}=\sum_i 1/\lambda_i$. By the
+Cauchy--Schwarz inequality applied to the vectors
+$\bigl(\sqrt{\lambda_i}\bigr)_i$ and $\bigl(1/\sqrt{\lambda_i}\bigr)_i$,
+\[
+  n^{2}=\Bigl(\sum_{i=1}^{n}\sqrt{\lambda_i}\cdot\frac{1}{\sqrt{\lambda_i}}\Bigr)^{2}
+  \leq\Bigl(\sum_{i=1}^{n}\lambda_i\Bigr)\Bigl(\sum_{i=1}^{n}\frac{1}{\lambda_i}\Bigr)
+  =\tr(A)\,\tr(A^{-1}).
+\]
+
+\textbf{(3)} Equality in Cauchy--Schwarz holds if and only if the two vectors are
+proportional, that is $\lambda_i=c$ for all $i$ and some $c>0$. Then
+$A=Q(cI_n)\transpose{Q}=cI_n$: equality holds exactly for the positive scalar
+multiples of the identity.
+\end{solution}
+
+\begin{solution}{\Cref{prob:commuting}}
+\textbf{(1)} Let $\lambda\in\spec(u)$ and $x\in E_\lambda$. Then
+\[
+  u\bigl(v(x)\bigr)=v\bigl(u(x)\bigr)=v(\lambda x)=\lambda v(x),
+\]
+so $v(x)\in E_\lambda$; thus $v(E_\lambda)\subseteq E_\lambda$.
+
+\textbf{(2)} Since $u$ is diagonalisable, $E=\bigoplus_{\lambda}E_\lambda$. Fix
+$\lambda$ and let $v_\lambda$ be the restriction of $v$ to $E_\lambda$, which is
+well defined by (1). As $v$ is diagonalisable, it admits a split annihilating
+polynomial with simple roots (its minimal polynomial); that polynomial also
+annihilates $v_\lambda$, so $v_\lambda$ is diagonalisable by
+\cref{thm:split-simple}. Choose a basis of $E_\lambda$ of eigenvectors of
+$v_\lambda$; its vectors are also eigenvectors of $u$, with eigenvalue
+$\lambda$. Concatenating over $\lambda\in\spec(u)$ gives a basis of $E$ in which
+both $u$ and $v$ are diagonal.
+
+\textbf{(3)} In that common basis, $u+v$ and $u\circ v$ are diagonal, hence
+diagonalisable.
+\end{solution}

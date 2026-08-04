@@ -1,0 +1,94 @@
+\chapter{Common Mistakes, Summary and Practice}
+\label{ch:summary}
+
+\section{Common mistakes}
+
+\begin{mistakes}
+\begin{itemize}
+  \item \textbf{Writing $\Ker u=\emptyset$.} A kernel always contains $0$; the
+        correct statement for an injective map is $\Ker u=\set{0}$.
+  \item \textbf{Believing that $F\cup G$ is a subspace.} It is one only when one
+        of the two contains the other (\cref{exo:union}).
+  \item \textbf{Confusing free and generating.} A basis needs both; forgetting one
+        half is the most frequent loss of marks.
+  \item \textbf{Using rank--nullity in infinite dimension.}
+        \Cref{thm:rank-nullity} assumes $\dim E<\infty$.
+  \item \textbf{Deducing diagonalisability from a split annihilating polynomial
+        with multiple roots.} The roots must be simple; see
+        \cref{ex:jordan-block}.
+  \item \textbf{Assuming $\rank(AB)=\rank A\cdot\rank B$.} Only the inequality
+        of \cref{prop:rank-inequalities} holds.
+  \item \textbf{Forgetting that eigenvalues depend on the field.} The matrix
+        $\begin{pmatrix}0&-1\\1&0\end{pmatrix}$ has no eigenvalue over $\R$ and
+        two over $\C$.
+  \item \textbf{Adding dimensions of subspaces.} The correct formula is
+        $\dim(F+G)=\dim F+\dim G-\dim(F\cap G)$.
+\end{itemize}
+\end{mistakes}
+
+\section{Summary}
+
+\begin{summarybox}
+\begin{itemize}
+  \item A vector space is a set where addition and scaling behave as expected;
+        subspaces, sums and direct sums are the ways of building new ones.
+  \item A basis is a system of unique addresses; its cardinality, the dimension,
+        does not depend on the basis (\cref{thm:dimension-well-defined}).
+  \item A linear map is determined by its values on a basis. Its kernel measures
+        destroyed information, its image kept information, and
+        $\dim E=\rank u+\dim\Ker u$ (\cref{thm:rank-nullity}).
+  \item In equal finite dimensions, injective, surjective and bijective coincide
+        (\cref{cor:iso-criterion}).
+  \item Eigenspaces of distinct eigenvalues are independent
+        (\cref{thm:eigen-independent}); $u$ is diagonalisable exactly when their
+        dimensions add up to $\dim E$ (\cref{thm:diagonalisable-criterion}).
+  \item A split annihilating polynomial with simple roots gives diagonalisability
+        for free (\cref{thm:split-simple}).
+  \item Every real symmetric matrix is orthogonally diagonalisable
+        (\cref{thm:spectral}).
+\end{itemize}
+\end{summarybox}
+
+\section{Practice exercises}
+
+Solve these before reading \cref{ch:solutions}. Complete solutions are given
+there.
+
+\begin{exercise}{Polynomials of bounded degree}{poly-dim}
+Show that $\K_{n}[X]=\set{P\in\K[X]\setst\deg P\leq n}$ is a vector space of
+dimension $n+1$, and that $\bigl(1,X,\dots,X^{n}\bigr)$ is a basis.
+\end{exercise}
+
+\begin{exercise}{Union of two subspaces}{union}
+Let $F,G$ be subspaces of $E$. Prove that $F\cup G$ is a subspace if and only if
+$F\subseteq G$ or $G\subseteq F$.
+\end{exercise}
+
+\begin{exercise}{Rank of a sum}{rank-sum}
+Let $u,v\in\Hom(E,F)$ with $\dim E<\infty$. Prove
+$\abs{\rank u-\rank v}\leq\rank(u+v)\leq\rank u+\rank v$.
+\end{exercise}
+
+\begin{exercise}{Kernel of the square}{kernel-square}
+Let $u\in\End(E)$ with $\dim E<\infty$. Show that
+$\Ker u=\Ker u^{2}$ if and only if $\Ker u\cap\im u=\set{0}$, and that this is
+also equivalent to $E=\Ker u\oplus\im u$.
+\end{exercise}
+
+\begin{exercise}{Projections}{projection-exo}
+Let $p\in\End(E)$ with $p^{2}=p$ and $\dim E<\infty$. Show that
+$E=\Ker p\oplus\im p$, that $\im p=\Ker(p-\id)$, and that $\tr p=\rank p$.
+\end{exercise}
+
+\begin{exercise}{Similar matrices}{similar}
+Let $A,B\in\Mat{n}{\K}$ be similar, that is $B=P^{-1}AP$ for some invertible
+$P$. Show that $A$ and $B$ have the same characteristic polynomial, the same
+trace, the same determinant and the same rank. Show by an example that the
+converse fails.
+\end{exercise}
+
+\section{Further reading}
+
+\Textcite{axler2015} treats the reduction theory without determinants;
+\textcite{gourdon2009} contains a large number of examination-style exercises of
+the difficulty of \cref{ch:problems}.

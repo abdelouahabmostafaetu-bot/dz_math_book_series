@@ -1,0 +1,76 @@
+\chapter{Doctoral Entrance Problems}
+\label{ch:problems}
+
+The problems below are of the type and difficulty of the linear algebra parts of
+Algerian doctoral entrance examinations: a short statement, no hint, and a
+complete proof expected in twenty to thirty minutes. Full solutions are in
+\cref{ch:solutions}.
+
+\begin{note}[Editorial note on sources]
+The source line of every problem must record the university, the speciality and
+the year of the original examination paper, and must be verified against the
+official paper before publication. Problems whose source has not yet been
+verified are marked \emph{classical} and are stated in their standard form; they
+must never be attributed to a specific university without a verified paper. See
+\texttt{docs/EDITORIAL\_GUIDE.md}.
+\end{note}
+
+\begin{problem}{Idempotent endomorphisms}{idempotent}
+Let $E$ be a $\K$-vector space of finite dimension $n$ and let $u\in\End(E)$
+satisfy $u^{2}=u$.
+\begin{enumerate}
+  \item Determine $\spec(u)$, distinguishing the cases $u=0$, $u=\id$ and
+        $u\notin\set{0,\id}$.
+  \item Show that $u$ is diagonalisable and give a matrix of $u$ in a suitable
+        basis.
+  \item Deduce that $\tr u=\rank u$.
+  \item Show that $\id-u$ is a projection and that $\rank u+\rank(\id-u)=n$.
+\end{enumerate}
+\source{Classical; source to be verified.}
+\end{problem}
+
+\begin{problem}{Nilpotent matrices}{nilpotent}
+Let $A\in\Mat{n}{\C}$ be nilpotent, that is $A^{p}=0$ for some $p\geq1$.
+\begin{enumerate}
+  \item Show that $\spec(A)=\set{0}$ and that the characteristic polynomial of
+        $A$ is $X^{n}$.
+  \item Show that $I_n-A$ is invertible and compute its inverse.
+  \item Show that $\det(I_n+A)=1$ and $\tr(A^{k})=0$ for every $k\geq1$.
+  \item Show that $A$ is diagonalisable if and only if $A=0$.
+\end{enumerate}
+\source{Classical; source to be verified.}
+\end{problem}
+
+\begin{problem}{An endomorphism with $u^{3}=u$}{cubic}
+Let $E$ be a finite-dimensional $\R$-vector space and $u\in\End(E)$ with
+$u^{3}=u$.
+\begin{enumerate}
+  \item Show that $E=\Ker u\oplus\Ker(u-\id)\oplus\Ker(u+\id)$.
+  \item Deduce that $u$ is diagonalisable and describe its possible spectra.
+  \item Show that $\rank u=\dim\Ker(u-\id)+\dim\Ker(u+\id)$.
+  \item Determine all such $u$ when $\dim E=2$, up to similarity.
+\end{enumerate}
+\source{Classical; source to be verified.}
+\end{problem}
+
+\begin{problem}{A trace inequality for positive definite matrices}{trace-inequality}
+Let $A\in\Mat{n}{\R}$ be symmetric positive definite.
+\begin{enumerate}
+  \item Show that $A$ is invertible and that $A^{-1}$ is symmetric positive
+        definite.
+  \item Prove that $\tr(A)\,\tr(A^{-1})\geq n^{2}$.
+  \item Determine the case of equality.
+\end{enumerate}
+\source{Classical; source to be verified.}
+\end{problem}
+
+\begin{problem}{Commuting diagonalisable endomorphisms}{commuting}
+Let $E$ be finite-dimensional over $\C$ and let $u,v\in\End(E)$ be
+diagonalisable with $u\circ v=v\circ u$.
+\begin{enumerate}
+  \item Show that every eigenspace of $u$ is stable under $v$.
+  \item Deduce that $u$ and $v$ are simultaneously diagonalisable.
+  \item Show that $u+v$ and $u\circ v$ are diagonalisable.
+\end{enumerate}
+\source{Classical; source to be verified.}
+\end{problem}

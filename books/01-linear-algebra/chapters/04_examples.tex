@@ -1,0 +1,124 @@
+\chapter{Illustrative Examples}
+\label{ch:examples}
+
+The theorems of \cref{ch:theorems} become usable only after they have been seen
+at work. Every computation below is written in full, in the order in which it
+should be produced on an examination sheet.
+
+\section{Rank computed in three ways}
+
+\begin{example}{One matrix, three methods}{rank-three-ways}
+Let
+\[
+  A=\begin{pmatrix} 1 & 2 & 3\\ 2 & 4 & 6\\ 1 & 1 & 1 \end{pmatrix}
+  \in\Mat{3}{\R}.
+\]
+
+\textbf{By elimination.} Subtracting twice the first row from the second gives a
+zero row; subtracting the first row from the third gives $(0,-1,-2)$. Hence
+\[
+  A\sim\begin{pmatrix} 1 & 2 & 3\\ 0 & -1 & -2\\ 0 & 0 & 0\end{pmatrix},
+  \qquad \rank A=2 .
+\]
+
+\textbf{By the image.} The columns are $c_1=(1,2,1)$, $c_2=(2,4,1)$,
+$c_3=(3,6,1)$. One checks $c_3=2c_2-c_1$, while $c_1,c_2$ are not proportional,
+so $\im A=\Span(c_1,c_2)$ has dimension $2$.
+
+\textbf{By the kernel.} Solving $Ax=0$: the second equation is twice the first,
+and the system reduces to $x_1+2x_2+3x_3=0$, $x_2+2x_3=0$, whence
+$x_2=-2x_3$ and $x_1=x_3$. Thus $\Ker A=\Span\bigl((1,-2,1)\bigr)$ has
+dimension $1$, and $\rank A=3-1=2$ by \cref{thm:rank-nullity}.
+
+The three methods must agree, and comparing them is the cheapest way to detect
+an arithmetic slip.
+\end{example}
+
+\section{A projection, seen algebraically and geometrically}
+
+\begin{example}{Decomposition induced by a projection}{projection-example}
+Let $p\colon\R^{2}\To\R^{2}$ be given in the canonical basis by
+\[
+  P=\frac{1}{5}\begin{pmatrix} 4 & 2\\ 2 & 1\end{pmatrix}.
+\]
+Then $P^{2}=\frac{1}{25}\begin{pmatrix}20&10\\10&5\end{pmatrix}=P$, so $p$ is a
+projection. Its image is $\Span\bigl((2,1)\bigr)$ and its kernel is
+$\Span\bigl((1,-2)\bigr)$, since $P(1,-2)^{\mathsf{T}}=0$. These two lines are
+orthogonal, so $p$ is the orthogonal projection onto the line $y=x/2$, exactly
+the situation of \cref{fig:projection}.
+
+By \cref{thm:split-simple} applied to $X^{2}-X=X(X-1)$, the map $p$ is
+diagonalisable with $\spec(p)=\set{0,1}$; in the basis $\bigl((2,1),(1,-2)\bigr)$
+its matrix is $\diag(1,0)$. Note also $\tr P=1=\rank P$, an instance of
+\cref{prob:idempotent}.
+\end{example}
+
+\section{Diagonalisation without a characteristic polynomial}
+
+\begin{example}{An involution}{involution}
+Let $u\in\End(\R^{3})$ with matrix
+\[
+  M=\begin{pmatrix} 0 & 1 & 0\\ 1 & 0 & 0\\ 0 & 0 & -1\end{pmatrix}.
+\]
+A direct computation gives $M^{2}=I_3$, so $X^{2}-1=(X-1)(X+1)$ annihilates $u$.
+Its roots are simple, hence $u$ is diagonalisable by \cref{thm:split-simple} and
+\[
+  \R^{3}=\Ker(u-\id)\oplus\Ker(u+\id)
+        =\Span\bigl((1,1,0)\bigr)\oplus\Span\bigl((1,-1,0),(0,0,1)\bigr).
+\]
+No determinant was computed. This is the standard time-saving move in an
+examination.
+\end{example}
+
+\section{When diagonalisation fails}
+
+\begin{example}{A non-diagonalisable matrix}{jordan-block}
+Let $N=\begin{pmatrix}0&1\\0&0\end{pmatrix}$. Its only eigenvalue is $0$, and
+$\Ker N=\Span\bigl((1,0)\bigr)$ has dimension $1<2$, so $N$ is not
+diagonalisable by \cref{thm:diagonalisable-criterion}. Observe that $X^{2}$
+annihilates $N$: an annihilating polynomial that is split but has a
+\emph{multiple} root gives no information. The hypothesis of simple roots in
+\cref{thm:split-simple} cannot be dropped.
+\end{example}
+
+\section{The spectral theorem in practice}
+
+\begin{example}{Orthogonal diagonalisation of a symmetric matrix}{symmetric-example}
+Let $A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$, which is symmetric. Then
+$\det(A-\lambda I)=(2-\lambda)^{2}-1=(\lambda-1)(\lambda-3)$, so
+$\spec(A)=\set{1,3}$ with eigenvectors $(1,-1)$ and $(1,1)$. These are
+orthogonal, as \cref{thm:spectral} predicts. Normalising,
+\[
+  Q=\frac{1}{\sqrt2}\begin{pmatrix}1&1\\-1&1\end{pmatrix},\qquad
+  \transpose{Q}AQ=\diag(1,3).
+\]
+Since both eigenvalues are positive, $A$ is positive definite by
+\cref{cor:spd-eigen}, and
+$\tr A\cdot\tr A^{-1}=4\cdot\bigl(1+\tfrac13\bigr)=\tfrac{16}{3}\geq4=n^{2}$,
+illustrating \cref{prob:trace-inequality}.
+\end{example}
+
+\section{Visual explanation: what rank measures}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % source space
+  \draw[dmzrule] (0,0) rectangle (3,2.4);
+  \node[text=dmzsoft,font=\footnotesize] at (1.5,2.65) {$E$, $\dim E=3$};
+  \draw[dmzgreen,fill=dmzgreen!12] (0.5,0.4) rectangle (1.4,1.9);
+  \node[text=dmzgreen,font=\footnotesize] at (0.95,0.15) {$\Ker u$};
+  % target space
+  \draw[dmzrule] (5.5,0) rectangle (8.5,2.4);
+  \node[text=dmzsoft,font=\footnotesize] at (7,2.65) {$F$};
+  \draw[dmztheorem,fill=dmztheorem!12] (6.1,0.9) rectangle (7.9,1.6);
+  \node[text=dmztheorem,font=\footnotesize] at (7,0.6) {$\im u$, $\rank u=2$};
+  % arrow
+  \draw[->,dmzaccent,line width=0.9pt] (3.2,1.2) -- (5.3,1.2)
+        node[midway,above,text=dmzaccent,font=\footnotesize] {$u$};
+  \draw[->,dmzsoft,dashed] (1.0,1.15) -- (6.9,1.25);
+\end{tikzpicture}
+\end{center}
+
+The kernel is the information destroyed by $u$; the image is the information
+kept. \Cref{thm:rank-nullity} says that the two amounts add up to $\dim E$:
+nothing is created and nothing disappears.
