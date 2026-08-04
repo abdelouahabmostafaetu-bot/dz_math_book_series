@@ -1,0 +1,47 @@
+%% ===================================================================
+%%  docmath-colors.sty -- Doc Math DZ print-safe palette
+%%
+%%  Muted, low-saturation colours chosen to stay readable when printed
+%%  in colour AND in greyscale. Never use raw "red", "blue", ... in a book.
+%% ===================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{docmath-colors}[2026/08/04 v1.0 Doc Math DZ palette]
+\RequirePackage{xcolor}
+
+%% --- neutral base -------------------------------------------------
+\definecolor{dmzink}{HTML}{1B1B1F}      % body text
+\definecolor{dmzsoft}{HTML}{5A5F६B}
+\definecolor{dmzpaper}{HTML}{FCFBF7}    % ivory page
+\definecolor{dmzrule}{HTML}{C9C6BC}     % hair rules
+\definecolor{dmzlink}{HTML}{1F4E79}     % hyperlinks
+
+%% --- subject accents (one per volume) -----------------------------
+\definecolor{dmzblue}{HTML}{1F4E79}     % linear algebra
+\definecolor{dmzteal}{HTML}{176B6B}     % real analysis
+\definecolor{dmzgreen}{HTML}{2C6E49}    % topology
+\definecolor{dmzplum}{HTML}{5B3A70}     % group theory
+\definecolor{dmzwine}{HTML}{7B2D3B}     % measure theory
+\definecolor{dmzocre}{HTML}{8A6415}     % probability
+\definecolor{dmzslate}{HTML}{3F4A58}    % functional analysis
+\definecolor{dmzcopper}{HTML}{9A5B2B}   % complex analysis
+
+%% default accent; overridden by \dmzset{accent=...}
+\colorlet{dmzaccent}{dmzblue}
+
+%% --- semantic colours of the mathematical environments ------------
+\colorlet{dmzdefinition}{dmzblue}
+\colorlet{dmztheorem}{dmzwine}
+\colorlet{dmzlemma}{dmzslate}
+\colorlet{dmzproposition}{dmzteal}
+\colorlet{dmzcorollary}{dmzplum}
+\colorlet{dmzexample}{dmzgreen}
+\colorlet{dmzremark}{dmzsoft}
+\colorlet{dmznote}{dmzslate}
+\colorlet{dmzwarning}{dmzcopper}
+\colorlet{dmzexercise}{dmzocre}
+\colorlet{dmzproblem}{dmzblue}
+\colorlet{dmzsolution}{dmzsoft}
+\colorlet{dmzintuition}{dmzteal}
+\colorlet{dmzsummary}{dmzslate}
+
+\endinput
