@@ -1,0 +1,1042 @@
+\chapter{Doctoral Entrance Problems}
+\label{ch:problems}
+
+The problems below are the algebra of Algerian doctoral entrance examinations,
+reproduced in French as they were set. They are grouped by university and, inside
+each university, ordered from the oldest paper to the most recent. Every problem
+carries the university, the year and the number of the épreuve it came from.
+
+Each statement is given exactly as it was examined: no hint has been added and no
+step has been removed. Where the original scan is damaged, the source line says
+so rather than silently inventing the missing symbols. Full solutions are in
+\cref{ch:solutions}.
+\newpage
+
+%% ===================================================================
+\section{Centre Universitaire Si El Haouès --- Barika}
+%% ===================================================================
+
+\begin{problem}{(Barika) — Épreuve N°02}{alg:barika-2025-e2-p1}
+Let $(G, 1_G, \leq)$ be an ordered group with the identity element $1_G$.
+\begin{enumerate}
+\item Prove that if $G$ is a $\vee$-semilattice, then for all $x, y, z \in G$ it
+      holds that
+      $$
+      x(y \vee z) = xy \vee xz \quad \text{and} \quad (y \vee z)x = yx \vee zx.
+      $$
+\item Prove that the following statements are equivalent:
+      \begin{enumerate}
+      \item $G$ is a $\vee$-semilattice;
+      \item $G$ is a lattice (indication: show that $x \wedge y = x(x \vee y)^{-1}y$
+            for any $x, y \in G$);
+      \item $\sup\{x, 1_G\}$ exists for any $x \in G$.
+      \end{enumerate}
+\item Suppose that $G$ is a lattice and $H$ is a subgroup of $G$. Prove that $H$ is
+      a sublattice of $G$ if and only if for all $x \in H$, $\sup\{x, 1_G\} \in H$.
+\end{enumerate}
+
+\source{\emph{\small Centre Universitaire Si El Haouès - Barika, 2025, Épreuve~n\textsuperscript{o}~02 — barème : 7 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Barika) — Épreuve N°02}{alg:barika-2025-e2-p2}
+Let $G$ be a group with identity element $1_G$ and $P$ a subset of $G$ satisfying
+the following three conditions:
+
+(i) $P \cap P^{-1} = \{1_G\}$; (ii) $P^2 = P$, where $P^2 = \{xy \mid x, y \in P\}$;
+(iii) $\forall x \in G$, $xPx^{-1} = P$.
+
+Consider the binary relation $\leq$ defined on $G$ by
+$x \leq y \Leftrightarrow yx^{-1} \in P$.
+\begin{enumerate}
+\item Prove that $(G, \leq)$ is an ordered group.
+\item Deduce that $P$ is the positive cone relative to this compatible order on $G$.
+\item Prove that $\leq$ is total if and only if $P \cup P^{-1} = G$.
+\item \textbf{Application:} consider the additive abelian group
+      $\mathbb{R} \times \mathbb{R}$ and the subset $P$ defined by
+      $$
+      (x, y) \in P \Leftrightarrow (x = y = 0) \text{ or } (x \geq 0 \text{ and } y > 0).
+      $$
+      \begin{enumerate}
+      \item Prove that $P$ is the positive cone of the compatible order $\leq$ on
+            $\mathbb{R} \times \mathbb{R}$.
+      \item Show that this order is described by
+            $$
+            (x, y) \leq (x', y') \Leftrightarrow
+            \begin{cases} x = x' \text{ and } y = y'; \\
+            \text{or } x \leq x' \text{ and } y < y'. \end{cases}
+            $$
+      \end{enumerate}
+\end{enumerate}
+
+\source{\emph{\small Centre Universitaire Si El Haouès - Barika, 2025, Épreuve~n\textsuperscript{o}~02 — barème : 7 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Barika) — Épreuve N°02}{alg:barika-2025-e2-p3}
+Let $G$ be a group and $H$ be a fuzzy subgroup of $G$. $H$ is called a normal
+fuzzy subgroup if for all $x, y \in G$, $\mu_H(xy) = \mu_H(yx)$, where $\mu_H(x)$
+is the degree of membership of $x$ in the fuzzy set $H$.
+\begin{enumerate}
+\item Prove that $H$ is a fuzzy normal subgroup of $G$ if and only if $\mu_H$ is
+      constant in each conjugate class of $G$.
+
+      \emph{Note that} $\mu_H$ constant in each conjugate class of $G$ means
+      $\mu_H(yxy^{-1}) = \mu_H(x)$ for all $x, y \in G$.
+\item Prove that if $H$ is a fuzzy normal subgroup, then
+      $$
+      \mu_H[x, y] \geq \mu_H(x) \quad \text{for all } x, y \in G,
+      $$
+      where $[x, y] = x^{-1}y^{-1}xy$ is the commutator of $x$ and $y$.
+\item Let $\alpha \in [0, 1]$ be such that $\alpha \leq \mu_H(e)$, where $e$ denotes
+      the identity of $G$. Prove that if $H$ is a fuzzy normal subgroup of $G$, then
+      $H_\alpha = \{x \in G \mid \mu_H(x) \geq \alpha\}$ is a normal subgroup of $G$.
+\item Let $\varphi : G \to G'$ be a group morphism and $B$ a fuzzy set of $G'$.
+      Consider the fuzzy set $\varphi^{-1}(B)$ of $G$, called the preimage of $B$,
+      defined by
+      $$
+      \forall x \in G,\; \mu_{\varphi^{-1}(B)}(x) = \mu_B(\varphi(x)).
+      $$
+      Prove that $\varphi^{-1}(B)$ is a fuzzy normal subgroup of $G$.
+\end{enumerate}
+
+\source{\emph{\small Centre Universitaire Si El Haouès - Barika, 2025, Épreuve~n\textsuperscript{o}~02 — barème : 6 points. Dans l'énoncé original la question 3 écrit « $x \in L$ », probablement une coquille pour « $x \in G$ ».}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{École Normale Supérieure de Kouba (ENS)}
+%% ===================================================================
+
+\begin{problem}{(ENS Kouba) — Épreuve N°03}{alg:ens-kouba-2023-e3-p1}
+Soit
+$$
+K=\mathbb{Q}(\sqrt{-15})
+$$
+et, pour tout $a\in K^*$, on considère le polynôme
+$$
+P(X)=X^3-a\in K[X].
+$$
+\begin{enumerate}
+\item Rappeler (ou démontrer) un critère d'irréductibilité d'un polynôme de degré
+      $3$ à coefficients dans un corps $K$.
+\item Montrer qu'il existe un élément $a\in K^*$ tel que $P(X)=X^3-a$ soit
+      irréductible sur $K$. Dans toute la suite, on fixe un tel élément $a$.
+\item Soit $\theta$ une racine de $P$ dans une clôture algébrique de $K$, et soit
+      $j=e^{\frac{2i\pi}{3}}$. Montrer que le corps de décomposition de $P$ sur $K$
+      est $L=K(\theta,j)=K(\theta,\theta j,\theta j^2)$.
+\item Montrer que l'extension $L/K$ est galoisienne de degré $6$ et que
+      $\sqrt5\in L$.
+\item Montrer qu'il existe des automorphismes $\sigma,\tau\in\operatorname{Gal}(L/K)$
+      tels que
+      $$
+      \sigma(\sqrt5)=\sqrt5,\qquad \sigma(\theta)=j\theta,
+      $$
+      et
+      $$
+      \tau(\sqrt5)=-\sqrt5,\qquad \tau(\theta)=\theta.
+      $$
+\item Déterminer les ordres de $\sigma$ et de $\tau$ dans $\operatorname{Gal}(L/K)$,
+      puis calculer $\tau\sigma\tau^{-1}$.
+\item En déduire la structure du groupe $\operatorname{Gal}(L/K)$, puis déterminer
+      toutes les sous-extensions de $L/K$.
+\end{enumerate}
+
+\source{\emph{\small École Normale Supérieure de Kouba (ENS), 2023, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(ENS Kouba) — Épreuve N°03}{alg:ens-kouba-2023-e3-p2}
+Soit $K$ un corps algébriquement clos, et soit $A_n=K[X_1,\dots,X_n]$. Pour tout
+idéal $I\subset A_n$, on définit
+$$
+V(I)=\{x\in K^n:\ f(x)=0,\ \forall\,f\in I\},
+\qquad
+\sqrt I=\{f\in A_n:\ \exists\,m\ge1,\ f^m\in I\}.
+$$
+De plus, pour toute partie $S\subset K^n$, on pose
+$$
+I(S)=\{f\in A_n:\ f(x)=0,\ \forall\,x\in S\}.
+$$
+\begin{enumerate}
+\item Montrer que $I(S)$ est un idéal de $A_n$.
+\item Montrer que $\sqrt I\subset I(V(I))$.
+\item (Astuce de Rabinowitsch) Soit $Q\in I(V(I))$. On plonge $A_n$ dans
+      $A_{n+1}=K[X_1,\dots,X_n,X_{n+1}]$, et on considère l'idéal
+      $$
+      J=\left\langle I\cup\{1-X_{n+1}Q\}\right\rangle\subset A_{n+1}.
+      $$
+      Montrer que $V(J)=\varnothing$ dans $K^{n+1}$.
+\item En déduire, à l'aide du Nullstellensatz faible, que la classe de
+      $1-X_{n+1}Q$ est inversible dans $A_{n+1}/\langle I\rangle$.
+\item Conclure que $Q\in\sqrt I$, puis en déduire que $I(V(I))=\sqrt I$.
+      (On retrouve ainsi le Nullstellensatz de Hilbert.)
+\end{enumerate}
+
+\source{\emph{\small École Normale Supérieure de Kouba (ENS), 2023, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(ENS Kouba) — Épreuve N°03}{alg:ens-kouba-2023-e3-p3}
+Soit $A$ un anneau commutatif intègre, et soit $a\in A$, avec $a\neq0$.
+\begin{enumerate}
+\item Étudier l'idéal $(a,X)$ de $A[X]$ et montrer qu'il ne peut être principal que
+      si $a$ est inversible dans $A$, c'est-à-dire $a\in A^*$. Dans ce cas, montrer
+      que $(a,X)=A[X]$.
+\item En déduire que si l'anneau $A[X]$ est principal, alors $A$ est un corps.
+\end{enumerate}
+
+\source{\emph{\small École Normale Supérieure de Kouba (ENS), 2023, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Ahmed Ben Bella --- Oran 1}
+%% ===================================================================
+
+\begin{problem}{(Oran 1) — Épreuve N°03}{alg:oran1-2023-e3-p2}
+Soit $\mathbb{F}_p$ le corps premier à $p$ éléments, $\alpha$ une racine septième de
+l'unité et $K = \mathbb{F}_p(\alpha)$.
+\begin{enumerate}
+\item Expliquer pourquoi $K$ est un corps fini.
+\item Supposons que $p = 3$. Déterminer le cardinal du corps $K$.
+\item Supposons que $p \neq 3$. Soit $f(x) = x^p - x + 3$ ; si $\beta$ est une racine
+      de $f$ dans une extension de $\mathbb{F}_p$, montrer que $f$ admet $p$ racines
+      distinctes dans le corps d'extension $\mathbb{F}_p(\beta)$.
+\end{enumerate}
+
+\source{\emph{\small Université Ahmed Ben Bella - Oran 1, 2023, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Akli Mohand Oulhadj --- Bouira}
+%% ===================================================================
+
+\begin{problem}{(Bouira) — Épreuve N°01}{alg:bouira-2025-e1-p1}
+Soit $n > 0$ un nombre entier. On note $\sigma(n)$ la somme des diviseurs de $n$.
+Par exemple $\sigma(6) = 1+2+3+6$. On dit que $n$ est parfait si $\sigma(n) = 2n$.
+\begin{enumerate}
+\item Les nombres $12$ et $28$ sont-ils parfaits ?
+\item Soit $n \geq 2$ ; montrer que $\sigma(n) \geq n + 1$.
+\item Soient $p_1$ et $p_2$ deux nombres premiers distincts et $\alpha, \beta$ deux
+      entiers $\geq 2$.
+      \begin{enumerate}
+      \item Calculer $\sigma(p_1)$ et $\sigma(p_1^\alpha)$.
+      \item Montrer que $\sigma(p_1^\alpha p_2^\beta) = \sigma(p_1^\alpha)\sigma(p_2^\beta)$.
+      \item Pour $n = 2025$, calculer $\sigma(n)$.
+      \end{enumerate}
+\item On suppose que pour tous entiers $n$ et $m$ premiers entre eux,
+      $\sigma(nm) = \sigma(n)\sigma(m)$. On pose
+      $$
+      M_p = 2^{p-1}(2^p - 1),
+      $$
+      où $p$ et $2^p - 1$ sont premiers.
+      \begin{enumerate}
+      \item Calculer $\sigma(2^{p-1})$ et $\sigma(2^p - 1)$.
+      \item En déduire que $M_p$ est un nombre parfait.
+      \end{enumerate}
+\item On suppose que $n$ est un nombre parfait pair, de la forme $n = 2^l a$ avec
+      $l > 0$ et $a$ impair. Montrer que $2^{l+1} a = (2^{l+1} - 1)\sigma(a)$.
+\end{enumerate}
+
+\source{\emph{\small Université Akli Mohand Oulhadj - Bouira, 2025, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Bouira) — Épreuve N°01}{alg:bouira-2025-e1-p2}
+On considère le polynôme
+$$
+f(x) = x^3 - 7x + 7 \in \mathbb{Q}[x].
+$$
+\begin{enumerate}
+\item Montrer que $f$ est irréductible sur $\mathbb{Q}$.
+\item Montrer que $f$ possède trois racines réelles $\alpha, \beta, \gamma$ telles que
+      $\alpha > \beta > 0 > \gamma$.
+\item En calculant $(\beta - \gamma)^2$ en fonction de $\alpha$, montrer que
+      $\beta - \gamma = \dfrac{\alpha}{2\alpha - 3}$.
+\end{enumerate}
+
+\source{\emph{\small Université Akli Mohand Oulhadj - Bouira, 2025, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université des Sciences et de la Technologie Houari Boumediène (USTHB)}
+%% ===================================================================
+
+\begin{problem}{(USTHB) — Épreuve N°03}{alg:usthb-2014-e3-p1}
+Les affirmations suivantes sont-elles vraies ? Justifier.
+\begin{enumerate}
+\item Tout code linéaire est cyclique.
+\item Un anneau à chaîne est un anneau de Galois.
+\item Tout anneau principal est à chaîne.
+\item La caractéristique d'un anneau de Galois est toujours première.
+\item Un anneau de Galois n'a pas d'éléments nilpotents.
+\item Tout code libre est auto-dual.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°03}{alg:usthb-2014-e3-p2}
+Soit $(n,e)$ une clé publique RSA.
+\begin{enumerate}
+\item Soient $p,q$ deux premiers distincts avec $p\equiv q\equiv 2 \pmod 3$,
+      $n=pq$ et
+      $$
+      e=\frac{2(p-1)(q-1)+1}{3}.
+      $$
+      Montrer que $e$ est premier avec $\varphi(n)$ et calculer son inverse modulo
+      $\varphi(n)$.
+\item On prend $(n,e)=(187,107)$ et le cryptogramme reçu est $9$. Quel est le
+      message ?
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°03}{alg:usthb-2014-e3-p3}
+Les matrices suivantes peuvent-elles être génératrices de codes sur $\mathbb{Z}_4$ ?
+$$
+G_1=\begin{pmatrix} 1&1&1&0\\ 0&0&2&2\\ 0&2&0&2\end{pmatrix},
+\qquad
+G_2=\begin{pmatrix} 1&0&0&0&5&1&2&1\\ 0&1&0&0&1&2&7&1\\ 0&0&1&0&3&6&3&2\\ 0&0&0&1&2&3&1&1\end{pmatrix}.
+$$
+Si oui :
+\begin{enumerate}
+\item déterminer le type et la longueur ;
+\item le code est-il auto-dual ? Donner la matrice de contrôle ;
+\item le code est-il libre ?
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°03}{alg:usthb-2014-e3-p4}
+Déterminer tous les anneaux de Galois d'ordre $64$, avec leurs caractéristiques,
+leurs corps résiduels et leurs groupes multiplicatifs.
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~03.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°04}{alg:usthb-2014-e4-p1}
+\begin{enumerate}
+\item Soient $H$ et $K$ deux sous-groupes distingués et résolubles d'un groupe $G$.
+      Montrer que $HK$ est distingué et résoluble.
+\item Soient $H,K$ distingués tels que $G/H$ et $G/K$ soient résolubles. Montrer
+      que $G/(H\cap K)$ est résoluble.
+\item Déterminer à isomorphisme près les groupes d'ordre $15$ et d'ordre $35$.
+\item Déterminer une suite de Jordan--Hölder pour :
+      \begin{enumerate}
+      \item $\mathbb{Z}/18\mathbb{Z}$,
+      \item $\mathbb{Z}/2\mathbb{Z}\times\mathbb{Z}/2\mathbb{Z}$,
+      \item $S_3$, $S_4$, $S_5$.
+      \end{enumerate}
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~04.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°04}{alg:usthb-2014-e4-p2}
+Soit $A$ un anneau.
+\begin{enumerate}
+\item Montrer par un contre-exemple que l'ensemble des éléments nilpotents de $A$
+      ne forme pas un sous-groupe abélien de $A$ (on pourra choisir
+      $A=M_2(\mathbb{C})$).
+\item Soit $N=\{a\in A \ / \ ax \text{ est nilpotent } \forall x\in A\}$. Montrer que
+      $N$ est un idéal bilatère de $A$ et que tout élément de $N$ est nilpotent.
+\item Soit $I$ un idéal bilatère de $A$ dont tout élément est nilpotent. Montrer que
+      $I\subset N$.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~04.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°04}{alg:usthb-2014-e4-p3}
+Soit $K$ un corps. On pose
+$$
+A=\frac{K[X,Y]}{(X^2,XY,Y^2)}.
+$$
+\begin{enumerate}
+\item Déterminer les éléments inversibles de $A$.
+\item Déterminer tous les idéaux principaux de $A$.
+\item Déterminer tous les idéaux de $A$.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~04.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°04}{alg:usthb-2014-e4-p4}
+Soient $L,M$ deux $A$-modules et $f:L\to M$ un homomorphisme.
+\begin{enumerate}
+\item On suppose que $\operatorname{Ker}(f)$ et $\operatorname{Im}(f)$ sont de type
+      fini. Montrer que $L$ est de type fini.
+\item On suppose que $\operatorname{Ker}(f)\cong A^p$ et
+      $\operatorname{Im}(f)\cong A^q$. Montrer que $L\cong A^{p+q}$.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2014, Épreuve~n\textsuperscript{o}~04.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°02}{alg:usthb-2015-e2-p1}
+Soit $A = \mathbb{C}^{\mathbb{N}^*}$ l'ensemble des fonctions arithmétiques muni de
+l'addition usuelle et du produit de Dirichlet
+$$
+(f*g)(n)=\sum_{d\mid n} f(d)\,g(n/d).
+$$
+\begin{enumerate}
+\item Préciser l'élément neutre $\delta$ de la multiplication.
+\item Montrer que le groupe des unités de $A$ est $U(A)=\{f\in A : f(1)\neq 0\}$.
+\item On dit qu'une fonction arithmétique $f$ est multiplicative si $f(1)\neq 0$ et
+      $(n,m)=1 \Rightarrow f(nm)=f(n)f(m)$. On désigne par $\mathcal{M}$ l'ensemble
+      des fonctions arithmétiques multiplicatives. Montrer que $\mathcal{M}$ est un
+      sous-groupe de $U(A)$.
+\item On désigne par $1$ et $j$ les fonctions définies par $1(n)=1$ et $j(n)=n$.
+      \begin{enumerate}
+      \item Montrer que $1$ et $j$ appartiennent à $\mathcal{M}$.
+      \item On désigne par $\mu$ la fonction de Möbius et par $\varphi$ la fonction
+            indicatrice d'Euler. Prouver que $\mu$ est l'inverse pour le produit de
+            Dirichlet de la fonction arithmétique $1$ et que $1*\varphi=j$.
+      \end{enumerate}
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2015, Épreuve~n\textsuperscript{o}~02.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°01}{alg:usthb-2023-e1-p1}
+Soit $D$ l'ensemble des nombres décimaux, c'est-à-dire
+$$
+D=\mathbb{Z}\Big[\tfrac1{10}\Big]=\Big\{\tfrac{a}{10^n}\ :\ a\in\mathbb{Z},\ n\in\mathbb{N}\Big\},
+$$
+qui est un sous-anneau de $\mathbb{Q}$. Soit $I$ un idéal de $D$.
+\begin{enumerate}
+\item Montrer que $I\cap\mathbb{Z}$ est un idéal de $\mathbb{Z}$.
+\item En déduire que $I$ est un idéal principal de $D$.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2023, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°01}{alg:usthb-2023-e1-p2}
+Soit $A$ un anneau et soit
+$$
+0\longrightarrow M\xrightarrow{\ f\ }N\xrightarrow{\ g\ }P\longrightarrow0
+$$
+une suite exacte de $A$-modules. On suppose que $M$ et $P$ sont de type fini.
+Montrer que $N$ est de type fini.
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2023, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°01}{alg:usthb-2023-e1-p3}
+Soit $n\ge2$ un entier. Étudier l'exactitude des deux suites de
+$\mathbb{Z}$-modules suivantes.
+\begin{enumerate}
+\item[\textbf{(S1)}] $0\longrightarrow\mathbb{Z}\xrightarrow{\ \times n\ }\mathbb{Z}\xrightarrow{\ \pi\ }\mathbb{Z}/n\mathbb{Z}\longrightarrow0$,
+      où $\pi$ est la projection canonique.
+\item[\textbf{(S2)}] $0\longrightarrow\mathbb{Z}/n\mathbb{Z}\xrightarrow{\ f\ }\mathbb{Z}/n^2\mathbb{Z}\xrightarrow{\ g\ }\mathbb{Z}/n\mathbb{Z}\longrightarrow0$,
+      où $f(\overline x)=\overline{nx}$ et $g$ est la réduction modulo $n$.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2023, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°01}{alg:usthb-2023-e1-p4}
+Soit $f=x^5-x+1\in\mathbb{Q}[x]$, $\alpha$ une racine de $f$ et
+$K=\mathbb{Q}(\alpha)$. On rappelle que pour le trinôme $x^n+ax+b$,
+$$
+\operatorname{disc}=(-1)^{n(n-1)/2}\big[(-1)^{n-1}(n-1)^{n-1}a^n+n^nb^{n-1}\big].
+$$
+\begin{enumerate}
+\item Montrer que $f$ est irréductible sur $\mathbb{Q}$.
+\item Calculer le discriminant de $f$, puis déterminer l'anneau des entiers
+      $\mathcal{O}_K$ et le discriminant $\operatorname{disc}(K)$.
+\item Décomposer les idéaux $3\,\mathcal{O}_K$ et $19\,\mathcal{O}_K$ en produit
+      d'idéaux premiers.
+\item Déterminer le nombre de racines réelles de $f$, puis montrer que le groupe de
+      Galois de $f$ sur $\mathbb{Q}$ est $G\cong S_5$.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2023, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°02}{alg:usthb-2026-e2-p1}
+On note $A$ l'ensemble des éléments de $\mathbb{C}$ qui sont entiers sur
+$\mathbb{Z}$. Soient $\alpha\in A\setminus\{0\}$ et $f(X)$ son polynôme minimal sur
+$\mathbb{Q}$.
+
+Les équivalences suivantes sont-elles vraies ?
+$$
+\frac1\alpha\in A\Longleftrightarrow f(0)=\pm1\Longleftrightarrow\frac1\alpha\in\mathbb{Z}[\alpha].
+$$
+Justifier votre réponse.
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2026, Épreuve~n\textsuperscript{o}~02 — barème : 4 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°02}{alg:usthb-2026-e2-p2}
+Soit le polynôme $f(X)=X^3+X^2-2X+8$ et $\alpha\in\mathbb{C}$ tel que
+$f(\alpha)=0$. On pose $\beta=4/\alpha$ et $K=\mathbb{Q}(\beta)$. On note $A$
+l'anneau des entiers de $K$ sur $\mathbb{Z}$.
+\begin{enumerate}
+\item Donner $D_{K/\mathbb{Q}}(1,\alpha,\alpha^2)$ et
+      $D_{K/\mathbb{Q}}(1,\alpha,\beta)$.
+\item Est-ce que $(1,\alpha,\alpha^2)$ est une base de $A$ sur $\mathbb{Z}$ ?
+\end{enumerate}
+Indication : on pourra utiliser le fait que $503$ est un nombre premier.
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2026, Épreuve~n\textsuperscript{o}~02 — barème : 5 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°02}{alg:usthb-2026-e2-p3}
+\begin{enumerate}
+\item Soient $M$ et $N$ deux $A$-modules noethériens. Montrer que $M\times N$ est
+      noethérien.
+\item Soient $E$ un $A$-module, $M$ et $N$ deux sous-modules de $E$. Montrer que si
+      $M$ et $N$ sont noethériens alors $M+N$ est noethérien.
+\item Soit $M$ un module sur un anneau noethérien. Si $M$ est de type fini alors
+      $M$ est noethérien.
+\item Soit $A$ un anneau et $S$ une partie multiplicative de $A$. Si $A$ est
+      noethérien alors $S^{-1}A$ est noethérien.
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2026, Épreuve~n\textsuperscript{o}~02 — barème : 5 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(USTHB) — Épreuve N°02}{alg:usthb-2026-e2-p4}
+Soit $n$ un entier $\ge3$.
+\begin{enumerate}
+\item Montrer que le degré de l'extension
+      $\mathbb{Q}(\cos(2\pi/n))/\mathbb{Q}$ est $\varphi(n)/2$, où $\varphi$ désigne
+      la fonction indicatrice d'Euler.
+\item Soit $x\in\mathbb{Q}$ écrit sous forme irréductible $a/b$, avec $a$ et $b$
+      entiers premiers entre eux et $b>0$. On suppose $b\ge3$. Calculer le degré de
+      $\mathbb{Q}(\cos(2\pi a/b))/\mathbb{Q}$.
+\item Pour $n\ge5$, en déduire que le degré de
+      $\mathbb{Q}(\sin(2\pi/n))/\mathbb{Q}$ est
+      $$
+      \begin{cases}
+      \varphi(n), & \text{si } \operatorname{pgcd}(n,8)<4,\\
+      \dfrac{\varphi(n)}4, & \text{si } \operatorname{pgcd}(n,8)=4,\\
+      \dfrac{\varphi(n)}2, & \text{si } \operatorname{pgcd}(n,8)>4.
+      \end{cases}
+      $$
+\item Application : déterminer le polynôme minimal de $\sin(2\pi/5)$ sur
+      $\mathbb{Q}$.
+\end{enumerate}
+Indication : $\sin(5x)=16\sin(x)^5-20\sin(x)^3+5\sin(x)$ pour tout $x$ réel.
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2026, Épreuve~n\textsuperscript{o}~02 — barème : 6 points.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Ferhat Abbas --- Sétif 1}
+%% ===================================================================
+
+\begin{problem}{(Sétif 1) — Épreuve N°01}{alg:setif1-2025-e1-p1}
+Soit $G$ un groupe fini simple non abélien, et $M$ un sous-groupe maximal propre de
+$G$ (i.e. $M\ne G$ et il n'existe aucun sous-groupe strictement compris entre $M$
+et $G$).
+\begin{enumerate}
+\item Montrer que le normalisateur $N_G(M)$ de $M$ dans $G$ est égal à $M$.
+\item En déduire que l'action de $G$ par translation sur l'ensemble des classes à
+      gauche $G/M$ est fidèle et transitive, et que $|G|$ divise $[G:M]!$.
+\item Application : montrer que si $G$ simple non abélien possède un sous-groupe
+      maximal $M$ d'indice $n$, alors $G$ se plonge dans $S_n$ (groupe symétrique),
+      et donc $|G|$ divise $n!$.
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2025, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Sétif 1) — Épreuve N°01}{alg:setif1-2025-e1-p2}
+Soit $G$ un groupe fini. On rappelle que le sous-groupe de Frattini
+$\mathrm{Frat}(G)$ (ou $\Phi(G)$) est l'intersection de tous les sous-groupes
+maximaux de $G$.
+\begin{enumerate}
+\item Montrer que $\mathrm{Frat}(G)$ est un sous-groupe caractéristique (donc
+      normal) de $G$.
+\item Montrer que si $x\in G$ est tel que $G=\langle \mathrm{Frat}(G),x\rangle$,
+      alors $G=\langle x\rangle$ (propriété dite de « non-générateur »).
+\item Montrer que pour $G$ un $p$-groupe fini,
+      $\mathrm{Frat}(G)=G'G^p$, sous-groupe engendré par le dérivé et les puissances
+      $p$-ièmes.
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2025, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Sétif 1) — Épreuve N°01}{alg:setif1-2025-e1-p3}
+Soit $G$ un groupe d'ordre $p^3q$ où $p,q$ sont des nombres premiers distincts. On
+veut montrer que $G$ n'est pas simple (sauf cas triviaux à exclure).
+\begin{enumerate}
+\item Rappeler les théorèmes de Sylow (existence, conjugaison, nombre de $p$-Sylow
+      $n_p\equiv1\pmod p$ et $n_p\mid q$ ; nombre de $q$-Sylow
+      $n_q\equiv1\pmod q$ et $n_q\mid p^3$).
+\item Traiter le cas $q<p$ : montrer que $n_p=1$, donc que le $p$-Sylow est normal
+      et que $G$ n'est pas simple.
+\item Traiter le cas $q>p$ : discuter les valeurs possibles de $n_q$ et montrer que
+      dans les configurations restantes, $G$ n'est pas simple (on pourra utiliser un
+      argument de comptage d'éléments).
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2025, Épreuve~n\textsuperscript{o}~01.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Sétif 1) — Épreuve N°02}{alg:setif1-2025-e2-p1}
+Soit $G$ un groupe et $M$ un sous-groupe maximal de $G$, simple et distingué dans
+$G$. Soit $N$ un sous-groupe distingué de $G$ non trivial ($N\neq\{e\}$ et
+$N\neq G$).
+\begin{enumerate}
+\item Montrer que si $N\subseteq M$, alors $N=M$.
+\item Montrer que si $N\not\subseteq M$, alors $NM=G$ et $G/N$ est isomorphe à un
+      quotient de $M$ ; en déduire que $G/N$ est simple ou trivial.
+\item Conclure : tout quotient propre non trivial de $G$ est simple.
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2025, Épreuve~n\textsuperscript{o}~02 — barème : 6 points. Le même sujet circule aussi sans corrigé sous un autre numéro d'épreuve.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Sétif 1) — Épreuve N°02}{alg:setif1-2025-e2-p2}
+Soit $G$ un groupe fini et $\Phi(G)$ son sous-groupe de Frattini (intersection des
+sous-groupes maximaux de $G$). Montrer l'équivalence des assertions suivantes :
+\begin{enumerate}
+\item $G$ est nilpotent ;
+\item $G/\Phi(G)$ est nilpotent ;
+\item $G'\subseteq\Phi(G)$ (où $G'$ est le groupe dérivé), i.e. $G/\Phi(G)$ est
+      abélien.
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2025, Épreuve~n\textsuperscript{o}~02 — barème : 6 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Sétif 1) — Épreuve N°02}{alg:setif1-2025-e2-p3}
+Soient $p$ et $q$ deux nombres premiers distincts et $G$ un groupe d'ordre $p^3q$.
+On veut montrer que $G$ possède un sous-groupe de Sylow distingué, sauf exception à
+préciser.
+\begin{enumerate}
+\item Rappeler les théorèmes de Sylow sur $n_p$ et $n_q$ (nombres de $p$- et
+      $q$-Sylow).
+\item Montrer que si $n_p=q$, alors $q\equiv 1 \pmod p$ et donc $q>p$.
+\item On suppose $n_p\neq 1$ et $n_q\neq 1$. Montrer que $n_q\in\{p,p^2,p^3\}$,
+      éliminer le cas $n_q=p$, puis montrer que le cas $n_q=p^3$ conduit à une
+      contradiction.
+\item Étudier le cas restant $n_q=p^2$ et conclure (on examinera la petite exception
+      numérique).
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2025, Épreuve~n\textsuperscript{o}~02 — barème : 8 points.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Kasdi Merbah --- Ouargla}
+%% ===================================================================
+
+\begin{problem}{(Ouargla) — Épreuve N°35}{alg:ouargla-2015-e35-p1}
+Soit $A$ un sous-anneau de $\mathbb{Z}$.
+\begin{enumerate}
+\item Montrer que $A$ est un sous-anneau principal de la forme $n\mathbb{Z}$ pour un
+      certain entier $n$.
+\item Soit $x\in A$. On pose $a=x+1$ avec $a\in A$ ; vérifier les propriétés
+      indiquées dans l'énoncé original.
+\item Montrer que $\mathbb{Z}$ est commutatif.
+\end{enumerate}
+
+\source{\emph{\small Université Kasdi Merbah - Ouargla, 2015, Épreuve~n\textsuperscript{o}~35 — barème : 8 points. Transcription partielle : la photo d'origine est peu lisible, la question~2 doit être recoupée avec le sujet papier.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Ouargla) — Épreuve commune}{alg:ouargla-2022-gen-p1}
+Soit $A$ un anneau d'élément neutre $0$ et d'élément unité $1$. On note $Z(A)$ le
+centre de $A$ et l'on suppose que
+$$
+\forall x\in A,\qquad x^2-x\in Z(A).
+$$
+\begin{enumerate}
+\item Montrer que $Z(A)$ est un sous-anneau de $A$.
+\item Soient $x,y\in A$. On pose $\alpha=x+y$.
+      \begin{enumerate}
+      \item Vérifier que $\alpha^2-\alpha\in Z(A)$, puis en déduire que
+            $xy+yx\in Z(A)$.
+      \item En utilisant la question précédente, montrer que $x^2\in Z(A)$.
+      \item Montrer que $x\in Z(A)$.
+      \end{enumerate}
+\item En déduire que l'anneau $A$ est commutatif.
+\end{enumerate}
+
+\source{\emph{\small Université Kasdi Merbah - Ouargla, 2022, épreuve commune — barème : 8 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Ouargla) — Épreuve commune}{alg:ouargla-2022-gen-p2}
+\begin{enumerate}
+\item Soit $n\in\mathbb{N}^*$ et
+      $$
+      P(x)=a_0+a_1x+\cdots+a_nx^n\in\mathbb{Z}[X],\qquad a_n\neq0.
+      $$
+      Soit $\alpha=\dfrac{a}{b}\in\mathbb{Q}$, avec $\gcd(a,b)=1$ et $b\neq0$.
+      Montrer que si $\alpha$ est une racine de $P$, alors $a\mid a_0$ et
+      $b\mid a_n$. En déduire que si $P$ est unitaire, alors toute racine
+      rationnelle est un entier.
+\item On considère le polynôme $P(x)=x^4-3x^3+11x^2-9x$. Déterminer :
+      \begin{enumerate}
+      \item toutes les racines de $P$ dans $\mathbb{C}$ ;
+      \item le corps de décomposition $E$ de $P$ sur $\mathbb{Q}$.
+      \end{enumerate}
+\end{enumerate}
+
+\source{\emph{\small Université Kasdi Merbah - Ouargla, 2022, épreuve commune — barème : 8 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Ouargla) — Épreuve commune}{alg:ouargla-2022-gen-p3}
+On rappelle que si $G$ est un groupe fini et $a,b\in G$ tels que $o(a)=n$,
+$o(b)=m$ et $\langle a\rangle\cap\langle b\rangle=\{e\}$, alors
+$o(ab)=\operatorname{ppcm}(n,m)$.
+
+Soit $G$ un groupe fini d'ordre $35$.
+\begin{enumerate}
+\item Déterminer $n_5$ et $n_7$, le nombre de $5$-sous-groupes de Sylow et de
+      $7$-sous-groupes de Sylow de $G$, respectivement.
+\item En déduire que $G$ est cyclique.
+\end{enumerate}
+Soit $E=\mathbb{Q}\!\left(\sqrt{2},\,i\right)$.
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Déterminer le degré $[E:\mathbb{Q}]$.
+\item Déterminer le groupe de Galois $G=\operatorname{Gal}(E/\mathbb{Q})$.
+\item Déterminer tous les sous-groupes de $G$ ainsi que tous les sous-corps
+      intermédiaires de $E$.
+\item Déterminer un élément primitif $\theta$ de $E$ ainsi que son inverse.
+\item Donner deux bases différentes de $E$ sur $\mathbb{Q}$.
+\end{enumerate}
+
+\source{\emph{\small Université Kasdi Merbah - Ouargla, 2022, épreuve commune — barème : 4 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Ouargla) — Épreuve de spécialité}{alg:ouargla-2022-spec-p3}
+On rappelle que si $G$ est un groupe fini et $a,b\in G$ tels que $o(a)=n$ et
+$o(b)=m$, avec $\langle a\rangle\cap\langle b\rangle=\{e\}$, alors
+$o(ab)=\operatorname{ppcm}(n,m)$.
+
+Soit $G$ un groupe fini d'ordre $35$.
+\begin{enumerate}
+\item Déterminer $n_5$ et $n_7$, le nombre de $5$-sous-groupes de Sylow et le nombre
+      de $7$-sous-groupes de Sylow de $G$, respectivement.
+\item En déduire que $G$ est cyclique.
+\end{enumerate}
+Soit $E=\mathbb{Q}\!\left(\sqrt{2},\sqrt{3}\right)$.
+\begin{enumerate}
+\setcounter{enumi}{2}
+\item Déterminer le degré $[E:\mathbb{Q}]$.
+\item Déterminer le groupe de Galois $G=\operatorname{Gal}(E/\mathbb{Q})$.
+\item Déterminer tous les sous-groupes de $G$ ainsi que les sous-corps
+      intermédiaires de $E$.
+\item Déterminer un élément primitif $\theta$ de $E$ ainsi que son inverse.
+\item Donner deux bases différentes de $E$ sur $\mathbb{Q}$.
+\end{enumerate}
+
+\source{\emph{\small Université Kasdi Merbah - Ouargla, 2022, épreuve de spécialité — barème : 4 points. Variante de l'exercice précédent : seul le corps $E$ change ($\sqrt3$ au lieu de $i$).}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Mohamed Boudiaf --- M'Sila}
+%% ===================================================================
+
+\begin{problem}{(M'Sila) — Épreuve N°34}{alg:msila-2015-e34-p1}
+Soit $R$ une relation d'équivalence définie sur un ensemble $E$. Une partie
+$X\subset\mathcal P(E)$ est dite saturée par $R$ si
+$\bigcup_{x\in X}\overline{x}=X$, avec $\overline{x}$ la classe de $x$ modulo $R$.
+
+Soit $f:E\to F$ une application et soit $R_f$ l'équivalence associée dans $E$,
+définie par $x\,R_f\,y\Longleftrightarrow f(x)=f(y)$.
+\begin{enumerate}
+\item À quelle condition une partie $X\subset E$ est-elle saturée par $R_f$ ?
+\item Soit $B$ une partie quelconque de $E$ ; déterminer la plus petite partie
+      saturée $\overline B$ contenant $B$.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~34 — barème : 5 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°11}{alg:msila-2016-e11-p3}
+Soit $\mathbb{F}_p^*$ le groupe multiplicatif des éléments non nuls du corps fini
+$\mathbb{F}_p=\mathbb{Z}/p\mathbb{Z}$, $p$ étant un nombre premier différent de $2$.
+On désigne par $G_p$ l'ensemble des carrés dans $\mathbb{F}_p^*$, c'est-à-dire
+$G_p = \{y \in \mathbb{F}_p^* \ / \ \exists x \in \mathbb{F}_p^* : y = x^2\}$.
+\begin{enumerate}
+\item Vérifier que $G_p$ est un sous-groupe de $\mathbb{F}_p^*$. Montrer que
+      l'application $\varphi : x \mapsto x^2$ est un morphisme du groupe
+      $\mathbb{F}_p^*$ sur le groupe $G_p$.
+\item Calculer $\operatorname{Ker}\varphi$. En déduire que $G_p$ est isomorphe à
+      $\mathbb{F}_p^*/\operatorname{Ker}\varphi$.
+\item Montrer que $|G_p| = (p - 1)/2$. Pour $p = 7$, calculer $G_p$.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~11.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°12}{alg:msila-2016-e12-p1}
+Soit $E$ un ensemble à $n$ éléments. Quel est le nombre des couples $(X, Y)$ de
+$\mathcal{P}(E) \times \mathcal{P}(E)$ tels que $X \subset Y$ ?
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~12 — barème : 5 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°12}{alg:msila-2016-e12-p2}
+\begin{enumerate}
+\item Montrer que le polynôme $p(x) = x^4 + x + 1$ est irréductible sur le corps
+      fini $\mathbb{F}_2$.
+\item Construire $\mathbb{F}_{16}$.
+\item Soit $\alpha$ un élément primitif de $\mathbb{F}_{16}$. Montrer que
+      $\mathbb{F}_4 = \{0, 1, \alpha^5, \alpha^{10}\}$.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~12 — barème : 7 points. Cet exercice est reposé à l'identique dans plusieurs sujets de M'Sila (2015 et 2016).}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°14}{alg:msila-2016-e14-p1}
+Soit $(P, \le)$ un ensemble partiellement ordonné et $X \subseteq P$, non vide.
+\begin{enumerate}
+\item Montrer que $\vee X$ et $\wedge X$, s'ils existent, sont uniques.
+\item Montrer que si $X = \emptyset$, alors $\vee X$ et $\wedge X$ existent si et
+      seulement si $P$ est fermé.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~14 — barème : 5 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°14}{alg:msila-2016-e14-p2}
+Montrer que dans un ensemble ordonné $(X, \le)$ on a
+$$
+x \ne \sup\, x\ \text{ si et seulement si } \ x \ne \sup A, \quad \forall A \subset X \ \text{tel que } x \in A.
+$$
+\emph{Indication} : $x = \{a \in X \ / \ a < x\}$.
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~14 — barème : 4 points. L'énoncé original est ambigu sur la notation $\sup x$ ; il est reproduit tel quel.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°14}{alg:msila-2016-e14-p3}
+Soit $E = \{a, b, c, d, e\}$.
+\begin{enumerate}
+\item Trouver le nombre des relations réflexives sur $E$.
+\item Trouver le nombre des relations irréflexives sur $E$.
+\item Trouver le nombre des relations symétriques sur $E$.
+\item Montrer qu'il existe une relation d'équivalence sur $E$ qui soit incluse dans
+      toute autre relation d'équivalence sur $E$.
+\item Montrer qu'il existe une relation d'équivalence sur $E$ qui contient toute
+      autre relation d'équivalence sur $E$.
+\item Supposons que $E$ est un treillis. Donner tous les diagrammes de Hasse de $E$
+      (à isomorphisme près).
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~14 — barème : 11 points. Cet exercice est reposé à l'identique dans plusieurs sujets de M'Sila (2015 et 2016).}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°15}{alg:msila-2016-e15-p2}
+Soit $E = \{a, b, c\}$ et $\delta$ la relation définie sur $E$ par la matrice
+$$
+\begin{pmatrix}1&0&1\\0&1&1\\0&0&1\end{pmatrix},
+$$
+les lignes et les colonnes étant indexées par $a, b, c$ dans cet ordre.
+\begin{enumerate}
+\item Montrer que $\delta$ est une relation d'ordre.
+\item Donner la dimension de $\delta$.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~15 — barème : 3 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°15}{alg:msila-2016-e15-p3}
+\begin{enumerate}
+\item Montrer que dans un treillis $T$ on a
+      $$
+      \begin{cases} x \wedge y = x \wedge z \\ x \vee y = x \vee z \end{cases}
+      \Longrightarrow y = z
+      $$
+      si et seulement si $T$ est distributif.
+\item Montrer que l'image d'un treillis distributif par un morphisme de treillis est
+      un treillis distributif.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~15 — barème : 6 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°16}{alg:msila-2016-e16-p1}
+Soit $(X, \le)$ un ensemble ordonné, et $E$ une famille de sous-ensembles de $X$
+(i.e. $E \subseteq \mathcal{P}(X)$). La relation $\mathfrak{R}$ est définie sur $E$
+par :
+$$
+A\,\mathfrak{R}\,B \ \text{ssi} \
+\begin{cases}
+\text{pour tout } a \in A \text{ il existe } b \in B \text{ tel que } a \le b, \\
+\text{pour tout } b \in B \text{ il existe } a \in A \text{ tel que } a \le b.
+\end{cases}
+$$
+Est-elle réflexive ? symétrique ? antisymétrique ? transitive ?
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~16 — barème : 6 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°16}{alg:msila-2016-e16-p3}
+Soit $E = \{x, y, z, t\}$ et $R$ la relation définie sur $E$ par la matrice
+$$
+\begin{pmatrix}1&1&1&1\\0&1&0&1\\0&0&1&1\\0&0&0&1\end{pmatrix},
+$$
+les lignes et les colonnes étant indexées par $x, y, z, t$ dans cet ordre.
+\begin{enumerate}
+\item Montrer que $R$ est une relation d'ordre.
+\item Donner la dimension de $R$.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~16 — barème : 4 points.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Mohamed Seddik Benyahia --- Jijel}
+%% ===================================================================
+
+\begin{problem}{(Jijel) — Épreuve N°03}{alg:jijel-2019-e3-p2}
+Soit $A = \{a_1, -a_2\}$ et $E = \{p_1, -p_2\}$ deux alphabets. On donne une
+identité de fonctions génératrices reliant les fonctions symétriques complètes
+$h_n$ des alphabets $A$ et $E$ à des séries rationnelles en $z$.
+\begin{enumerate}
+\item Déterminer la fonction génératrice de $\displaystyle\sum_{n \ge 0} F_{n+1} P_n z^n$.
+\item Déterminer la fonction génératrice de $\displaystyle\sum_{n \ge 0} F_{n+2} F_n z^n$.
+\item Montrer que
+      $\displaystyle\sum_{n \ge 0} F_{n+1} F_n z^n = \frac{z}{1 - 2z - 2z^2 + z^3}$,
+      sachant que
+      $\displaystyle\sum_{n \ge 0} F_n^2 z^n = \frac{1 - z}{1 - 2z - 2z^2 + z^3}$.
+\item Montrer que
+      $\displaystyle\sum_{n \ge 0} F_{n+1} U_n(x) z^n = \frac{1 + 2xz}{1 - 2xz + (3 - 4x^2)z^2 + 4xz^3 + z^4}$,
+      où $x = p_1 - p_2$, sachant que
+      $\displaystyle\sum_{n \ge 0} F_n U_n(x) z^n = \frac{1 - xz}{1 - 2xz + (3 - 4x^2)z^2 + 4xz^3 + z^4}$.
+\item Montrer que
+      $\displaystyle\sum_{n \ge 0} F_n T_n(x) z^n = \frac{1 - xz + (1 - 2x^2)z^2}{1 - 2xz + (3 - 4x^2)z^2 + 2xz^3 + z^4}$.
+\end{enumerate}
+\textbf{Remarque :}
+\begin{itemize}
+\item la suite $(F_n)_{n \in \mathbb{N}}$ est donnée par $F_n = F_{n-1} + F_{n-2}$,
+      $F_0 = 1$, $F_1 = 1$ ;
+\item la suite $(P_n)_{n \in \mathbb{N}}$ est donnée par $P_n = 2P_{n-1} + P_{n-2}$,
+      $P_0 = 0$, $P_1 = 1$ ;
+\item la fonction génératrice d'une suite $(a_n)_{n \in \mathbb{N}}$ est
+      $g(z) = \sum_{n \ge 0} a_n z^n$ ;
+\item $T_n$ et $U_n$ sont respectivement les polynômes de Tchebychev de première et
+      de seconde espèce.
+\end{itemize}
+
+\source{\emph{\small Université Mohamed Seddik Benyahia - Jijel, 2019, Épreuve~n\textsuperscript{o}~03 — barème : 6,5 points. Avertissement : le scan d'origine est de très mauvaise qualité ; l'identité introductive et les fractions des questions~3 à~5 doivent être recoupées avec le sujet papier.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Jijel) — Épreuve N°03}{alg:jijel-2019-e3-p3}
+Pour tous entiers naturels $n, r$ et $p$, les hyper-sommes de puissances d'entiers
+notées $S_{p,(a,b)}^{(r)}(n)$ sont définies par la relation de récurrence
+$$
+S_{p,(a,b)}^{(r)}(n) = \sum_{k=0}^{n} S_{p,(a,b)}^{(r-1)}(k)
+= \sum_{k=0}^{n} \binom{n + r - k}{r} (a + kb)^p, \quad n, r, p \ge 1,
+$$
+où
+$S_{0,(a,b)}^{(r)}(n) = \sum_{k=0}^{n} \binom{n + r - k}{r} = \binom{n + r + 1}{r + 1}$
+et $S_{p,(a,b)}^{(0)}(n) = \sum_{k=0}^{n} (a + kb)^p$. On note
+$\binom{n}{k} = \dfrac{n!}{k!(n-k)!}$ le coefficient binomial.
+\begin{enumerate}
+\item Calculer la fonction génératrice exponentielle de $S_{p,(a,b)}^{(r)}(n)$ en $p$.
+\item Si $r \equiv -1 \bmod n$, montrer que
+      $S_{0,(a,b)}^{(r-1)}(n) \equiv (i + 1) \bmod n$ où $0 \le i \le n - 1$.
+\item Montrer que pour tout nombre premier $n \ge 2$ et tout $p > 0$ on a
+      $$
+      S_{p,(a,b)}^{(r)}(n) \equiv (i + 2)\,a^p \bmod n
+      \ \text{ si } \ r \equiv -1 \bmod n, \ \text{ où } \ 0 \le i \le n - 1.
+      $$
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Seddik Benyahia - Jijel, 2019, Épreuve~n\textsuperscript{o}~03 — barème : 6,5 points. Avertissement : le texte d'origine est très pâle ; les conditions des questions~2 et~3 (l'indice $i$ et les membres de droite des congruences) doivent être recoupées avec le sujet papier.}}
+\end{problem}
