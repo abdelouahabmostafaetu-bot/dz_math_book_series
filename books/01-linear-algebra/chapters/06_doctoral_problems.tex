@@ -74,3 +74,32 @@ diagonalisable with $u\circ v=v\circ u$.
 \end{enumerate}
 \source{Classical; source to be verified.}
 \end{problem}
+
+\begin{problem}{Anti-symmetric endomorphism on $\R^{3}$}{antisymmetric-r3}
+Let $E=\R^{3}$ with its canonical basis $\mathcal{B}=\{e_1,e_2,e_3\}$ and the
+standard inner product: for all $x=(x_1,x_2,x_3)$ and $y=(y_1,y_2,y_3)$ in $E$,
+$\langle x,y\rangle = x_1 y_1 + x_2 y_2 + x_3 y_3$.
+
+Let $u$ be a non-zero endomorphism of $E$ such that
+$\langle u(x),x\rangle=0$ for all $x\in E$.
+\begin{enumerate}
+  \item Show that for all $(x,y)\in E^{2}$,
+        $\langle u(x),y\rangle = -\langle x,u(y)\rangle$.
+        \emph{Hint:} use $z=x+y$ and compute $\langle u(z),z\rangle$.
+  \item \begin{enumerate}
+          \item Show that $0$ is the only possible real eigenvalue of $u$.
+          \item Let $P_u(X)$ be the characteristic polynomial of $u$. What is
+                its degree? Why must it have at least one real root? Deduce that
+                $P_u(X)=X\,R(X)$ where $R(X)$ is a degree-$2$ polynomial with
+                no real roots.
+          \item Show that $\ker(u)$ has dimension $1$. What is
+                $\dim\Img(u)$?
+        \end{enumerate}
+  \item \begin{enumerate}
+          \item Show that if $x\in\ker(u)$ and $y\in\Img(u)$ then
+                $\langle x,y\rangle=0$.
+          \item Deduce that $E=\ker(u)\oplus\Img(u)$.
+        \end{enumerate}
+\end{enumerate}
+\source{USTHB, 2026, \'Epreuve~n\textsuperscript{o}~02.}
+\end{problem}
