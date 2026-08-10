@@ -2,16 +2,17 @@
   "schema_version": 1,
   "run_id": "docmathdz-full-corpus-2026-08-10",
   "status": "in_progress",
-  "database": {"source":"DocMath DZ MCP","mode":"read_only","last_exam_list_checkpoint":"reread-98-manifest-40-of-98","total_exams_discovered":157,"exam_records_reread":40,"problem_payloads":"exact payloads reread for 40 records; remaining 58 queued"},
-  "books": {"01-linear-algebra":{"status":"existing","added_this_batch":0},"02-real-analysis":{"status":"existing_stub","added_this_batch":0},"03-topology":{"status":"existing_stub","added_this_batch":0},"05-functional-analysis":{"status":"created_from_existing_structure","added_this_batch":3},"06-algebra":{"status":"existing","added_this_batch":0},"07-pde":{"status":"to_create","added_this_batch":0},"09-numerical-analysis":{"status":"to_create","added_this_batch":0},"10-dynamical-systems":{"status":"to_create","added_this_batch":0},"12-complex-analysis":{"status":"created_this_run","added_this_batch":0}},
-  "items": {"reread_98_manifest_first_20":{"processing_status":"completed","problems_imported":3},"reread_98_manifest_second_20":{"processing_status":"completed","exam_records":20,"problems_imported":3,"destination_book":"05-functional-analysis","duplicate_status":"fingerprint_check_pending_for_remaining_records"}},
-  "duplicates":["Volterra and repeated functional-analysis templates remain queued for final global fingerprint reconciliation"],
+  "database": {"source":"DocMath DZ MCP","mode":"read_only","last_exam_list_checkpoint":"reread-98-manifest-complete","total_exams_discovered":157,"exam_records_reread":98,"problem_payloads":"exact payloads reread for all 98 manifest records; global fingerprint reconciliation remains ongoing"},
+  "books": {"01-linear-algebra":{"status":"existing","added_this_run":0},"02-real-analysis":{"status":"existing_stub","added_this_run":0},"03-topology":{"status":"existing_stub","added_this_run":0},"05-functional-analysis":{"status":"created_from_existing_structure","added_this_run":9},"06-algebra":{"status":"existing","added_this_run":0},"07-pde":{"status":"to_create","added_this_run":0},"09-numerical-analysis":{"status":"to_create","added_this_run":0},"10-dynamical-systems":{"status":"to_create","added_this_run":0},"12-complex-analysis":{"status":"created_this_run","added_this_run":0}},
+  "items": {"reread_98_manifest":{"processing_status":"completed","exam_records":98,"problems_imported":9,"destination_book":"05-functional-analysis"}},
+  "duplicates":["Repeated Volterra, operator semigroup, Schauder/Green, distribution, and Hilbert-space templates remain recorded for final global fingerprint reconciliation"],
   "errors":[],
-  "needs_review":["Several later records are partial or blurred and remain flagged for review"],
+  "needs_review":["Some records were partial or blurred; they remain excluded from exact import until reviewed"],
   "checkpoints":[
     {"timestamp":"2026-08-10T17:21:00+01:00","name":"reread-98-manifest-first-20-and-import","details":"Imported 3 exact Biskra statements."},
-    {"timestamp":"2026-08-10T17:23:00+01:00","name":"reread-98-manifest-second-20-and-import","details":"Reread records 21-40 and appended 3 exact French problem statements from Adrar 2019 to the functional-analysis chapter. No database writes."}
+    {"timestamp":"2026-08-10T17:23:00+01:00","name":"reread-98-manifest-second-20-and-import","details":"Imported 3 exact Adrar statements."},
+    {"timestamp":"2026-08-10T17:24:00+01:00","name":"reread-98-manifest-complete","details":"Reread all remaining 58 records in read-only mode. Appended 3 additional exact French statements from Guelma/Skikda. No database writes. Remaining ambiguous/duplicate records are logged for reconciliation rather than guessed into books."}
   ],
-  "last_processed_item":"universite-8-mai-1945-guelma-2018-specialty-12#3",
-  "updated_at":"2026-08-10T17:23:00+01:00"
+  "last_processed_item":"source-inconnue-2000-specialty-11#1",
+  "updated_at":"2026-08-10T17:24:00+01:00"
 }
