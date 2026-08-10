@@ -5,25 +5,53 @@
   "database": {
     "source": "DocMath DZ MCP",
     "mode": "read_only",
-    "last_exam_list_checkpoint": null,
+    "last_exam_list_checkpoint": "small-specialties-2026-08-10",
     "total_exams_discovered": null,
-    "total_problems_discovered": null
+    "total_problems_discovered": 25
   },
   "books": {
-    "01-linear-algebra": {"status": "existing", "problems_imported_before_run": 2},
-    "06-algebra": {"status": "created_in_previous_run", "problems_imported_before_run": 50}
+    "01-linear-algebra": {"status": "existing", "new_problems_this_run": 2},
+    "02-real-analysis": {"status": "existing_stub", "new_problems_this_run": 1},
+    "03-topology": {"status": "existing_stub", "new_problems_this_run": 1},
+    "05-functional-analysis": {"status": "existing_stub", "new_problems_this_run": 3},
+    "06-algebra": {"status": "existing", "new_problems_this_run": 1},
+    "07-pde": {"status": "to_create", "new_problems_this_run": 2},
+    "09-numerical-analysis": {"status": "to_create", "new_problems_this_run": 2},
+    "10-dynamical-systems": {"status": "to_create", "new_problems_this_run": 5},
+    "12-complex-analysis": {"status": "to_create", "new_problems_this_run": 6}
   },
-  "items": {},
-  "duplicates": [],
+  "items": {
+    "universite-djilali-liabes-sidi-bel-abbes-2026-specialty-12347#1": {"processing_status":"completed","classification":"dynamical-systems","destination_book":"10-dynamical-systems","duplicate_status":"unique","normalized_fingerprint":"systemes-lineaires-plans-classification-stabilite"},
+    "universite-djilali-liabes-sidi-bel-abbes-2026-specialty-12347#2": {"processing_status":"completed","classification":"dynamical-systems","destination_book":"10-dynamical-systems","duplicate_status":"unique","normalized_fingerprint":"dynamique-hote-parasitoide-lotka-volterra"},
+    "universite-djilali-liabes-sidi-bel-abbes-2026-specialty-12347#3": {"processing_status":"completed","classification":"dynamical-systems","destination_book":"10-dynamical-systems","duplicate_status":"unique","normalized_fingerprint":"modele-seir-delai-incubation"},
+    "universite-djillali-liabes-sidi-bel-abbes-2021-specialty-1#1": {"processing_status":"completed","classification":"dynamical-systems","destination_book":"10-dynamical-systems","duplicate_status":"unique","normalized_fingerprint":"modele-epidemique-sis-population-constante"},
+    "universite-djilali-liabes-sidi-bel-abbes-2021-specialty-03#1": {"processing_status":"completed","classification":"dynamical-systems","destination_book":"10-dynamical-systems","duplicate_status":"duplicate","normalized_fingerprint":"modele-epidemique-sis-population-constante","duplicate_of":"universite-djillali-liabes-sidi-bel-abbes-2021-specialty-1#1"},
+    "universite-djilali-liabes-sidi-bel-abbes-2021-specialty-03#2": {"processing_status":"completed","classification":"pde","destination_book":"07-pde","duplicate_status":"unique","normalized_fingerprint":"schema-gear-equation-chaleur-stabilite"},
+    "universite-abdelhamid-ibn-badis-mostaganem-2025-specialty-01#1": {"processing_status":"completed","classification":"complex-analysis","destination_book":"12-complex-analysis","duplicate_status":"unique","normalized_fingerprint":"integrale-ellipse-poles-doubles"},
+    "universite-abdelhamid-ibn-badis-mostaganem-2025-specialty-01#2": {"processing_status":"completed","classification":"complex-analysis","destination_book":"12-complex-analysis","duplicate_status":"unique","normalized_fingerprint":"formule-integrale-noyau-poisson"},
+    "universite-abdelhamid-ibn-badis-mostaganem-2025-specialty-01#3": {"processing_status":"completed","classification":"complex-analysis","destination_book":"12-complex-analysis","duplicate_status":"unique","normalized_fingerprint":"mittag-leffler-cos-sin-pi"},
+    "universite-mohamed-cherif-messaadia-de-souk-ahras-2025-specialty-01#1": {"processing_status":"completed","classification":"complex-analysis","destination_book":"12-complex-analysis","duplicate_status":"unique","normalized_fingerprint":"edo-complexe-serie-entiere"},
+    "universite-mohamed-cherif-messaadia-de-souk-ahras-2025-specialty-01#2": {"processing_status":"completed","classification":"complex-analysis","destination_book":"12-complex-analysis","duplicate_status":"unique","normalized_fingerprint":"integrale-contour-conjuguee"},
+    "universite-mohamed-cherif-messaadia-de-souk-ahras-2025-specialty-01#3": {"processing_status":"completed","classification":"complex-analysis","destination_book":"12-complex-analysis","duplicate_status":"unique","normalized_fingerprint":"fonctions-harmoniques-holomorphes"},
+    "2026-specialty-01#1": {"processing_status":"completed","classification":"functional-analysis","destination_book":"05-functional-analysis","duplicate_status":"unique","normalized_fingerprint":"noyaux-operateur-nilpotence-espace-complet"},
+    "2026-specialty-01#2": {"processing_status":"completed","classification":"algebra","destination_book":"06-algebra","duplicate_status":"unique","normalized_fingerprint":"corps-quadratique-classe-ideaux"},
+    "2026-specialty-01#3": {"processing_status":"completed","classification":"topology","destination_book":"03-topology","duplicate_status":"unique","normalized_fingerprint":"theoreme-point-fixe-brouwer-disque"},
+    "nhsm-2026-specialty-01#1": {"processing_status":"completed","classification":"numerical-analysis","destination_book":"09-numerical-analysis","duplicate_status":"unique","normalized_fingerprint":"optimisation-quadratique-contrainte-lineaire"},
+    "nhsm-2026-specialty-01#2": {"processing_status":"completed","classification":"algebra","destination_book":"06-algebra","duplicate_status":"unique","normalized_fingerprint":"vrai-faux-algebre-groupes-anneaux"},
+    "nhsm-2026-specialty-01#3": {"processing_status":"completed","classification":"linear-algebra","destination_book":"01-linear-algebra","duplicate_status":"unique","normalized_fingerprint":"endomorphisme-n-valeurs-propres-base-cyclique"},
+    "universite-yahia-fares-de-medea-2012-specialty-2#1": {"processing_status":"completed","classification":"numerical-analysis","destination_book":"09-numerical-analysis","duplicate_status":"unique","normalized_fingerprint":"gradient-systeme-lineaire-iteration"},
+    "universite-yahia-fares-de-medea-2012-specialty-2#2": {"processing_status":"completed","classification":"pde","destination_book":"07-pde","duplicate_status":"unique","normalized_fingerprint":"schema-differences-finies-equation-parabolique"},
+    "universite-yahia-fares-de-medea-2012-specialty-3#1": {"processing_status":"completed","classification":"linear-algebra","destination_book":"01-linear-algebra","duplicate_status":"unique","normalized_fingerprint":"norme-l1-norme-application-lineaire"},
+    "universite-yahia-fares-de-medea-2012-specialty-3#2": {"processing_status":"completed","classification":"real-analysis","destination_book":"02-real-analysis","duplicate_status":"unique","normalized_fingerprint":"epigraphe-fonction-convexe-composition"},
+    "universite-yahia-fares-de-medea-2012-specialty-3#3": {"processing_status":"completed","classification":"functional-analysis","destination_book":"05-functional-analysis","duplicate_status":"unique","normalized_fingerprint":"extension-fonctions-espace-banach"},
+    "universite-yahia-fares-de-medea-2012-specialty-3#4": {"processing_status":"completed","classification":"functional-analysis","destination_book":"05-functional-analysis","duplicate_status":"unique","normalized_fingerprint":"lax-milgram-espace-sobolev-variationnelle"}
+  },
+  "duplicates": ["universite-djilali-liabes-sidi-bel-abbes-2021-specialty-03#1"],
   "errors": [],
   "needs_review": [],
   "checkpoints": [
-    {
-      "timestamp": "2026-08-10T16:09:00+01:00",
-      "name": "resume-state-initialized",
-      "details": "Previous routing log records the completed Algebra batch. This file is the resumable state for all subsequent batches."
-    }
+    {"timestamp":"2026-08-10T16:10:00+01:00","name":"small-specialties-read-and-classified","details":"Biomathématiques, Analyse Complexe, Advanced Fundamenta, Advanced Mathematical Modeling and Statistics read-only batches completed."}
   ],
-  "last_processed_item": null,
-  "updated_at": "2026-08-10T16:09:00+01:00"
+  "last_processed_item": "universite-yahia-fares-de-medea-2012-specialty-3#4",
+  "updated_at": "2026-08-10T16:10:00+01:00"
 }
