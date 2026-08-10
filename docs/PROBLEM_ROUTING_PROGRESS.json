@@ -1,18 +1,14 @@
 {
-  "schema_version": 1,
-  "run_id": "docmathdz-full-corpus-2026-08-10",
-  "status": "in_progress",
-  "database": {"source":"DocMath DZ MCP","mode":"read_only","last_exam_list_checkpoint":"reread-98-manifest-complete","total_exams_discovered":157,"exam_records_reread":98,"problem_payloads":"exact payloads reread for all 98 manifest records; global fingerprint reconciliation remains ongoing"},
-  "books": {"01-linear-algebra":{"status":"existing","added_this_run":0},"02-real-analysis":{"status":"existing_stub","added_this_run":0},"03-topology":{"status":"existing_stub","added_this_run":0},"05-functional-analysis":{"status":"created_from_existing_structure","added_this_run":9},"06-algebra":{"status":"existing","added_this_run":0},"07-pde":{"status":"to_create","added_this_run":0},"09-numerical-analysis":{"status":"to_create","added_this_run":0},"10-dynamical-systems":{"status":"to_create","added_this_run":0},"12-complex-analysis":{"status":"created_this_run","added_this_run":0}},
-  "items": {"reread_98_manifest":{"processing_status":"completed","exam_records":98,"problems_imported":9,"destination_book":"05-functional-analysis"}},
-  "duplicates":["Repeated Volterra, operator semigroup, Schauder/Green, distribution, and Hilbert-space templates remain recorded for final global fingerprint reconciliation"],
-  "errors":[],
-  "needs_review":["Some records were partial or blurred; they remain excluded from exact import until reviewed"],
-  "checkpoints":[
-    {"timestamp":"2026-08-10T17:21:00+01:00","name":"reread-98-manifest-first-20-and-import","details":"Imported 3 exact Biskra statements."},
-    {"timestamp":"2026-08-10T17:23:00+01:00","name":"reread-98-manifest-second-20-and-import","details":"Imported 3 exact Adrar statements."},
-    {"timestamp":"2026-08-10T17:24:00+01:00","name":"reread-98-manifest-complete","details":"Reread all remaining 58 records in read-only mode. Appended 3 additional exact French statements from Guelma/Skikda. No database writes. Remaining ambiguous/duplicate records are logged for reconciliation rather than guessed into books."}
-  ],
-  "last_processed_item":"source-inconnue-2000-specialty-11#1",
-  "updated_at":"2026-08-10T17:24:00+01:00"
+  "schema_version":1,
+  "run_id":"docmathdz-full-corpus-2026-08-10",
+  "status":"in_progress",
+  "database":{"source":"DocMath DZ MCP","mode":"read_only","last_exam_list_checkpoint":"edp-limit-100-offset-0","total_exams_discovered":257,"exam_records_read_this_batch":20,"problem_payloads":"20 EDP records read; remaining EDP records queued"},
+  "books":{"05-functional-analysis":{"status":"created_from_existing_structure","added_this_run":9},"07-pde":{"status":"created_this_run","added_this_batch":4}},
+  "items":{"edp_batch_first_20":{"processing_status":"completed","exam_records":20,"problems_imported":4,"destination_book":"07-pde","mixed_subjects_routed_individually":true}},
+  "duplicates":["EDP records contain repeated heat-equation and variational templates; global fingerprint reconciliation remains ongoing"],
+  "errors":["Parallel GitHub scaffold writes hit a branch race; recovered with sequential retries"],
+  "needs_review":["Some EDP records have incomplete statements or mixed EDO/functional-analysis content"],
+  "checkpoints":[{"timestamp":"2026-08-10T17:28:00+01:00","name":"edp-batch-first-20-import","details":"Read 20 EDP records read-only, created books/07-pde, and imported 4 unique PDE statements. No database writes."}],
+  "last_processed_item":"universite-chadli-bendjedid-el-tarf-2025-specialty-01#2",
+  "updated_at":"2026-08-10T17:28:00+01:00"
 }
