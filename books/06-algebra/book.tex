@@ -1,0 +1,64 @@
+%% ===================================================================
+%%  Doc Math DZ Book Series -- Volume 6: Algebra
+%%  Master file. Content lives in chapters/, figures in figures/.
+%%  Build:  latexmk -pdf book.tex   (see .latexmkrc)
+%% ===================================================================
+\documentclass[print]{docmathdz}
+
+%% ---- volume metadata (drives cover, title page and PDF properties) ----
+\dmzset{
+  title    = Algebra,
+  subtitle = Theory, Intuition and Doctoral Entrance Problems,
+  subject  = Algebra,
+  tagline  = Theory \textperiodcentered\ Intuition \textperiodcentered\ Proofs
+             \textperiodcentered\ Examples \textperiodcentered\ PhD Problems
+             \textperiodcentered\ Solutions,
+  author   = Abdelouahab Mostafa,
+  volume   = 6,
+  accent   = dmzblue,
+  edition  = First Edition,
+  year     = 2026,
+}
+
+\addbibresource{references.bib}
+
+\begin{document}
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\markboth{Preface}{Preface}
+
+This volume collects the algebra of the Algerian doctoral entrance examinations:
+groups, rings, fields, modules, Galois theory, algebraic number theory, finite
+fields, order and lattice theory, and the algebraic side of coding and
+cryptography.
+
+The problems are taken verbatim from the papers actually sat at Algerian
+universities, and they are kept in French, the language in which they were
+written. They are grouped by university and ordered by year, so that a reader
+preparing for a particular \emph{concours} can work through the house style of
+that university first.
+
+A warning about the sources is in order. Examination papers are filed by a single
+subject label, and that label is often wrong: a paper labelled \emph{Algèbre} may
+consist entirely of Fourier transforms, or of graph colouring, or of symplectic
+geometry. Each problem in this volume was therefore classified on its own
+mathematical content rather than on the label of the paper it came from. The rule
+used is written down in \texttt{docs/PROBLEM\_ROUTING.md}; problems that turned
+out not to be algebra were sent to the volume where they belong.
+
+\bigskip\noindent\emph{Abdelouahab Mostafa}\\
+\emph{Doc Math DZ}
+
+%% ---------------- main matter ----------------
+\mainmatter
+
+\include{chapters/06_doctoral_problems}
+\include{chapters/07_solutions}
+
+%% ---------------- back matter ----------------
+\backmatter
+\printbibliography[heading=bibintoc,title={References}]
+\printindex
+
+\end{document}
