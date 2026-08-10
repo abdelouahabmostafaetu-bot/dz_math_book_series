@@ -11,28 +11,38 @@ $$\int_\Omega\nabla u\cdot\nabla v\,dxdy+\int_\Omega(\nabla u\cdot F)v\,dxdy=\in
 avec $f\in(L^2(\Omega))^2$, $F\in(L^\infty(\Omega))^2$ et $\operatorname{div}(F)=0$. Montrer que $\nabla u\cdot F=\operatorname{div}(uF)$, que $\int_\Omega u(F\cdot\nabla u)=0$, établir l'existence et l'unicité de $u\in H_0^1(\Omega)$, puis déterminer le problème aux limites satisfait par $u$ lorsque $u\in H^2(\Omega)$ et $\operatorname{div}(f)\in L^2(\Omega)$.
 \source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2026, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
 \newpage
-\begin{problem}{(USTHB) — Épreuve N°01}{pde:usthb-2026-e1-p2}
-Montrer que le problème de minimisation quadratique sous contrainte linéaire
-$$\operatorname{minimize}\quad \frac12x^\top Qx-c^\top x+d,\qquad\operatorname{subject\ to}\quad Ax=b,$$
-où $Q=Q^\top>0$, $A\in\mathbb R^{m\times n}$, $m<n$, $\operatorname{rank}(A)=m$, admet un unique minimiseur global et en déterminer une expression fermée.
-\source{\emph{\small École Nationale Supérieure de Mathématiques (ENSM), 2026, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
-\newpage
-\section{Université Mohamed Boudiaf --- M'Sila}
-\begin{problem}{(M'Sila) — Épreuve N°01}{pde:msila-2025-e1-p1}
-Soit $\Omega$ un ouvert borné de $\mathbb R^2$ de frontière régulière. On considère
-$$\int_\Omega\nabla u\cdot\nabla v+\int_\Omega u(F\cdot\nabla v)=\int_\Omega f\cdot\nabla v,\qquad\forall v\in H_0^1(\Omega),$$
-avec $f\in(L^2(\Omega))^2$, $F\in(L^\infty(\Omega))^2$ et $\operatorname{div}F=0$. Montrer l'existence et l'unicité de $u\in H_0^1(\Omega)$ et, sous $u\in H^2(\Omega)$ et $\operatorname{div}f\in L^2(\Omega)$, déterminer le problème aux limites associé.
-\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2025, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
-\newpage
-\section{Université Chadli Bendjedid --- El Tarf}
-\begin{problem}{(El Tarf) — Épreuve N°01}{pde:eltarf-2025-e1-p1}
-On considère l'équation aux dérivées partielles du second ordre
-$$y^2u_{xx}-e^{2x}u_{yy}=1,\qquad(x,y)\in\mathbb R\times\mathbb R^*.$$
-Déterminer la nature de cette équation et ses courbes caractéristiques.
-\source{\emph{\small Université Chadli Bendjedid - El Tarf, 2025, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
-\newpage
 \begin{problem}{(El Tarf) — Épreuve N°01}{pde:eltarf-2025-e1-p2}
 On considère le problème de la chaleur sur $]0,\pi[$ :
 $$\begin{cases}u_t-u_{xx}=0,\\u(0,t)=u(\pi,t)=0,\\u(x,0)=2\cos\!\bigl(3(x+\tfrac\pi6)\bigr).\end{cases}$$
 Simplifier la donnée initiale et résoudre le problème par séparation des variables.
 \source{\emph{\small Université Chadli Bendjedid - El Tarf, 2025, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+
+\section{Université Mohamed Boudiaf --- M'Sila}
+\begin{problem}{(M'Sila) — Épreuve N°01}{pde:msila-2020-e1-p1}
+Une barre de longueur $L$, initialement à température nulle, est chauffée par une source de chaleur $P$, ses extrémités restant à température nulle. Résoudre
+$$\begin{cases}u_t-\lambda u_{xx}=P,\\u(x,0)=0,\\u(0,t)=u(L,t)=0.\end{cases}$$
+Déterminer la température d'équilibre, réduire à un problème homogène par $w=u-v$, puis résoudre par séparation des variables et calculer les coefficients de Fourier.
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2020, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°03}{pde:msila-2017-e3-p1}
+Considérons l'équation de la chaleur $u_t=u_{xx}$ sur $\mathbb R$ avec donnée initiale $f\in C_b(\mathbb R)$ et noyau
+$$G(x,t)=\frac1{\sqrt{4\pi t}}e^{-x^2/(4t)}.$$
+Montrer que $\int_\mathbb R G(x,t)\,dx=1$, que $u(x,t)=\int f(y)G(x-y,t)\,dy$ conserve la masse pour $f\in L^1$, et que la solution est lisse pour $t>0$. Calculer le cas $f(x)=e^{-x}$ pour $x>0$ et $0$ sinon.
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2017, Épreuve~n\textsuperscript{o}~03.}}\end{problem}
+\newpage
+\begin{problem}{(USTHB) — Épreuve N°04}{pde:usthb-2017-e4-p1}
+Résoudre l'équation des ondes $u_{tt}=u_{xx}$ sur $0<x<\pi$, avec $u(0,t)=u(\pi,t)=0$, $u(x,0)=x^2(\pi-x)$ et $u_t(x,0)=1$, par séries de Fourier. Interpréter le modèle comme les vibrations d'une tige.
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2017, Épreuve~n\textsuperscript{o}~04.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°02}{pde:msila-2016-e2-p2}
+On considère
+$$\begin{cases}u_t-u_{xx}=\sin(5\pi x),\\u(x,0)=0,\\u(0,t)=u(1,t)=0.\end{cases}$$
+Chercher une solution sous la forme $A(t)\sin(5\pi x)$ et démontrer son unicité par la méthode d'énergie.
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°03}{pde:msila-2016-e3-p3}
+Soient $c,\alpha>0$. Pour l'équation des ondes amortie
+$$u_{tt}-c^2u_{xx}+\alpha u_t=0$$
+sur $\mathbb R$, avec données initiales régulières à support compact, montrer que l'énergie $E(t)=\int_{\mathbb R}(u_t^2+c^2u_x^2)\,dx$ décroît et en déduire l'unicité.
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~03.}}\end{problem}
