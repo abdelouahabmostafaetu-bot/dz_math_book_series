@@ -25,27 +25,27 @@
 \begin{document}
 
 %% ---------------- front matter ----------------
-\dmzfrontmatter{%
-  Volumes of the series:\par\medskip
-  \begin{tabular}{@{}r@{\quad}l@{}}
-    1 & Linear Algebra\\
-    2 & Real Analysis\\
-    3 & Topology\\
-    4 & Measure Theory\\
-    5 & Functional Analysis\\
-    6 & Probability Theory\\
-    7 & Group Theory\\
-    8 & Ring Theory\\
-    9 & Field Theory\\
-   10 & Complex Analysis\\
-   11 & Differential Equations\\
-   12 & Dynamical Systems\\
-   13 & Numerical Analysis\\
-   14 & Optimization\\
-   15 & Graph Theory\\
-  \end{tabular}\par\medskip
-  Each volume is devoted to a single subject and can be studied independently.
-}
+% \dmzfrontmatter{%
+%   Volumes of the series:\par\medskip
+%   \begin{tabular}{@{}r@{\quad}l@{}}
+%     1 & Linear Algebra\\
+%     2 & Real Analysis\\
+%     3 & Topology\\
+%     4 & Measure Theory\\
+%     5 & Functional Analysis\\
+%     6 & Probability Theory\\
+%     7 & Group Theory\\
+%     8 & Ring Theory\\
+%     9 & Field Theory\\
+%    10 & Complex Analysis\\
+%    11 & Differential Equations\\
+%    12 & Dynamical Systems\\
+%    13 & Numerical Analysis\\
+%    14 & Optimization\\
+%    15 & Graph Theory\\
+%   \end{tabular}\par\medskip
+%   Each volume is devoted to a single subject and can be studied independently.
+% }
 
 \chapter*{Preface}
 \addcontentsline{toc}{chapter}{Preface}
@@ -69,82 +69,82 @@ routine for a reader meeting it for the first time.
 \bigskip\noindent\emph{Abdelouahab Mostafa}\\
 \emph{Doc Math DZ}
 
-\chapter*{Learning Objectives}
-\addcontentsline{toc}{chapter}{Learning Objectives}
-\markboth{Learning Objectives}{Learning Objectives}
+% \chapter*{Learning Objectives}
+% \addcontentsline{toc}{chapter}{Learning Objectives}
+% \markboth{Learning Objectives}{Learning Objectives}
 
-After working through this volume you should be able to:
+% After working through this volume you should be able to:
 
-\begin{enumerate}
-  \item decide whether a given set with two operations is a vector space, and
-        recognise the standard examples and counter-examples;
-  \item manipulate families of vectors fluently: freeness, generation, bases,
-        dimension, and the exchange arguments behind them;
-  \item compute the rank of a linear map or of a matrix by three independent
-        methods and explain why they agree;
-  \item use the rank--nullity theorem as a counting tool rather than as a formula;
-  \item determine whether an endomorphism is diagonalisable, and diagonalise it
-        explicitly when it is;
-  \item exploit annihilating polynomials, in particular the criterion by split
-        polynomials with simple roots;
-  \item state and apply the spectral theorem for real symmetric matrices;
-  \item solve a complete doctoral entrance problem in linear algebra within the
-        time of an examination.
-\end{enumerate}
+% \begin{enumerate}
+%   \item decide whether a given set with two operations is a vector space, and
+%         recognise the standard examples and counter-examples;
+%   \item manipulate families of vectors fluently: freeness, generation, bases,
+%         dimension, and the exchange arguments behind them;
+%   \item compute the rank of a linear map or of a matrix by three independent
+%         methods and explain why they agree;
+%   \item use the rank--nullity theorem as a counting tool rather than as a formula;
+%   \item determine whether an endomorphism is diagonalisable, and diagonalise it
+%         explicitly when it is;
+%   \item exploit annihilating polynomials, in particular the criterion by split
+%         polynomials with simple roots;
+%   \item state and apply the spectral theorem for real symmetric matrices;
+%   \item solve a complete doctoral entrance problem in linear algebra within the
+%         time of an examination.
+% \end{enumerate}
 
-\chapter*{Roadmap of the Subject}
-\addcontentsline{toc}{chapter}{Roadmap of the Subject}
-\markboth{Roadmap}{Roadmap}
+% \chapter*{Roadmap of the Subject}
+% \addcontentsline{toc}{chapter}{Roadmap of the Subject}
+% \markboth{Roadmap}{Roadmap}
 
-Linear algebra has a very short logical skeleton, and it pays to keep it in view.
+% Linear algebra has a very short logical skeleton, and it pays to keep it in view.
 
-\begin{center}
-\begin{tikzpicture}[
-    node distance=7mm and 10mm,
-    every node/.style={font=\sffamily\small},
-    box/.style={draw=dmzaccent,fill=dmzaccent!5,rounded corners=1.5pt,
-                inner sep=5pt,text width=32mm,align=center},
-    arr/.style={-{Stealth[length=2mm]},draw=dmzsoft}]
-  \node[box] (vs) {Vector spaces};
-  \node[box,below=of vs] (fam) {Families: free, generating, bases};
-  \node[box,below=of fam] (dim) {Dimension};
-  \node[box,right=of dim] (maps) {Linear maps};
-  \node[box,right=of maps] (rank) {Rank and rank--nullity};
-  \node[box,below=of rank] (mat) {Matrices, change of basis};
-  \node[box,below=of mat] (red) {Reduction: eigenvalues, diagonalisation};
-  \node[box,left=of red] (spec) {Spectral theorem};
-  \draw[arr] (vs) -- (fam);
-  \draw[arr] (fam) -- (dim);
-  \draw[arr] (dim) -- (maps);
-  \draw[arr] (maps) -- (rank);
-  \draw[arr] (rank) -- (mat);
-  \draw[arr] (mat) -- (red);
-  \draw[arr] (red) -- (spec);
-\end{tikzpicture}
-\end{center}
+% \begin{center}
+% \begin{tikzpicture}[
+%     node distance=7mm and 10mm,
+%     every node/.style={font=\sffamily\small},
+%     box/.style={draw=dmzaccent,fill=dmzaccent!5,rounded corners=1.5pt,
+%                 inner sep=5pt,text width=32mm,align=center},
+%     arr/.style={-{Stealth[length=2mm]},draw=dmzsoft}]
+%   \node[box] (vs) {Vector spaces};
+%   \node[box,below=of vs] (fam) {Families: free, generating, bases};
+%   \node[box,below=of fam] (dim) {Dimension};
+%   \node[box,right=of dim] (maps) {Linear maps};
+%   \node[box,right=of maps] (rank) {Rank and rank--nullity};
+%   \node[box,below=of rank] (mat) {Matrices, change of basis};
+%   \node[box,below=of mat] (red) {Reduction: eigenvalues, diagonalisation};
+%   \node[box,left=of red] (spec) {Spectral theorem};
+%   \draw[arr] (vs) -- (fam);
+%   \draw[arr] (fam) -- (dim);
+%   \draw[arr] (dim) -- (maps);
+%   \draw[arr] (maps) -- (rank);
+%   \draw[arr] (rank) -- (mat);
+%   \draw[arr] (mat) -- (red);
+%   \draw[arr] (red) -- (spec);
+% \end{tikzpicture}
+% \end{center}
 
-Everything else in the subject is a refinement of one of these eight boxes.
+% Everything else in the subject is a refinement of one of these eight boxes.
 
-\chapter*{Prerequisites}
-\addcontentsline{toc}{chapter}{Prerequisites}
-\markboth{Prerequisites}{Prerequisites}
+% \chapter*{Prerequisites}
+% \addcontentsline{toc}{chapter}{Prerequisites}
+% \markboth{Prerequisites}{Prerequisites}
 
-The reader is assumed to know: elementary set theory and maps (injective,
-surjective, bijective); the notion of a field, with $\Q$, $\R$, $\C$ and
-$\Z/p\Z$ as examples; polynomial arithmetic in $\K[X]$, including division and
-factorisation; and Gaussian elimination on a system of linear equations.
+% The reader is assumed to know: elementary set theory and maps (injective,
+% surjective, bijective); the notion of a field, with $\Q$, $\R$, $\C$ and
+% $\Z/p\Z$ as examples; polynomial arithmetic in $\K[X]$, including division and
+% factorisation; and Gaussian elimination on a system of linear equations.
 
-Nothing from analysis is used, except in a few remarks that are explicitly
-marked as such.
+% Nothing from analysis is used, except in a few remarks that are explicitly
+% marked as such.
 
-%% ---------------- main matter ----------------
+% %% ---------------- main matter ----------------
 \mainmatter
 
-\include{chapters/01_introduction}
-\include{chapters/02_definitions}
-\include{chapters/03_theorems}
-\include{chapters/04_examples}
-\include{chapters/05_summary}
+%\include{chapters/01_introduction}
+%\include{chapters/02_definitions}
+%\include{chapters/03_theorems}
+%\include{chapters/04_examples}
+%\include{chapters/05_summary}
 \include{chapters/06_doctoral_problems}
 \include{chapters/07_solutions}
 

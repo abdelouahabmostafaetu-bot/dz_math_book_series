@@ -5,101 +5,42 @@ The problems below are of the type and difficulty of the linear algebra parts of
 Algerian doctoral entrance examinations: a short statement, no hint, and a
 complete proof expected in twenty to thirty minutes. Full solutions are in
 \cref{ch:solutions}.
+\newpage
 
-\begin{note}[Editorial note on sources]
-The source line of every problem must record the university, the speciality and
-the year of the original examination paper, and must be verified against the
-official paper before publication. Problems whose source has not yet been
-verified are marked \emph{classical} and are stated in their standard form; they
-must never be attributed to a specific university without a verified paper. See
-\texttt{docs/EDITORIAL\_GUIDE.md}.
-\end{note}
-
-\begin{problem}{Idempotent endomorphisms}{idempotent}
-Let $E$ be a $\K$-vector space of finite dimension $n$ and let $u\in\End(E)$
-satisfy $u^{2}=u$.
+\begin{problem}{(USTHB) — Épreuve N°01}{}
+Soit l'ensemble $V = \{M \in \mathcal{M}_2(\mathbb{R}) \;/\; {}^tM = M\}$.
 \begin{enumerate}
-  \item Determine $\spec(u)$, distinguishing the cases $u=0$, $u=\id$ and
-        $u\notin\set{0,\id}$.
-  \item Show that $u$ is diagonalisable and give a matrix of $u$ in a suitable
-        basis.
-  \item Deduce that $\tr u=\rank u$.
-  \item Show that $\id-u$ is a projection and that $\rank u+\rank(\id-u)=n$.
+\item Montrer que $V$ est un sous-espace vectoriel de $\mathcal{M}_2(\mathbb{R})$.
+
+\item Déterminer une base de $V$ ainsi que la dimension de $V$.
+
 \end{enumerate}
-\source{Classical; source to be verified.}
+
+On pose
+$$
+A=\begin{pmatrix}
+1 & 1\\
+0 & 2
+\end{pmatrix}
+$$
+et pour toute matrice $M\in V$, on note
+$$
+f(M)=AM({}^tA).
+$$
+
+\begin{enumerate}
+\setcounter{enumi}{2}
+
+\item Montrer que $f$ est un endomorphisme de $V$.
+
+\item Donner la matrice $B$ associée à $f$ dans la base de $V$ obtenue précédemment.
+
+\item Déterminer le spectre de $f$.
+
+\item L'endomorphisme $f$ est-il diagonalisable sur $\mathbb{R}$ ? Justifier.
+
+\end{enumerate}
+
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB)}
 \end{problem}
 
-\begin{problem}{Nilpotent matrices}{nilpotent}
-Let $A\in\Mat{n}{\C}$ be nilpotent, that is $A^{p}=0$ for some $p\geq1$.
-\begin{enumerate}
-  \item Show that $\spec(A)=\set{0}$ and that the characteristic polynomial of
-        $A$ is $X^{n}$.
-  \item Show that $I_n-A$ is invertible and compute its inverse.
-  \item Show that $\det(I_n+A)=1$ and $\tr(A^{k})=0$ for every $k\geq1$.
-  \item Show that $A$ is diagonalisable if and only if $A=0$.
-\end{enumerate}
-\source{Classical; source to be verified.}
-\end{problem}
-
-\begin{problem}{An endomorphism with $u^{3}=u$}{cubic}
-Let $E$ be a finite-dimensional $\R$-vector space and $u\in\End(E)$ with
-$u^{3}=u$.
-\begin{enumerate}
-  \item Show that $E=\Ker u\oplus\Ker(u-\id)\oplus\Ker(u+\id)$.
-  \item Deduce that $u$ is diagonalisable and describe its possible spectra.
-  \item Show that $\rank u=\dim\Ker(u-\id)+\dim\Ker(u+\id)$.
-  \item Determine all such $u$ when $\dim E=2$, up to similarity.
-\end{enumerate}
-\source{Classical; source to be verified.}
-\end{problem}
-
-\begin{problem}{A trace inequality for positive definite matrices}{trace-inequality}
-Let $A\in\Mat{n}{\R}$ be symmetric positive definite.
-\begin{enumerate}
-  \item Show that $A$ is invertible and that $A^{-1}$ is symmetric positive
-        definite.
-  \item Prove that $\tr(A)\,\tr(A^{-1})\geq n^{2}$.
-  \item Determine the case of equality.
-\end{enumerate}
-\source{Classical; source to be verified.}
-\end{problem}
-
-\begin{problem}{Commuting diagonalisable endomorphisms}{commuting}
-Let $E$ be finite-dimensional over $\C$ and let $u,v\in\End(E)$ be
-diagonalisable with $u\circ v=v\circ u$.
-\begin{enumerate}
-  \item Show that every eigenspace of $u$ is stable under $v$.
-  \item Deduce that $u$ and $v$ are simultaneously diagonalisable.
-  \item Show that $u+v$ and $u\circ v$ are diagonalisable.
-\end{enumerate}
-\source{Classical; source to be verified.}
-\end{problem}
-
-\begin{problem}{Anti-symmetric endomorphism on $\R^{3}$}{antisymmetric-r3}
-Let $E=\R^{3}$ with its canonical basis $\mathcal{B}=\{e_1,e_2,e_3\}$ and the
-standard inner product: for all $x=(x_1,x_2,x_3)$ and $y=(y_1,y_2,y_3)$ in $E$,
-$\langle x,y\rangle = x_1 y_1 + x_2 y_2 + x_3 y_3$.
-
-Let $u$ be a non-zero endomorphism of $E$ such that
-$\langle u(x),x\rangle=0$ for all $x\in E$.
-\begin{enumerate}
-  \item Show that for all $(x,y)\in E^{2}$,
-        $\langle u(x),y\rangle = -\langle x,u(y)\rangle$.
-        \emph{Hint:} use $z=x+y$ and compute $\langle u(z),z\rangle$.
-  \item \begin{enumerate}
-          \item Show that $0$ is the only possible real eigenvalue of $u$.
-          \item Let $P_u(X)$ be the characteristic polynomial of $u$. What is
-                its degree? Why must it have at least one real root? Deduce that
-                $P_u(X)=X\,R(X)$ where $R(X)$ is a degree-$2$ polynomial with
-                no real roots.
-          \item Show that $\ker(u)$ has dimension $1$. What is
-                $\dim\Img(u)$?
-        \end{enumerate}
-  \item \begin{enumerate}
-          \item Show that if $x\in\ker(u)$ and $y\in\Img(u)$ then
-                $\langle x,y\rangle=0$.
-          \item Deduce that $E=\ker(u)\oplus\Img(u)$.
-        \end{enumerate}
-\end{enumerate}
-\source{USTHB, 2026, \'Epreuve~n\textsuperscript{o}~02.}
-\end{problem}
