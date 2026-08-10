@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "run_id": "docmathdz-full-corpus-2026-08-10",
+  "status": "in_progress",
+  "database": {
+    "source": "DocMath DZ MCP",
+    "mode": "read_only",
+    "last_exam_list_checkpoint": null,
+    "total_exams_discovered": null,
+    "total_problems_discovered": null
+  },
+  "books": {
+    "01-linear-algebra": {"status": "existing", "problems_imported_before_run": 2},
+    "06-algebra": {"status": "created_in_previous_run", "problems_imported_before_run": 50}
+  },
+  "items": {},
+  "duplicates": [],
+  "errors": [],
+  "needs_review": [],
+  "checkpoints": [
+    {
+      "timestamp": "2026-08-10T16:09:00+01:00",
+      "name": "resume-state-initialized",
+      "details": "Previous routing log records the completed Algebra batch. This file is the resumable state for all subsequent batches."
+    }
+  ],
+  "last_processed_item": null,
+  "updated_at": "2026-08-10T16:09:00+01:00"
+}
