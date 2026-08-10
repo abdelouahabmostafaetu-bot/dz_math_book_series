@@ -2,38 +2,31 @@
   "schema_version": 1,
   "run_id": "docmathdz-full-corpus-2026-08-10",
   "status": "in_progress",
-  "database": {
-    "source": "DocMath DZ MCP",
-    "mode": "read_only",
-    "last_exam_list_checkpoint": "analyse-fonctionnelle-offset-5",
-    "total_exams_discovered": 157,
-    "total_problems_discovered": 52
-  },
-  "books": {
-    "01-linear-algebra": {"status": "existing", "pending_new": 1},
-    "02-real-analysis": {"status": "existing_stub", "pending_new": 2},
-    "03-topology": {"status": "existing_stub", "pending_new": 1},
-    "05-functional-analysis": {"status": "existing_stub", "pending_new": 17},
-    "06-algebra": {"status": "existing", "pending_new": 1},
-    "07-pde": {"status": "to_create", "pending_new": 2},
-    "09-numerical-analysis": {"status": "to_create", "pending_new": 0},
-    "10-dynamical-systems": {"status": "to_create", "pending_new": 0},
-    "12-complex-analysis": {"status": "created_this_run", "pending_new": 0}
-  },
+  "database": {"source":"DocMath DZ MCP","mode":"read_only","last_exam_list_checkpoint":"analyse-fonctionnelle-offset-9-limit-50","total_exams_discovered":157,"exam_records_read_this_batch":50,"problem_records_read_this_batch":"at least 130; exact deduplicated count pending reconciliation"},
+  "books": {"01-linear-algebra":{"status":"existing","pending_new":"batch classified"},"02-real-analysis":{"status":"existing_stub","pending_new":"batch classified"},"03-topology":{"status":"existing_stub","pending_new":"batch classified"},"05-functional-analysis":{"status":"existing_stub","pending_new":"batch classified"},"06-algebra":{"status":"existing","pending_new":"batch classified"},"07-pde":{"status":"to_create","pending_new":"batch classified"},"09-numerical-analysis":{"status":"to_create","pending_new":0},"10-dynamical-systems":{"status":"to_create","pending_new":"batch classified"},"12-complex-analysis":{"status":"created_this_run","pending_new":0}},
   "items": {
-    "batch_functional_analysis_offset_0": {"processing_status": "read_classified", "problems": 15, "duplicates": 0},
-    "universite-badji-mokhtar-annaba-2025-general-1": {"processing_status": "read_classified", "problems": {"1": "real-analysis", "2": "real-analysis", "3": "algebra"}},
-    "universite-mohamed-khider-biskra-2025-specialty-01": {"processing_status": "read_classified", "problems": {"1": "functional-analysis", "2": "functional-analysis", "3": "functional-analysis"}},
-    "universite-mohamed-boudiaf-m-sila-2025-specialty-01": {"processing_status": "read_classified", "problems": {"1": "functional-analysis", "2": "functional-analysis", "3": "functional-analysis"}},
-    "universite-mohamed-cherif-messaadia-de-souk-ahras-2025-specialty-2": {"processing_status": "read_classified", "problems": {"1": "functional-analysis", "2": "functional-analysis"}}
+    "batch_functional_analysis_offset_0": {"processing_status":"read_classified","problems":15,"duplicates":0},
+    "batch_functional_analysis_offset_5": {"processing_status":"read_classified","problems":12,"duplicates":0},
+    "batch_functional_analysis_offset_9_limit_50": {"processing_status":"read_classified","exam_records":50,"problem_records":"at least 130","duplicates":"several exact/near duplicates detected; canonical reconciliation pending","needs_review":"at least 2 source records contain explicitly incomplete/illegible statements"}
   },
-  "duplicates": [],
-  "errors": [],
-  "needs_review": [],
-  "checkpoints": [
-    {"timestamp": "2026-08-10T17:12:00+01:00", "name": "functional-analysis-batch-read", "details": "Read 5 exams, 15 problems. Classified individually. No database writes."},
-    {"timestamp": "2026-08-10T17:13:00+01:00", "name": "functional-analysis-offset-5-read", "details": "Read 4 new exams, 12 problems. Classified: 8 functional analysis, 2 real analysis, 1 algebra. The overlapping Relizane record was not reread or counted."}
+  "duplicates": [
+    "Repeated Volterra operator problems across El Tarf 2025, Sétif 2022, Chlef 2023, and related records",
+    "Repeated multiplication semigroup problems across Sidi Bel Abbès 2022, Djilali Liabès 2022, and Chlef 2023",
+    "Repeated operator symmetrization and Baire/bidual problems across Chlef and Biskra records",
+    "Repeated Schauder/Green-function boundary-value problems across Béjaïa 2022 and related records"
   ],
-  "last_processed_item": "universite-mohamed-cherif-messaadia-de-souk-ahras-2025-specialty-2#2",
-  "updated_at": "2026-08-10T17:13:00+01:00"
+  "errors": [],
+  "needs_review": [
+    "Tiaret 2022 specialty 11 problem 1: translation semigroup space/formula too blurred",
+    "Tiaret 2022 specialty 11 problem 2: Green kernel and boundary signs partly illegible",
+    "Batna 1 2023 problem 1: supplied solution mismatches the displayed inequality and needs editorial review",
+    "Tlemcen 2023 problem 1: statistical estimation belongs to probability/statistics rather than functional analysis"
+  ],
+  "checkpoints": [
+    {"timestamp":"2026-08-10T17:12:00+01:00","name":"functional-analysis-batch-read","details":"Read 5 exams, 15 problems. No database writes."},
+    {"timestamp":"2026-08-10T17:13:00+01:00","name":"functional-analysis-offset-5-read","details":"Read 4 new exams, 12 problems."},
+    {"timestamp":"2026-08-10T17:14:00+01:00","name":"functional-analysis-offset-9-limit-50-read","details":"Read 50 exam records and their full problem payloads in read-only mode. Classified each problem independently. Repository content import is intentionally deferred until this checkpoint is reconciled and written idempotently."}
+  ],
+  "last_processed_item":"analyse-fonctionnelle-offset-9-limit-50",
+  "updated_at":"2026-08-10T17:14:00+01:00"
 }
