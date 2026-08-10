@@ -7,6 +7,10 @@ complete proof expected in twenty to thirty minutes. Full solutions are in
 \cref{ch:solutions}.
 \newpage
 
+%% ===================================================================
+\section{Université des Sciences et de la Technologie Houari Boumediène (USTHB)}
+%% ===================================================================
+
 \begin{problem}{(USTHB) — Épreuve N°01}{}
 Soit l'ensemble $V = \{M \in \mathcal{M}_2(\mathbb{R}) \;/\; {}^tM = M\}$.
 \begin{enumerate}
@@ -72,4 +76,208 @@ $\langle u(x),x\rangle=0$ pour tout $x\in E$.
 \end{enumerate}
 
 \source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2026, Épreuve~n\textsuperscript{o}~02.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Abdelhafid Boussouf --- Mila}
+%% ===================================================================
+
+\begin{problem}{(Mila) — Épreuve N°22}{la:mila-2023-e22-p2}
+Soit $\mathscr{M}_n(\mathbb{C})$ l'ensemble des matrices carrées d'ordre $n$ à
+coefficients dans $\mathbb{C}$ et soit $GL_n(\mathbb{C})$ le groupe des matrices
+inversibles de $\mathscr{M}_n(\mathbb{C})$. Pour toute matrice
+$M=(a_{pq})_{1\leq p,q\leq n}$, on note $\overline M=(\overline{a_{pq}})_{1\leq p,q\leq n}$
+la matrice conjuguée de $M$. Posons
+$$
+R=\{M\in \mathscr{M}_n(\mathbb{C}) : M\overline M=I_n\}.
+$$
+\begin{enumerate}
+\item Soit $M\in \mathscr{M}_n(\mathbb{C})$ une matrice inversible ; on pose
+      $A=M\overline M^{-1}$. Vérifier que $A\in R$.
+\item Soit $M\in R$. Pour $\alpha\in\mathbb{C}$, on pose
+      $C_\alpha=\alpha M+\overline\alpha I_n$.
+      \begin{enumerate}
+      \item Montrer que $M\overline{C_\alpha}=C_\alpha$.
+      \item Montrer que $\det(C_\alpha)=\alpha^nP_M\!\left(\dfrac{\overline\alpha}{\alpha}\right)$,
+            où $P_M$ est le polynôme caractéristique de $M$.
+      \item En déduire l'existence de $\beta\in\mathbb{C}^*$ tel que $C_\beta$ soit
+            inversible.
+      \item Calculer $C_\beta\overline{C_\beta}^{-1}$.
+      \end{enumerate}
+\item Déduire de ce qui précède que
+      $R=\{P\overline P^{-1} : P\in GL_n(\mathbb{C})\}$.
+\item \begin{enumerate}
+      \item Vérifier que $-I_n\in R$.
+      \item Déterminer l'ensemble $\{P\in GL_n(\mathbb{C}) : P\overline P^{-1}=-I_n\}$.
+      \end{enumerate}
+\end{enumerate}
+
+\source{\emph{\small Université Abdelhafid Boussouf - Mila, 2023, Épreuve~n\textsuperscript{o}~22 — barème : 7 points.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Ferhat Abbas --- Sétif 1}
+%% ===================================================================
+
+\begin{problem}{(Sétif 1) — Épreuve commune}{la:setif1-2022-p1}
+Soient $E$ un espace vectoriel et $u, v, f, g$ quatre endomorphismes de $E$ qui
+deux à deux commutent, et vérifient $u \circ f + v \circ g = \mathrm{Id}_E$.
+\begin{enumerate}
+\item Montrer que $\mathrm{Ker}\,f \cap \mathrm{Ker}\,g = \{0\}$ et
+      $E = \mathrm{Im}\,f + \mathrm{Im}\,g$.
+\item Montrer que
+      $\mathrm{Ker}(f \circ g) = \mathrm{Ker}\,f \oplus \mathrm{Ker}\,g$ et
+      $\mathrm{Im}(f \circ g) = \mathrm{Im}\,f \cap \mathrm{Im}\,g$.
+\item On suppose de plus que $f \circ g = 0$. Montrer que
+      $E = \mathrm{Ker}\,f \oplus \mathrm{Ker}\,g = \mathrm{Im}\,f \oplus \mathrm{Im}\,g$,
+      $\mathrm{Ker}\,f = \mathrm{Im}\,g$ et $\mathrm{Ker}\,g = \mathrm{Im}\,f$.
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2022, épreuve commune.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Sétif 1) — Épreuve commune}{la:setif1-2022-p2}
+Soient $a, b \in \mathbb{R}$ tels que $|a| \neq |b|$. On considère la matrice carrée
+de taille $2n$ suivante :
+$$
+A = \begin{pmatrix}
+a & b & a & b & \cdots \\
+b & a & b & a & \cdots \\
+a & b & a & b & \cdots \\
+b & a & b & a & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \ddots
+\end{pmatrix}
+$$
+\begin{enumerate}
+\item Calculer le rang de $A$. En déduire que si $n > 1$, alors $0$ est une valeur
+      propre de $A$, et déterminer la dimension du sous-espace propre associé.
+\item Déterminer deux vecteurs propres associés à deux autres valeurs propres. En
+      déduire que $A$ est diagonalisable.
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2022, épreuve commune.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(Sétif 1) — Épreuve commune}{la:setif1-2022-p3}
+Notons $\mathbb{R}[X]_d$ l'espace vectoriel des applications polynomiales de degré
+inférieur ou égal à $d$. Dans ce qui suit les coordonnées seront relatives à la
+base canonique $B_d$ de $\mathbb{R}[X]_d$.
+\begin{enumerate}
+\item Soit $f$ l'application de $\mathbb{R}[X]_4$ dans $\mathbb{R}[X]_3$ qui à une
+      application polynomiale $P$ associe sa dérivée $P'$.
+      \begin{enumerate}
+      \item Prouver que l'application $f$ est linéaire.
+      \item Donner la matrice de $f$ dans les bases $B_4$ et $B_3$.
+      \end{enumerate}
+\item Soit $g$ l'application linéaire de $\mathbb{R}[X]_3$ dans $\mathbb{R}[X]_4$
+      définie par $g(P) = XP$. Donner la matrice de $g$ dans les bases $B_3$ et
+      $B_4$.
+\item Donner la matrice de $g \circ f$ dans la base $B_4$.
+\item Soit $\lambda \in \mathbb{R}$. Discuter suivant la valeur de $\lambda$ la
+      dimension du noyau de l'application linéaire
+      $g \circ f - \lambda \, \mathrm{Id}_{\mathbb{R}[X]_4}$.
+\end{enumerate}
+
+\source{\emph{\small Université Ferhat Abbas - Sétif 1, 2022, épreuve commune.}}
+\end{problem}
+
+\newpage
+
+%% ===================================================================
+\section{Université Mohamed Boudiaf --- M'Sila}
+%% ===================================================================
+
+\begin{problem}{(M'Sila) — Épreuve N°34}{la:msila-2015-e34-p3}
+\begin{enumerate}
+\item Énoncer trois conditions nécessaires et suffisantes pour qu'une matrice carrée
+      soit diagonalisable.
+\item Expliquer sans calcul pourquoi la matrice
+      $\begin{pmatrix}\pi&1&2\\0&\pi&0\\0&0&\pi\end{pmatrix}$
+      n'est pas diagonalisable.
+\item Soit $A\in M_3(\mathbb{R})$ telle que $A^4=A^2$ et admettant $1$ et $-1$ parmi
+      ses valeurs propres. Montrer que $A$ est diagonalisable.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~34 — barème : 8 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°11}{la:msila-2016-e11-p1}
+Soit $n \in \mathbb{N}^*$, $E = \mathscr{M}_n(\mathbb{R})$ et $(a, b)$ dans
+$\mathbb{R}^2$.
+\begin{enumerate}
+\item Montrer que $\mathscr{S}_n(\mathbb{R})$ (respectivement
+      $\mathscr{A}_n(\mathbb{R})$), l'ensemble des matrices symétriques
+      (respectivement antisymétriques) de $E$, est un sous-espace vectoriel de $E$.
+\item Calculer les dimensions de $\mathscr{S}_n(\mathbb{R})$ et
+      $\mathscr{A}_n(\mathbb{R})$.
+\item Soit l'endomorphisme $u \in L(E)$ qui, à toute matrice $M \in E$, associe
+      $u(M) = aM + b\,{}^tM$.
+      \begin{enumerate}
+      \item Montrer que $u$ est diagonalisable.
+      \item Déterminer $\mathrm{tr}(u)$ et $\det(u)$.
+      \end{enumerate}
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~11.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°11}{la:msila-2016-e11-p2}
+Soit $A = \begin{pmatrix} a_1 & a_2 \\ a_3 & a_4 \end{pmatrix}$ une matrice de
+$\mathscr{M}_2(\mathbb{R})$. On considère l'application $q$ telle que
+$$
+q(A) = \det(A) - \tfrac{1}{4}\big(\mathrm{tr}(A)\big)^2.
+$$
+\begin{enumerate}
+\item Montrer que $q$ est une forme quadratique dégénérée. Quelle est sa signature ?
+\item Exprimer $q$ à l'aide de $\mathrm{tr}(A)$ et $\big(\mathrm{tr}(A)\big)^2$.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~11.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°12}{la:msila-2016-e12-p3}
+\begin{enumerate}
+\item Soit $A$ une matrice carrée d'ordre $n$ inversible, différente de la matrice
+      identité $I_n$ et telle que $A = A^{-1}$. Quel est le polynôme minimal de $A$ ?
+      Est-elle diagonalisable ? Donner en fonction de $A$ et $I_n$ l'expression de
+      $A^p$ pour tout $p$, puis celle de $e^A$.
+\item Qu'est-ce qu'une matrice hermitienne ? Montrer que le déterminant d'une matrice
+      hermitienne est réel.
+\item Qu'est-ce qu'une matrice orthogonale ? Montrer que si $A$ est orthogonale,
+      alors $\det(A) = \pm 1$.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~12 — barème : 8 points.}}
+\end{problem}
+
+\newpage
+
+\begin{problem}{(M'Sila) — Épreuve N°13}{la:msila-2016-e13-p3}
+\begin{enumerate}
+\item Qu'est-ce qu'une matrice nilpotente ? Énoncer la caractérisation au moyen du
+      polynôme caractéristique et également au moyen du polynôme minimal.
+\item Montrer que si $N = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$ vérifie
+      $N^2 = 0$ et $N \ne 0$, alors $N$ est semblable à
+      $J_2(0) = \begin{pmatrix} 0 & 1 \\ 0 & 0 \end{pmatrix}$.
+\item En déduire que les matrices nilpotentes d'ordre $2$ sont les matrices
+      $\begin{pmatrix} -a & b \\ c & a \end{pmatrix}$ de déterminant nul.
+\item Soit $A$ une matrice d'ordre $n$ nilpotente. Montrer que $A$ est semblable à
+      une matrice triangulaire supérieure stricte.
+\end{enumerate}
+
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~13 — barème : 8 points.}}
 \end{problem}
