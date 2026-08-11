@@ -121,6 +121,33 @@ où $c(x)=\mathbf{1}_{[1-\varepsilon,\,1]}(x)$ et $\varepsilon>0$ est tel que $0
 \begin{enumerate}\item Réécrire ce système sous la forme $y'(t)=Ay(t)$, $z(t)=Cy(t)$.\item Préciser l'espace d'état $Y$ et l'espace de sorties $Z$.\item Montrer que $A$ est un opérateur spectral de Riesz. En déduire que $A$ engendre un $C_0$-semi-groupe $S(t)$ sur $Y$. Donner l'expression de ce semi-groupe.\item Montrer que $C\in\mathcal{L}(Y,Z)$.\item Étudier l'observabilité approchée du système.\end{enumerate}
 \source{\emph{\small Université Batna 1 - Hadj Lakhdar, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
 \newpage
+\begin{problem}{(Batna 1) — Épreuve N°01}{fa:batna1-2013-e1-p1}
+Soit $c>0$. On considère le problème de Cauchy suivant
+$$\begin{cases}\partial_t^2u(t,x)-c^2\Delta_xu(t,x)=0 & \text{si } (t,x)\in\,]0,\infty[\times\mathbb{R}^d,\\ u(0,x)=f(x),\quad\partial_tu(0,x)=g(x) & \text{si } x\in\mathbb{R}^d.\end{cases}\tag{1}$$
+Supposons que $f,g\in\mathcal{S}(\mathbb{R}^d,\mathbb{C})$.
+\begin{enumerate}\item En utilisant la transformée de Fourier partielle par rapport à $x$, prouver que le problème (1) admet une unique solution $u$, donnée par
+$$\hat{u}(t,\xi)=\hat{f}(\xi)\cos(c|\xi|t)+\hat{g}(\xi)\,\frac{\sin(c|\xi|t)}{c|\xi|},\qquad t\in[0,+\infty[,\ \xi\in\mathbb{R}^d\setminus\{0\}.\tag{2}$$
+\item Déduire que $u\in C^\infty([0,\infty[\times\mathbb{R}^d)$.\item Prouver que pour tout $\xi\in\mathbb{R}^d$, la solution (2) vérifie
+$$(\Re(\partial_t\hat{u}))^2+c^2|\xi|^2(\Re(\hat{u}))^2=(\Re(\hat{g}))^2+c^2|\xi|^2(\Re(\hat{f}))^2,$$
+$$(\Im(\partial_t\hat{u}))^2+c^2|\xi|^2(\Im(\hat{u}))^2=(\Im(\hat{g}))^2+c^2|\xi|^2(\Im(\hat{f}))^2.$$
+\item Soit $s\in\mathbb{R}$. Prouver que pour tout $t\in[0,\infty[$ :
+$$\|\partial_tu(t)\|_{H^s}^2+c^2\|\nabla_xu(t)\|_{H^s}^2\leq\|g\|_{H^s}^2+c^2\|\nabla_xf\|_{H^s}^2.$$\end{enumerate}
+Notations : $\Delta_x=\sum_{i=1}^{d}\frac{\partial^2}{\partial x_i^2}$ ; $\Re$ : partie réelle ; $\Im$ : partie imaginaire ; $\mathcal{F}$ : la transformée de Fourier ; $|\cdot|$ : la norme euclidienne.
+\source{\emph{\small Université Batna 1 - Hadj Lakhdar, 2013, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(Batna 1) — Épreuve N°01}{fa:batna1-2013-e1-p2}
+\begin{enumerate}\item Soit $u\in L^\infty(\mathbb{R})$ et continue en $0$. Prouver que
+$$\lim_{n\to\infty}\int_{\mathbb{R}}u(x)\left(\frac{n}{2\pi}\right)^{1/2}e^{-\frac{nx^2}{2}}\,dx=u(0).$$
+Indication : supposer que $u(0)=0$ et utiliser la continuité de $u$ en $0$ pour découper l'intégrale en deux, l'une portant sur un voisinage de $0$, et l'autre sur l'extérieur de ce voisinage.
+\item Soit $\xi\in\mathbb{R}$, on note $(1+|\xi|^2)^{1/2}$ par $\langle\xi\rangle$. On considère une fonction $f\in L^2(\mathbb{R})$, $f\geq0$, telle que $\langle\xi\rangle^{-1}f\notin L^1(\mathbb{R})$. On pose
+$$u=\mathcal{F}^{-1}\left(\langle\xi\rangle^{-1}f\right),$$
+où $\mathcal{F}$ désigne l'opérateur de Fourier au sens des distributions tempérées.
+\begin{enumerate}\item Prouver que $u\in H^{1/2}(\mathbb{R})$.\item Définissons la suite $(I_n)_{n\in\mathbb{N}}$ par
+$$I_n=\int_{\mathbb{R}}u(x)\left(\frac{n}{2\pi}\right)^{1/2}e^{-\frac{nx^2}{2}}\,dx.$$
+Prouver que pour tout $n\in\mathbb{N}$, $I_n=\int_{\mathbb{R}}\hat{u}(\xi)\,e^{-\frac{\xi^2}{2n}}\,d\xi$, puis, en utilisant le lemme de Fatou, prouver que $\lim_{n\to\infty}I_n=+\infty$.\end{enumerate}
+\item En déduire que $H^{1/2}(\mathbb{R})$ n'est pas contenu dans $L^\infty(\mathbb{R})$.\end{enumerate}
+\source{\emph{\small Université Batna 1 - Hadj Lakhdar, 2013, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
 
 \section{Université Frères Mentouri --- Constantine 1}
 \begin{problem}{(Constantine 1) — Épreuve N°11}{fa:constantine1-2015-e11-p3}
@@ -128,6 +155,25 @@ Soit $(T(t))_{t\ge0}$ un $C_0$-semi-groupe défini dans l'espace de Banach $E$, 
 $$\|T(t)\|\le Me^{\omega t},\quad\forall t\ge0.$$
 \begin{enumerate}\item Montrer que la famille $(S(t))_{t\ge0}$, où $S(t)=e^{-\omega t}T(t)$ pour tout $t\ge0$, est un $C_0$-semi-groupe pour lequel $\|S(t)\|\le M$ pour tout $t\ge0$.\item Montrer que si $A$ est le générateur infinitésimal de $(T(t))_{t\ge0}$ alors $(A-\omega I)$ est le générateur infinitésimal de $(S(t))_{t\ge0}$.\end{enumerate}
 \source{\emph{\small Université Frères Mentouri - Constantine 1, 2015, Épreuve~n\textsuperscript{o}~11.}}\end{problem}
+\newpage
+\begin{problem}{(Constantine 1) — Épreuve N°02}{fa:constantine1-2013-e2-p1}
+Soit l'espace
+$$\ell^p=\left\{x=(x_1,x_2,x_3,\ldots)\text{ de nombres réels ou complexes pour lesquels }\sum_{k=1}^\infty|x_k|^p<+\infty,\ p\ge1\right\}.$$
+Montrer que $\|x\|=\left(\sum_{k=1}^\infty|x_k|^p\right)^{1/p}$ est une norme sur $\ell^p$.
+\source{\emph{\small Université Frères Mentouri - Constantine 1, 2013, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(Constantine 1) — Épreuve N°02}{fa:constantine1-2013-e2-p2}
+Soient $X$ et $Y$ deux espaces normés, $(A_n)_{n\in\mathbb{N}}$ une suite d'opérateurs linéaires bornés définis de $X$ dans $Y$ (c'est-à-dire $A_n\in L(X,Y)$ pour tout $n\in\mathbb{N}^*$) et soit $A\in L(X,Y)$. Montrer que si $A_n$ converge en norme vers $A$ alors $A_nx$ converge vers $Ax$ sur les parties bornées de $X$.
+\source{\emph{\small Université Frères Mentouri - Constantine 1, 2013, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(Constantine 1) — Épreuve N°02}{fa:constantine1-2013-e2-p3}
+Soient $E$ et $F$ deux espaces topologiques, avec $F$ un espace séparé, soit $f:E\to F$ et $\Gamma=\{(x,f(x)),\ x\in E\}\subset E\times F$ le graphe de $f$.
+\begin{enumerate}\item Montrer que $f$ continue implique que $\Gamma$ est fermé.\item Montrer que la réciproque n'est pas vraie (prendre $E=\mathbb{R}$ et $f(x)=\frac{1}{x}$ si $x\neq0$, $f(0)=0$).\end{enumerate}
+\source{\emph{\small Université Frères Mentouri - Constantine 1, 2013, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(Constantine 1) — Épreuve N°02}{fa:constantine1-2013-e2-p4}
+Soit $E$ un espace de Banach et $A$ un opérateur linéaire borné sur $E$. Montrer que la famille $\{e^{tA}\}_{t\ge0}$ est un semi-groupe uniformément continu sur $E$.
+\source{\emph{\small Université Frères Mentouri - Constantine 1, 2013, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
 \newpage
 
 \section{Université Mohamed Boudiaf --- M'Sila}
