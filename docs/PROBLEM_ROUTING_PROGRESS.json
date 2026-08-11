@@ -1,25 +1,11 @@
 {
   "schema_version": 1,
   "run_id": "docmathdz-full-corpus-2026-08-10",
-  "status": "completed_read_only_reconciliation",
+  "status": "final_batch_reconciled_chapter_sync_pending",
   "database": {"source": "DocMath DZ MCP", "mode": "read_only", "total_exams_discovered": 257, "exam_records_read_total": 99, "problem_payloads": "All 99 EDP records read"},
-  "final_batch": {
-    "checkpoint": "edp-offset-86-limit-20",
-    "exam_records_read": 13,
-    "problems_read": 31,
-    "unique_statements_added": 24,
-    "duplicates_skipped": 9,
-    "needs_review": 2,
-    "errors": 0,
-    "classification_counts": {"07-pde": 8, "05-functional-analysis": 8, "04-measure-theory": 2, "10-dynamical-systems": 4, "12-complex-analysis": 1, "01-linear-algebra": 1},
-    "new_books": [],
-    "review_items": ["universite-ziane-achour-djelfa-2000-specialty-11#2: equation left side obscured by stamp", "source-inconnue-2000-specialty-12#1: isolated fragment, source context incomplete"],
-    "duplicate_notes": ["Batna homogenisation reappears under multiple slugs and was retained once per normalized fingerprint", "Tizi Ouzou 2012 repeats the Guelma 2012 EDO set", "Repeated type-classification, Lp-inclusion, Dirac/Laplace and Poisson/Fourier templates were reconciled globally"]
-  },
-  "books": {"04-measure-theory":{"status":"created_this_run"},"05-functional-analysis":{"status":"existing"},"07-pde":{"status":"created_this_run"},"10-dynamical-systems":{"status":"created_this_run"},"11-operations-research":{"status":"created_this_run"},"01-linear-algebra":{"status":"existing"},"06-algebra":{"status":"existing"}},
-  "needs_review": ["source-inconnue-2015-specialty-02#1: mixed scan of four unrelated fragments", "universite-constantine-1-2013-specialty-1#1: damaged coefficient/variable", "universite-constantine-1-2013-specialty-1#2: undefined contour center q", "universite-ziane-achour-djelfa-2000-specialty-11#2: obscured differential operator", "source-inconnue-2000-specialty-12#1: incomplete isolated density question"],
-  "errors": [],
+  "final_batch": {"checkpoint": "edp-offset-86-limit-20", "exam_records_read": 13, "problems_read": 31, "unique_statements_identified": 24, "duplicates_identified": 9, "needs_review": 2, "errors": 0, "chapter_files_updated": false, "note": "Reconciliation ledger is committed. The 24 identified statements still require append-only synchronization into their destination 06_doctoral_problems.tex files; no database writes were made."},
+  "review_items": ["universite-ziane-achour-djelfa-2000-specialty-11#2: equation left side obscured by stamp", "source-inconnue-2000-specialty-12#1: isolated fragment, source context incomplete"],
   "last_processed_item": "source-inconnue-2000-specialty-12#3",
-  "next_checkpoint": "EDP specialty complete; next run may begin remaining specialties from their saved list checkpoint",
+  "next_checkpoint": "append-only chapter sync for final 13-exam batch, then verify all destination files",
   "updated_at": "2026-08-11T10:17:00+01:00"
 }
