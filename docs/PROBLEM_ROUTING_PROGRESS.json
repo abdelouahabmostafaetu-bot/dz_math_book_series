@@ -1,11 +1,13 @@
 {
-  "schema_version": 1,
-  "run_id": "docmathdz-full-corpus-2026-08-10",
-  "status": "final_batch_reconciled_chapter_sync_pending",
-  "database": {"source": "DocMath DZ MCP", "mode": "read_only", "total_exams_discovered": 257, "exam_records_read_total": 99, "problem_payloads": "All 99 EDP records read"},
-  "final_batch": {"checkpoint": "edp-offset-86-limit-20", "exam_records_read": 13, "problems_read": 31, "unique_statements_identified": 24, "duplicates_identified": 9, "needs_review": 2, "errors": 0, "chapter_files_updated": false, "note": "Reconciliation ledger is committed. The 24 identified statements still require append-only synchronization into their destination 06_doctoral_problems.tex files; no database writes were made."},
-  "review_items": ["universite-ziane-achour-djelfa-2000-specialty-11#2: equation left side obscured by stamp", "source-inconnue-2000-specialty-12#1: isolated fragment, source context incomplete"],
-  "last_processed_item": "source-inconnue-2000-specialty-12#3",
-  "next_checkpoint": "append-only chapter sync for final 13-exam batch, then verify all destination files",
-  "updated_at": "2026-08-11T10:17:00+01:00"
+  "schema_version":1,
+  "run_id":"docmathdz-full-corpus-2026-08-10",
+  "status":"in_progress",
+  "database":{"source":"DocMath DZ MCP","mode":"read_only","total_exams_discovered":257,"exam_records_read_total":111,"problem_payloads":"All 99 EDP records read; 12 Algèbre records read in current batch"},
+  "books":{"04-measure-theory":{"status":"created_this_run"},"05-functional-analysis":{"status":"existing"},"06-algebra":{"status":"existing","current_batch_candidates":25,"current_batch_new":0,"current_batch_already_present":25},"07-pde":{"status":"created_this_run"},"10-dynamical-systems":{"status":"created_this_run"},"11-operations-research":{"status":"created_this_run"}},
+  "algebra_batch":{"checkpoint":"algebra-offset-0-limit-20-partial-12","exam_records_read":12,"problems_read":33,"unique_candidates":25,"new_statements_added":0,"already_present":25,"duplicates_skipped":8,"needs_review":0,"errors":0,"destinations":{"06-algebra":22,"05-functional-analysis":2,"02-real-analysis":1},"note":"The current 06_algebra chapter already contains the 25 reconciled statements or their exact existing fingerprints; no duplicate chapter entries were added. Mixed Fourier/Sobolev content remains in functional analysis per routing precedence. The remaining 8 records on this page were not read yet."},
+  "review_items":["source-inconnue-2015-specialty-02#1: mixed scan of four unrelated fragments","universite-constantine-1-2013-specialty-1#1: damaged coefficient/variable","universite-constantine-1-2013-specialty-1#2: undefined contour center q","universite-ziane-achour-djelfa-2000-specialty-11#2: obscured differential operator","source-inconnue-2000-specialty-12#1: incomplete isolated density question"],
+  "errors":[],
+  "last_processed_item":"centre-universitaire-abdelhafid-boussouf-mila-2023-specialty-22#2",
+  "next_checkpoint":"list_exams(specialty=Algèbre, limit=20, offset=12) — resume at universite-kasdi-merbah-ouargla-2022-specialty-01-2",
+  "updated_at":"2026-08-11T17:14:00+01:00"
 }
