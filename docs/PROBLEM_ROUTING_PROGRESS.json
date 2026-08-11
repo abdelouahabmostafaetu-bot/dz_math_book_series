@@ -1,14 +1,15 @@
 {
   "schema_version":1,
   "run_id":"docmathdz-full-corpus-2026-08-10",
-  "status":"in_progress",
-  "database":{"source":"DocMath DZ MCP","mode":"read_only","total_exams_discovered":257,"exam_records_read_total":123,"problem_payloads":"All 99 EDP records read; 24 Algèbre records read in current run"},
+  "status":"in_progress_100_exam_run",
+  "database":{"source":"DocMath DZ MCP","mode":"read_only","total_exams_discovered":257,"exam_records_read_total":134,"problem_payloads":"All 99 EDP records read; 35 Algèbre records read"},
   "books":{"04-measure-theory":{"status":"created_this_run"},"05-functional-analysis":{"status":"existing"},"06-algebra":{"status":"existing"},"07-pde":{"status":"created_this_run"},"10-dynamical-systems":{"status":"created_this_run"},"11-operations-research":{"status":"created_this_run"}},
-  "algebra_batch":{"checkpoint":"algebra-offset-18-limit-20-partial-6","exam_records_read_this_batch":6,"problems_read_this_batch":17,"new_statements_added":0,"already_present_or_existing_fingerprints":17,"duplicates_skipped":6,"needs_review":0,"errors":0,"destinations":{"06-algebra":14,"05-functional-analysis":1,"02-real-analysis":1,"10-dynamical-systems":1},"note":"No duplicate entries written; existing chapter fingerprints were checked. Database remains read-only."},
+  "run_target":{"requested_exam_count":100,"exam_records_read_in_current_run":35,"remaining_to_target":65,"continue_without_repeated_permission_requests":true},
+  "algebra_batch":{"checkpoint":"algebra-offset-24-limit-20-complete","exam_records_read_this_batch":11,"problems_read_this_batch":39,"new_statements_added":0,"already_present_or_existing_fingerprints":39,"duplicates_skipped":15,"needs_review":1,"errors":0,"review_items":["universite-mohamed-boudiaf-de-m-sila-2015-specialty-35#1 and #2: partial/unclear transcription; no guessing"],"destinations":{"06-algebra":27,"05-functional-analysis":2,"02-real-analysis":3,"03-topology":4,"13-discrete-mathematics":3},"note":"Read-only database. Existing fingerprints prevented duplicate chapter entries."},
   "workflow":{"cross_account_handoff":true,"continue_without_repeated_permission_requests":true,"use_safe_batches":true,"never_write_database":true,"never_edit_template":true,"always_update_this_file":true},
-  "review_items":["source-inconnue-2015-specialty-02#1: mixed scan of four unrelated fragments","universite-constantine-1-2013-specialty-1#1: damaged coefficient/variable","universite-constantine-1-2013-specialty-1#2: undefined contour center q","universite-ziane-achour-djelfa-2000-specialty-11#2: obscured differential operator","source-inconnue-2000-specialty-12#1: incomplete isolated density question","universite-mohammed-seddik-benyahia-jijel-2019-specialty-3#2: unreadable generating-function identity","universite-mohammed-seddik-benyahia-jijel-2019-specialty-3#3: unreadable congruence details"],
+  "review_items":["source-inconnue-2015-specialty-02#1: mixed scan of four unrelated fragments","universite-constantine-1-2013-specialty-1#1: damaged coefficient/variable","universite-constantine-1-2013-specialty-1#2: undefined contour center q","universite-ziane-achour-djelfa-2000-specialty-11#2: obscured differential operator","source-inconnue-2000-specialty-12#1: incomplete isolated density question","universite-mohammed-seddik-benyahia-jijel-2019-specialty-3#2: unreadable generating-function identity","universite-mohammed-seddik-benyahia-jijel-2019-specialty-3#3: unreadable congruence details","universite-mohamed-boudiaf-de-m-sila-2015-specialty-35#1/#2: partial transcription"],
   "errors":[],
-  "last_processed_item":"universite-mohamed-boudiaf-de-m-sila-2015-specialty-31#3",
-  "next_checkpoint":"list_exams(specialty=Algèbre, limit=20, offset=24) — resume at universite-mohamed-boudiaf-de-m-sila-2015-specialty-32",
+  "last_processed_item":"universite-mohamed-boudiaf-de-m-sila-2015-specialty-35#2",
+  "next_checkpoint":"list_exams(specialty=Algèbre, limit=20, offset=35) — if empty, continue with next specialty and preserve 65 remaining target exams",
   "updated_at":"2026-08-11T17:16:00+01:00"
 }
