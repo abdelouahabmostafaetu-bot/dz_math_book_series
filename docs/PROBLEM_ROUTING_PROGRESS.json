@@ -5,15 +5,15 @@
   "database": {
     "source": "DocMath DZ MCP",
     "mode": "read_only",
-    "last_exam_list_checkpoint": "edp-offset-60-limit-20 (12 of 20 consumed)",
+    "last_exam_list_checkpoint": "edp-offset-60-limit-20 (all 20 consumed)",
     "total_exams_discovered": 257,
-    "exam_records_read_total": 72,
-    "problem_payloads": "72 EDP records read; 8 remaining in the current page"
+    "exam_records_read_total": 80,
+    "problem_payloads": "80 EDP records read; next page starts at offset 80"
   },
   "books": {
-    "05-functional-analysis": { "status": "existing", "added_this_run": 15 },
-    "07-pde": { "status": "created_this_run", "added_this_run": 20 },
-    "10-dynamical-systems": { "status": "created_this_run", "added_this_run": 1 },
+    "05-functional-analysis": { "status": "existing", "added_this_run": 18 },
+    "07-pde": { "status": "created_this_run", "added_this_run": 30 },
+    "10-dynamical-systems": { "status": "created_this_run", "added_this_run": 2 },
     "11-operations-research": { "status": "created_this_run", "added_this_run": 4 },
     "01-linear-algebra": { "status": "existing", "added_this_run": 0 },
     "06-algebra": { "status": "existing", "added_this_run": 0 }
@@ -23,20 +23,24 @@
     "edp_batch_second_20": { "processing_status": "completed", "exam_records": 20, "problems_imported": 2 },
     "edp_batch_third_20": { "processing_status": "completed", "exam_records": 20, "problems_imported": 4 },
     "edp_batch_offset_60_part_1": { "processing_status": "completed", "exam_records": 6, "problems_read": 14, "problems_imported": 9, "duplicates_skipped": 3, "needs_review": 2 },
-    "edp_batch_offset_66_part_2": {
+    "edp_batch_offset_66_part_2": { "processing_status": "completed", "exam_records": 6, "problems_read": 14, "problems_imported": 12, "duplicates_skipped": 3, "needs_review": 0 },
+    "edp_batch_offset_72_part_3": {
       "processing_status": "completed",
-      "exam_records": 6,
-      "problems_read": 14,
-      "problems_imported": 12,
-      "duplicates_skipped": 3,
-      "needs_review": 0,
+      "exam_records": 8,
+      "problems_read": 15,
+      "problems_imported": 14,
+      "duplicates_skipped": 0,
+      "variants_flagged": 3,
+      "needs_review": 1,
       "records": [
-        { "slug": "universite-ahmed-ben-bella-oran-1-2015-specialty-01-2", "problems": [ { "id": "universite-ahmed-ben-bella-oran-1-2015-specialty-01-2#1", "fingerprint": "oran1-2015-partition-unite-fonctions-test-d-omega", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:oran1-2015-e1-p1", "duplicate": false, "note": "ambiguous between topology and distributions; test-function space D(Omega) plus EDP parent specialty resolved to 05" }, { "id": "universite-ahmed-ben-bella-oran-1-2015-specialty-01-2#2", "fingerprint": "oran1-2015-operateur-ferme-adjoint-auto-adjoint", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:oran1-2015-e1-p2", "duplicate": false } ] },
-        { "slug": "universite-mohamed-boudiaf-m-sila-2015-specialty-01", "problems": [ { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-01#1", "fingerprint": "msila2015e1-evolution-poincare-estimations-energie", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2015-e1-p1", "duplicate": false }, { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-01#2", "fingerprint": "msila2015e1-diffusion-noyau-gauss-regularite", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2015-e1-p2", "duplicate": false, "note": "third variant of the Gauss-kernel template; kept as a distinct variant" } ], "note": "examNumber is null in the database; epreuve number taken from the slug suffix 01" },
-        { "slug": "universite-hadj-lakhdar-batna-1-2015-specialty-01", "problems": [ { "id": "universite-hadj-lakhdar-batna-1-2015-specialty-01#1", "fingerprint": "batna1-2015-semigroupe-riesz-observabilite-approchee", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:batna1-2015-e1-p1", "duplicate": false } ] },
-        { "slug": "universite-badji-mokhtar-annaba-2015-specialty-01", "problems": [ { "id": "universite-badji-mokhtar-annaba-2015-specialty-01#1", "fingerprint": "annaba2015-neumann-faible-compatibilite-lax-milgram", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:annaba-2015-e1-p1", "duplicate": false }, { "id": "universite-badji-mokhtar-annaba-2015-specialty-01#2", "fingerprint": "annaba2015-hyperbolique-caracteristiques-cauchy", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:annaba-2015-e1-p2", "duplicate": false } ] },
-        { "slug": "universite-batna-2-mostefa-ben-boulaid-2015-specialty-01", "problems": [ { "id": "universite-batna-2-mostefa-ben-boulaid-2015-specialty-01#1", "status": "skipped_duplicate", "duplicate_of": "fa:batna1-2015-e1-p1", "classification": "functional-analysis", "reason": "condensed restatement of the same observability exercise; the fuller Batna 1 statement was kept, this copy carries the solution and is reserved for 07_solutions.tex" } ] },
-        { "slug": "universite-badji-mokhtar-annaba-2015-specialty-02", "mixed_subjects_routed_individually": true, "problems": [ { "id": "universite-badji-mokhtar-annaba-2015-specialty-02#1", "status": "skipped_duplicate", "duplicate_of": "pde:annaba-2015-e1-p1", "reason": "verbatim repeat of epreuve 01 exercise 1" }, { "id": "universite-badji-mokhtar-annaba-2015-specialty-02#2", "fingerprint": "annaba2015e2-appariement-binomes-couplage-pondere", "status": "imported", "classification": "operations-research", "destination": "books/11-operations-research/chapters/06_doctoral_problems.tex", "label": "or:annaba-2015-e2-p2", "duplicate": false }, { "id": "universite-badji-mokhtar-annaba-2015-specialty-02#3", "fingerprint": "annaba2015e2-sac-a-dos-ensembles-bloquants", "status": "imported", "classification": "operations-research", "destination": "books/11-operations-research/chapters/06_doctoral_problems.tex", "label": "or:annaba-2015-e2-p3", "duplicate": false }, { "id": "universite-badji-mokhtar-annaba-2015-specialty-02#4", "status": "skipped_duplicate", "duplicate_of": "pde:annaba-2015-e1-p2", "reason": "verbatim repeat of epreuve 01 exercise 2" }, { "id": "universite-badji-mokhtar-annaba-2015-specialty-02#5", "fingerprint": "annaba2015e2-sac-a-dos-regret-programmation-dynamique", "status": "imported", "classification": "operations-research", "destination": "books/11-operations-research/chapters/06_doctoral_problems.tex", "label": "or:annaba-2015-e2-p5", "duplicate": false }, { "id": "universite-badji-mokhtar-annaba-2015-specialty-02#6", "fingerprint": "annaba2015e2-multiobjectif-binaire-geoffrion", "status": "imported", "classification": "operations-research", "destination": "books/11-operations-research/chapters/06_doctoral_problems.tex", "label": "or:annaba-2015-e2-p6", "duplicate": false }, { "id": "universite-badji-mokhtar-annaba-2015-specialty-02#7", "fingerprint": "annaba2015e2-lorenz-equilibres-stabilite-frenet", "status": "imported", "classification": "dynamical-systems", "destination": "books/10-dynamical-systems/chapters/06_doctoral_problems.tex", "label": "ds:annaba-2015-e2-p7", "duplicate": false, "note": "record bundles a Lorenz stability exercise with a Frenet-Serret helix exercise; kept together as one record, dominant signal is dynamical systems" } ] }
+        { "slug": "source-inconnue-2015-specialty-02", "problems": [ { "id": "source-inconnue-2015-specialty-02#1", "status": "needs_review", "reason": "record is an explicitly mixed scan compiling four unrelated fragments (semigroup renormalisation, canonical form, H_0^1 variational problem, distance to a set); no single recoverable statement", "classification": "mixed (provisional)", "destination": null, "duplicate": false } ] },
+        { "slug": "universite-batna-2-mostefa-ben-boulaid-2015-specialty-02", "problems": [ { "id": "universite-batna-2-mostefa-ben-boulaid-2015-specialty-02#1", "fingerprint": "batna2-2015e2-homogeneisation-elliptique-1d", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:batna2-2015-e2-p1", "duplicate": false } ] },
+        { "slug": "universite-mohamed-boudiaf-m-sila-2015-specialty-2", "problems": [ { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-2#1", "fingerprint": "msila2015e2-chaleur-cauchy-stabilite-donnees", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2015-e2-p1", "duplicate": false }, { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-2#2", "fingerprint": "msila2015e2-ondes-inegalite-energie-support-compact", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2015-e2-p2", "duplicate": false } ] },
+        { "slug": "universite-mohamed-boudiaf-m-sila-2015-specialty-3", "problems": [ { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-3#1", "fingerprint": "msila2015e3-chaleur-heaviside-erf-regularite", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2015-e3-p1", "duplicate": false, "variant_of": "pde:msila-2016-e4-p2", "note": "fourth Gauss-kernel variant; initial datum is the Heaviside step, kept separately" }, { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-3#2", "fingerprint": "msila2015e3-decroissance-exponentielle-l2-intervalle", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2015-e3-p2", "duplicate": false } ] },
+        { "slug": "universite-mohamed-boudiaf-m-sila-2015-specialty-10", "mixed_subjects_routed_individually": true, "problems": [ { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-10#1", "fingerprint": "msila2015e10-schrodinger-fourier-parseval-dispersion", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:msila-2015-e10-p1", "duplicate": false, "note": "Fourier/Parseval row of the router precedes the EDP row; same precedence already applied to the USTHB 2016 Sobolev papers" }, { "id": "universite-mohamed-boudiaf-m-sila-2015-specialty-10#2", "fingerprint": "msila2015e10-evolution-u3-formulation-faible-holder", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2015-e10-p2", "duplicate": false, "variant_of": "pde:msila-2015-e1-p1", "note": "same energy-estimate template but adds the weak-formulation question and uses Holder instead of Cauchy-Schwarz; kept as a variant" } ] },
+        { "slug": "universite-freres-mentouri-constantine-1-2015-specialty-11", "mixed_subjects_routed_individually": true, "problems": [ { "id": "universite-freres-mentouri-constantine-1-2015-specialty-11#1", "fingerprint": "constantine1-2015e11-lemme-gronwall-inegalite-differentielle", "status": "imported", "classification": "dynamical-systems", "destination": "books/10-dynamical-systems/chapters/06_doctoral_problems.tex", "label": "ds:constantine1-2015-e11-p1", "duplicate": false }, { "id": "universite-freres-mentouri-constantine-1-2015-specialty-11#2", "fingerprint": "constantine1-2015e11-classification-forme-canonique-parabolique", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:constantine1-2015-e11-p2", "duplicate": false, "variant_of": "pde:sba-2014-e1-p1", "note": "same operator as the second equation of the Sidi Bel Abbes 2014 exercise; the low-order term reads x u_y here and y u_y there, likely an OCR divergence, both kept" }, { "id": "universite-freres-mentouri-constantine-1-2015-specialty-11#3", "fingerprint": "constantine1-2015e11-semigroupe-renormalise-generateur", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:constantine1-2015-e11-p3", "duplicate": false } ] },
+        { "slug": "universite-djilali-liabes-sidi-bel-abbes-2014-specialty-01", "problems": [ { "id": "universite-djilali-liabes-sidi-bel-abbes-2014-specialty-01#1", "fingerprint": "sba2014-solution-generale-formes-canoniques", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:sba-2014-e1-p1", "duplicate": false }, { "id": "universite-djilali-liabes-sidi-bel-abbes-2014-specialty-01#2", "fingerprint": "sba2014-laplace-polaire-disque-rayon-a", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:sba-2014-e1-p2", "duplicate": false, "variant_of": "pde:sba-2016-e12-p2", "note": "same polar-Laplace template with a different boundary datum and radius" }, { "id": "universite-djilali-liabes-sidi-bel-abbes-2014-specialty-01#3", "fingerprint": "sba2014-ondes-feedback-frontiere-decroissance", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:sba-2014-e1-p3", "duplicate": false } ], "note": "examNumber is null in the database; epreuve number taken from the slug suffix 01" },
+        { "slug": "universite-8-mai-1945-guelma-2014-specialty-01", "problems": [ { "id": "universite-8-mai-1945-guelma-2014-specialty-01#1", "fingerprint": "guelma2014-stokes-champs-divergence-nulle-riesz", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:guelma-2014-e1-p1", "duplicate": false, "note": "Sobolev/Hilbert-projection row of the router precedes the EDP row" } ] }
       ]
     }
   },
@@ -44,13 +48,15 @@
     "Repeated heat, transport, wave, Neumann, variational and distribution templates detected; global fingerprint reconciliation ongoing",
     "M'Sila 2016 epreuves 5 and 6 are summary restatements of epreuves 2, 3 and 4",
     "Annaba 2015 epreuve 02 repeats both exercises of epreuve 01 verbatim",
-    "Batna 2 2015 epreuve 01 is the Batna 1 2015 observability exercise in condensed form"
+    "Batna 2 2015 epreuve 01 is the Batna 1 2015 observability exercise in condensed form",
+    "Gauss-kernel Cauchy problem now has four distinct M'Sila variants (2015 e1, 2015 e3, 2016 e4, 2017 e3), all kept and cross-linked"
   ],
   "errors": [],
   "needs_review": [
     "Some records contain summaries, OCR warnings, mixed subjects or incomplete statements; excluded from exact import until review",
     "universite-mohamed-boudiaf-m-sila-2016-specialty-5#1 — summary only, statement not usable",
-    "universite-mohamed-boudiaf-m-sila-2016-specialty-6#2 — summary only, overlaps pde:msila-2016-e4-p2"
+    "universite-mohamed-boudiaf-m-sila-2016-specialty-6#2 — summary only, overlaps pde:msila-2016-e4-p2",
+    "source-inconnue-2015-specialty-02#1 — mixed scan of four unrelated fragments, no recoverable single statement, university unknown"
   ],
   "new_books_this_run": ["07-pde", "10-dynamical-systems", "11-operations-research"],
   "checkpoints": [
@@ -58,9 +64,10 @@
     { "timestamp": "2026-08-10T17:29:00+01:00", "name": "edp-batch-second-20-import" },
     { "timestamp": "2026-08-10T20:00:00+01:00", "name": "edp-batch-third-20-import" },
     { "timestamp": "2026-08-11T09:55:00+01:00", "name": "edp-offset-60-part-1-import", "details": "EDP exams 61-66 read-only; 6 PDE and 3 functional-analysis statements imported." },
-    { "timestamp": "2026-08-11T10:05:00+01:00", "name": "edp-offset-66-part-2-import", "details": "EDP exams 67-72 read-only; 4 PDE, 3 functional-analysis, 4 operations-research and 1 dynamical-systems statements imported. Volumes 10 and 11 created from the existing book structure; template/ untouched. No database writes." }
+    { "timestamp": "2026-08-11T10:05:00+01:00", "name": "edp-offset-66-part-2-import", "details": "EDP exams 67-72 read-only; 4 PDE, 3 functional-analysis, 4 operations-research and 1 dynamical-systems statements imported. Volumes 10 and 11 created." },
+    { "timestamp": "2026-08-11T10:20:00+01:00", "name": "edp-offset-72-part-3-import", "details": "EDP exams 73-80 read-only; 10 PDE, 3 functional-analysis and 1 dynamical-systems statements imported; 1 damaged mixed-scan record flagged needs_review. No database writes." }
   ],
-  "last_processed_item": "universite-badji-mokhtar-annaba-2015-specialty-02#7",
-  "next_checkpoint": "list_exams(specialty=EDP, limit=20, offset=72) — resume at source-inconnue-2015-specialty-02",
-  "updated_at": "2026-08-11T10:05:00+01:00"
+  "last_processed_item": "universite-8-mai-1945-guelma-2014-specialty-01#1",
+  "next_checkpoint": "list_exams(specialty=EDP, limit=20, offset=80)",
+  "updated_at": "2026-08-11T10:20:00+01:00"
 }

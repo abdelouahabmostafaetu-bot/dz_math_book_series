@@ -81,6 +81,52 @@ $$\begin{cases}\partial_tu=k\,\partial_{xx}u, & x\in\mathbb{R},\ t>0,\\ u(x,0)=\
 \begin{enumerate}\item Vérifier que la fonction $G(x,t)=\frac{1}{\sqrt{4\pi kt}}e^{-\frac{x^2}{4kt}}$ est solution du problème. Comment appelle-t-on cette fonction ?\item La solution du problème s'écrit comme $u(x,t)=\int_{\mathbb{R}}\varphi(y)G(x-y,t)\,dy$. Quelles sont les conditions d'existence de cette solution ?\item Montrer que la solution $u(x,t)$ est $C^\infty$.\item Écrire la solution pour $\varphi(x)=e^{-x}$, sachant que $\int_{\mathbb{R}}G(y,t)\,dy=1$.\end{enumerate}
 \source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
 \newpage
+\begin{problem}{(M'Sila) — Épreuve N°02}{pde:msila-2015-e2-p1}
+On considère le problème de Cauchy suivant :
+$$\begin{cases}\partial_tu=k\,\partial_{xx}u, & x\in\mathbb{R},\ t>0,\ k>0,\\ u(x,0)=f(x), & x\in\mathbb{R}.\end{cases}$$
+\begin{enumerate}\item La solution du problème s'écrit comme
+$$u(x,t)=\frac{1}{\sqrt{4\pi kt}}\int_{\mathbb{R}}f(y)e^{-\frac{(x-y)^2}{4kt}}\,dy,$$
+pour $f(x)$ continue et bornée. Si la fonction $f(x)$ n'est pas continue, est-ce que la solution peut exister ?\item Montrer que si $f\equiv1$, alors la solution $u(x,t)=1$.\item Montrer que si $\lvert f(x)\rvert\leq Ae^{\alpha x}$, alors, pour tout $(x,t)$, $\lvert u(x,t)\rvert\leq Ae^{\alpha x}e^{\alpha^2t}$.\item Montrer que si $0<\lvert f(x)\rvert\leq M$, alors $0<\lvert u(x,t)\rvert\leq M$.\item Si $f_1(x)$ et $f_2(x)$ sont deux conditions initiales bornées et $u_1(x,t)$ et $u_2(x,t)$ les solutions correspondantes, alors montrer que, pour tout $(x,t)$, $\lvert u_1(x,t)-u_2(x,t)\rvert\leq\varepsilon$ dès que $\lvert f_1(x)-f_2(x)\rvert\leq\varepsilon$.\item Que peut-on déduire pour le problème ?\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°02}{pde:msila-2015-e2-p2}
+Soit $f(t,x)\in C^2\left([0,+\infty[\times\mathbb{R}\right)$ et $h(x)\in C^1(\mathbb{R})\cap L^2(\mathbb{R})$. Soit $u(t,x)\in C^2\left([0,+\infty[\times\mathbb{R}\right)$ la solution globale du problème de Cauchy suivant :
+$$\begin{cases}-\partial_{tt}u+\partial_{xx}u=f, & x\in\mathbb{R},\ t\in\,]0,+\infty[,\\ u(0,x)=0,\quad\partial_tu(0,x)=h(x), & x\in\mathbb{R}.\end{cases}$$
+On suppose que la solution $u$ est à support compact et que $\lVert f(t,\cdot)\rVert_{L^2(\mathbb{R})}\leq\frac{1}{1+t^2}$. On définit
+$$E^2(t)=\int_{\mathbb{R}}\left(\lvert\partial_tu(t,x)\rvert^2+\lvert\partial_xu(t,x)\rvert^2\right)dx.$$
+\begin{enumerate}\item Démontrer que $\frac{d}{dt}E^2(t)=-2\int_{\mathbb{R}}f(t,x)\partial_tu(t,x)\,dx$.\item Démontrer l'inégalité d'énergie suivante : $E(t)\leq E(0)+\frac{\pi}{2}$.\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°03}{pde:msila-2015-e3-p1}
+Soit le problème de Cauchy pour l'équation de la chaleur :
+$$\begin{cases}\partial_tu=c\,\partial_{xx}u, & x\in\mathbb{R},\ t>0,\ c>0,\\ u(x,0)=f(x), & x\in\mathbb{R}.\end{cases}$$
+\begin{enumerate}\item On sait que, pour $f(x)$ continue et bornée, la solution du problème s'écrit comme
+$$u(x,t)=\frac{1}{\sqrt{4\pi ct}}\int_{\mathbb{R}}f(y)e^{-\frac{(x-y)^2}{4ct}}\,dy.$$
+Y a-t-il d'autres conditions d'existence pour cette solution ? Si oui, lesquelles ?\item La solution $u(x,t)$ est-elle $C^\infty$ ? Si oui, démontrer.\item Écrire la solution pour
+$$f(x)=\begin{cases}1, & x\geq0,\\ 0, & x<0,\end{cases}$$
+sachant que $\operatorname{Erf}(x)=\frac{2}{\sqrt{\pi}}\int_0^xe^{-s^2}\,ds$ est la fonction d'erreur.\item Que peut-on remarquer par rapport à la condition d'existence de la solution ?\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~03.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°03}{pde:msila-2015-e3-p2}
+Soit $\ell>0$ un nombre positif. Soit $Q=(0,+\infty)\times(0,\ell)$ et soit $u(t)=u(t,\cdot)$ la solution régulière du problème
+$$\begin{cases}\partial_tu-\partial_{xx}u=0, & (t,x)\in Q,\\ u(0,x)=\frac{1}{\ell^2}x(\ell-x), & x\in(0,\ell),\\ u(t,0)=u(t,\ell)=0, & t\in(0,+\infty).\end{cases}$$
+Le but de cet exercice est de démontrer que la solution décroît exponentiellement en $t$, sans résoudre l'EDP.
+\begin{enumerate}\item Calculer $\lVert u(0)\rVert_{L^2(0,\ell)}$.\item Démontrer que $\frac{d}{dt}\left(\lVert u(t)\rVert_{L^2(0,\ell)}^2\right)=-2\lVert\partial_xu(t)\rVert_{L^2(0,\ell)}^2$.\item Démontrer que $\lVert u(t)\rVert_{L^\infty(0,\ell)}\leq\sqrt{\ell}\lVert\partial_xu(t)\rVert_{L^2(0,\ell)}$, et déduire que $\lVert u(t)\rVert_{L^2(0,\ell)}^2\leq\ell^2\lVert\partial_xu(t)\rVert_{L^2(0,\ell)}^2$.\item En utilisant les résultats précédents, déduire que
+$$\frac{d}{dt}\left(\lVert u(t)\rVert_{L^2(0,\ell)}^2\right)\leq-\frac{2}{\ell^2}\lVert u(t)\rVert_{L^2(0,\ell)}^2$$
+et finalement que $\lVert u(t)\rVert_{L^2(0,\ell)}\leq\sqrt{\frac{\ell}{30}}e^{-\frac{t}{\ell^2}}$ pour tout $t\geq0$.\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~03.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°10}{pde:msila-2015-e10-p2}
+On considère le problème d'évolution suivant :
+$$\begin{cases}\partial_tu-\partial_{xx}u+u^3=0, & (x,t)\in\,]0,1[\times[0,+\infty[,\\ u(0,t)=u(1,t)=0, & \forall t>0,\\ u(x,0)=g(x), & \forall x\in\,]0,1[.\end{cases}$$
+\begin{enumerate}\item Donner une formulation faible de ce problème, en précisant les espaces de $u$ et $\partial_tu$.\item On note $P(t)=\lVert u(t)\rVert_{L^2(0,1)}^2$ et on veut obtenir des estimations de plus en plus fines pour $P(t)$.
+\begin{enumerate}\item Démontrer que $P'(t)\leq0$ et déduire que $P(t)\leq\lVert g\rVert_{L^2(0,1)}^2$ pour tout $t>0$.\item En utilisant l'inégalité de Poincaré (la constante de Poincaré est $\frac1\pi$), démontrer que $P'(t)\leq-2\pi^2P(t)-2\int_0^1u^4(t)\,dx$ et déduire que $P(t)\leq P(0)e^{-2\pi^2t}$.\item En utilisant l'inégalité de Hölder pour estimer $\int_0^1u^4(t)\,dx$, démontrer que
+$$P'(t)\leq-2\pi^2P(t)-2P^2(t)\qquad(*)$$
+et déduire que
+$$P(t)\leq\left(\frac{\pi^2P(0)}{\pi^2+P(0)\left(1-e^{-2\pi^2t}\right)}\right)e^{-2\pi^2t}.$$\end{enumerate}\end{enumerate}
+Aide : avec le changement de variable $Z(t)=\frac1{P(t)}$, l'EDO $(*)$ devient linéaire.
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~10.}}\end{problem}
+\newpage
 
 \section{Université Djilali Liabès --- Sidi Bel Abbès}
 \begin{problem}{(Sidi Bel Abbès) — Épreuve N°12}{pde:sba-2016-e12-p1}
@@ -106,6 +152,27 @@ $$\begin{cases}u_{tt}=g\left(xu_{xx}+u_x\right) & 0<x<L,\ t>0,\\ u(x,0)=f(x),\ u
 où $g$ est une constante positive.
 \source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2016, Épreuve~n\textsuperscript{o}~12.}}\end{problem}
 \newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°01}{pde:sba-2014-e1-p1}
+Trouver la solution générale des équations aux dérivées partielles suivantes.
+\begin{enumerate}\item Résoudre
+$$u_{xx}-2\sin(x)\,u_{xy}-\cos^2(x)\,u_{yy}-\cos(x)\,u_y=0.$$
+\item Résoudre
+$$x^2u_{xx}-2xyu_{xy}+y^2u_{yy}+xu_x+yu_y=0,\qquad x>0.$$\end{enumerate}
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2014, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°01}{pde:sba-2014-e1-p2}
+En utilisant les coordonnées polaires et la méthode de séparation des variables de Fourier, déterminer la solution formelle du problème de Laplace
+$$\begin{cases}u_{xx}+u_{yy}=0, & x^2+y^2<a^2,\\ u(x,y)=x^2+y, & x^2+y^2=a^2.\end{cases}$$
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2014, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°01}{pde:sba-2014-e1-p3}
+On considère le problème de l'équation des ondes amorties par un feedback frontière, où $q:\mathbb{R}\to\mathbb{R}$ est une fonction non linéaire :
+$$\begin{cases}u_{tt}-u_{xx}=0, & x\in(0,1),\ t>0,\\ u(0,t)=0, & t>0,\\ u_x(1,t)=-q(u_t(1,t)), & t>0,\\ (u(x,0),u_t(x,0))=(u_0(x),u_1(x)), & x\in(0,1).\end{cases}$$
+On définit l'énergie par
+$$E(t)=\frac12\int_0^1\left(u_t^2(x,t)+u_x^2(x,t)\right)dx.$$
+On s'intéresse à la décroissance asymptotique de $E(t)$ lorsque $t\to+\infty$. On suppose que $q$ est continue, croissante et définie sur un voisinage $[-s_0,s_0]$ de $0$ par $q(s)=s|s|^{p-1}$, $p>1$. Soit $A_0\in\mathbb{R}$, $A_0\neq0$. On définit la suite réelle $(A_n)_{n\in\mathbb{N}}$ par $A_{n+1}+A_n=-q(A_{n+1}-A_n)$. Montrer que $(A_n^2)_{n\in\mathbb{N}}$ est décroissante et en déduire que $A_n\to0$ lorsque $n\to+\infty$.
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2014, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
 
 \section{Université Badji Mokhtar --- Annaba}
 \begin{problem}{(Annaba) — Épreuve N°01}{pde:annaba-2015-e1-p1}
@@ -122,3 +189,19 @@ $$u_{xx}+2u_{xy}-3u_{yy}=2.$$
 \begin{enumerate}\item Déterminer son type.\item Déterminer les lignes caractéristiques.\item Transformer l'équation à l'aide du changement de variables $\theta=x+y$, $\xi=-3x+y$.\item En déduire la solution générale puis résoudre le problème de Cauchy :
 $$\begin{cases}u_{xx}+2u_{xy}-3u_{yy}=2,\\ u(x,0)=0,\\ u_y(x,0)=x+\cos x.\end{cases}$$\end{enumerate}
 \source{\emph{\small Université Badji Mokhtar - Annaba, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+
+\section{Université Batna 2 --- Mostefa Ben Boulaïd}
+\begin{problem}{(Batna 2) — Épreuve N°02}{pde:batna2-2015-e2-p1}
+Sur $\Omega=(c,d)$, étudier
+$$-(a_\varepsilon u_\varepsilon')'+b_\varepsilon u_\varepsilon=f_\varepsilon,\qquad u_\varepsilon|_{\partial\Omega}=0,$$
+sous les hypothèses $0<\alpha\le a_\varepsilon\le\beta$, $1/a_\varepsilon\rightharpoonup^*c$, $b_\varepsilon\rightharpoonup^*b$ et $f_\varepsilon\rightharpoonup f$. Identifier le problème limite, puis traiter les cas périodique, convergence forte et sous-suites.
+\source{\emph{\small Université Batna 2 - Mostefa Ben Boulaïd, 2015, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+
+\section{Université Frères Mentouri --- Constantine 1}
+\begin{problem}{(Constantine 1) — Épreuve N°11}{pde:constantine1-2015-e11-p2}
+Soit l'équation aux dérivées partielles
+$$x^2\frac{\partial^2u}{\partial x^2}-2xy\frac{\partial^2u}{\partial x\partial y}+y^2\frac{\partial^2u}{\partial y^2}+x\frac{\partial u}{\partial x}+x\frac{\partial u}{\partial y}=0.$$
+\begin{enumerate}\item Quel est le type de cette équation ?\item Ramener cette équation à la forme canonique.\item Donner la solution générale de cette équation.\end{enumerate}
+\source{\emph{\small Université Frères Mentouri - Constantine 1, 2015, Épreuve~n\textsuperscript{o}~11.}}\end{problem}

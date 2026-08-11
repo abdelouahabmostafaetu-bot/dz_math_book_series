@@ -51,6 +51,18 @@ $$\left\|\sum a_n(\phi_n-f_n)\right\|^2\le\theta^2\sum|a_n|^2,\qquad0\le\theta<1
 pour toute suite à support fini. Montrer la convergence et la borne de l'opérateur $Kf=\sum_n\langle f,\phi_n\rangle(\phi_n-f_n)$, puis établir les inégalités $(1-\theta)\|f\|\le\|(\operatorname{Id}-K)f\|\le(1+\theta)\|f\|$ et leurs équivalents pour $(\operatorname{Id}-K)^{-1}$.
 \source{\emph{\small Université 8 Mai 1945 - Guelma, 2017, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
 \newpage
+\begin{problem}{(Guelma) — Épreuve N°01}{fa:guelma-2014-e1-p1}
+Soit $\Omega$ un ouvert borné de $\mathbb{R}^3$ à frontière de classe $C^1$. On pose
+$$V^0=\left\{u\in L^2(\Omega,\mathbb{R}^3):\int_\Omega u\cdot\nabla\varphi\,dx=0,\ \forall\varphi\in H^1(\Omega)\right\},$$
+et
+$$V^1=\{u\in H^1(\Omega,\mathbb{R}^3):\operatorname{div}u=0,\ u|_{\partial\Omega}=0\}.$$
+\begin{enumerate}\item Montrer que $V^0$ et $V^1$ sont des espaces vectoriels.\item Montrer que $V^1\subset V^0$.\item Montrer qu'il existe $c_1,c_2>0$ tels que, pour tout $u\in V^1$,
+$$\|u\|_{H^1(\Omega)}^2\le c_1\int_\Omega\sum_{i,j=1}^3\left(\frac{\partial u_i}{\partial x_j}\right)^2dx\le c_2\|u\|_{H^1(\Omega)}^2.$$
+\item Montrer que, pour $v\in V^1\cap H^2(\Omega)$ et $w\in V^1$,
+$$(v,w)_{V^1}=(-\Delta v,w)_{L^2}=(-P_{V^0}\Delta v,w)_{L^2},$$
+où $P_{V^0}$ est la projection orthogonale de $L^2(\Omega,\mathbb{R}^3)$ sur $V^0$.\item Pour $f\in V^0$, utiliser le théorème de Riesz afin de montrer que $-P_{V^0}\Delta v=f$ admet une unique solution faible $v\in V^1$.\end{enumerate}
+\source{\emph{\small Université 8 Mai 1945 - Guelma, 2014, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
 \begin{problem}{(Skikda) — Épreuve N°01}{fa:skikda-2017-e1-p1}
 Un opérateur $T:X\to Y$ entre espaces de Banach est de Dunford--Pettis si l'image par $T$ de toute suite faiblement convergente converge en norme. Montrer que tout opérateur compact est de Dunford--Pettis; si $X$ est réflexif, que tout opérateur de Dunford--Pettis est compact; et appliquer ces résultats à l'opérateur de Volterra $V:L^1([0,1])\to C([0,1])$, $Vf(x)=\int_0^x f(t)\,dt$.
 \source{\emph{\small Université 20 Août 1955 - Skikda, 2017, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
@@ -108,3 +120,19 @@ $$\begin{cases}\dfrac{\partial y}{\partial t}(x,t)=\dfrac{\partial^2y}{\partial 
 où $c(x)=\mathbf{1}_{[1-\varepsilon,\,1]}(x)$ et $\varepsilon>0$ est tel que $0<1-\varepsilon<1$.
 \begin{enumerate}\item Réécrire ce système sous la forme $y'(t)=Ay(t)$, $z(t)=Cy(t)$.\item Préciser l'espace d'état $Y$ et l'espace de sorties $Z$.\item Montrer que $A$ est un opérateur spectral de Riesz. En déduire que $A$ engendre un $C_0$-semi-groupe $S(t)$ sur $Y$. Donner l'expression de ce semi-groupe.\item Montrer que $C\in\mathcal{L}(Y,Z)$.\item Étudier l'observabilité approchée du système.\end{enumerate}
 \source{\emph{\small Université Batna 1 - Hadj Lakhdar, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+
+\section{Université Frères Mentouri --- Constantine 1}
+\begin{problem}{(Constantine 1) — Épreuve N°11}{fa:constantine1-2015-e11-p3}
+Soit $(T(t))_{t\ge0}$ un $C_0$-semi-groupe défini dans l'espace de Banach $E$, pour lequel il existe $\omega\in\mathbb{R}$ et $M\ge1$ tels que
+$$\|T(t)\|\le Me^{\omega t},\quad\forall t\ge0.$$
+\begin{enumerate}\item Montrer que la famille $(S(t))_{t\ge0}$, où $S(t)=e^{-\omega t}T(t)$ pour tout $t\ge0$, est un $C_0$-semi-groupe pour lequel $\|S(t)\|\le M$ pour tout $t\ge0$.\item Montrer que si $A$ est le générateur infinitésimal de $(T(t))_{t\ge0}$ alors $(A-\omega I)$ est le générateur infinitésimal de $(S(t))_{t\ge0}$.\end{enumerate}
+\source{\emph{\small Université Frères Mentouri - Constantine 1, 2015, Épreuve~n\textsuperscript{o}~11.}}\end{problem}
+\newpage
+
+\section{Université Mohamed Boudiaf --- M'Sila}
+\begin{problem}{(M'Sila) — Épreuve N°10}{fa:msila-2015-e10-p1}
+On considère le problème d'évolution suivant :
+$$\begin{cases}\partial_tu-i\,\partial_{xx}u=0, & x\in\mathbb{R},\ t>0,\\ u(x,0)=\varphi(x), & \varphi\in\mathcal{S}.\end{cases}$$
+\begin{enumerate}\item Appliquer la transformée de Fourier pour résoudre le problème.\item Démontrer que $\lVert u(t)\rVert_{L^\infty(\mathbb{R})}\leq\frac{1}{\sqrt{4\pi t}}\lVert\varphi\rVert_{L^1(\mathbb{R})}$.\item Utiliser l'identité de Parseval pour démontrer que $\lVert u(t)\rVert_{L^2(\mathbb{R})}\leq\lVert\varphi\rVert_{L^2(\mathbb{R})}$.\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~10.}}\end{problem}
