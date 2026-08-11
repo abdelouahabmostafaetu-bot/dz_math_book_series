@@ -1,0 +1,30 @@
+\chapter{Doctoral Entrance Problems}
+\label{ch:problems}
+
+The problems below are reproduced in French and routed by individual mathematical content.
+\newpage
+
+\section{Université Badji Mokhtar --- Annaba}
+\begin{problem}{(Annaba) — Épreuve N°02}{or:annaba-2015-e2-p2}
+On considère un ensemble de personnes $P=\{1,2,\ldots,n\}$ (avec $n$ pair), qui doivent travailler en binômes sur des projets. Chaque personne $i$ possède une capacité $c_i$ connue. Si on constitue un binôme entre deux personnes $i$ et $j$, alors le temps que mettra le binôme pour terminer son projet est $c_i+c_j$. On dispose de plus d'un graphe d'incompatibilité $G=(P,A)$ dont les sommets sont les personnes. L'existence d'une arête $\{i,j\}$ signifie que les personnes $i$ et $j$ ne peuvent pas être binôme. Le but est de répartir les personnes en binômes compatibles de sorte que tous les projets soient exécutés en un minimum de temps.
+\begin{enumerate}\item Donner une formulation mathématique de ce problème.\item Donner une autre formulation.\item Comparer les deux formulations.\end{enumerate}
+\source{\emph{\small Université Badji Mokhtar - Annaba, 2015, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(Annaba) — Épreuve N°02}{or:annaba-2015-e2-p3}
+On considère le problème classique du sac à dos : les objets à emporter sont $1,2,\ldots,n$, ont pour poids $p_1,p_2,\ldots,p_n$ et pour coefficients d'utilité $a_1,a_2,\ldots,a_n$. La capacité du sac est $b$.
+\begin{enumerate}\item Écrire le problème d'optimisation du remplissage du sac sous forme d'un programme linéaire à variables booléennes.\item Montrer que nous pouvons supposer que $p_j\ge0$ et $a_j\ge0$.\item Montrer que l'algorithme glouton donne une solution optimale pour le cas $a^t=(7,5,4,3,2)$, $p^t=(8,6,6,4,3)$ et $b=18$.\item Un ensemble d'objets est dit bloquant si la somme des poids des objets qui le composent est supérieure à $b$.
+\begin{enumerate}\item Montrer que l'on peut associer à chaque ensemble caractéristique une contrainte où les coefficients des variables sont $0$ ou $1$.\item Montrer que l'ajout de ces contraintes permet de supprimer la contrainte obtenue en 1, qui contenait des coefficients supérieurs à 1, et que les deux formulations sont équivalentes.\item Peut-on être assuré que l'optimum trouvé a toutes ses coordonnées égales à $0$ ou $1$ ? Appliquer à l'exemple précédent.\end{enumerate}\end{enumerate}
+\source{\emph{\small Université Badji Mokhtar - Annaba, 2015, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(Annaba) — Épreuve N°02}{or:annaba-2015-e2-p5}
+On considère $n$ objets, de poids respectifs $p_i$ et de regret $r_i$, avec $P$ un entier. Le regret d'un sac est la somme des regrets des objets qui ne sont pas dans le sac. On cherche à construire un sac de poids inférieur ou égal à $P$ qui soit de regret minimal.
+\begin{enumerate}\item Modéliser ce problème à l'aide d'un programme mathématique.\item Définir un schéma de programmation dynamique.\item Notons $F_k(E)$ le regret minimum d'un sac de poids inférieur ou égal à $P-E$ parmi les objets $\{k,\ldots,n\}$. Comment se définit la solution du problème initial ?\item Que vaut $F_{n+1}(E)$ ?\item Établir l'équation de récurrence satisfaite par les $F_k$.\item En déduire un algorithme pour résoudre le problème et donner sa complexité.\end{enumerate}
+\source{\emph{\small Université Badji Mokhtar - Annaba, 2015, Épreuve~n\textsuperscript{o}~02.}}\end{problem}
+\newpage
+\begin{problem}{(Annaba) — Épreuve N°02}{or:annaba-2015-e2-p6}
+Considérons le problème d'optimisation multi-objectifs à variables binaires :
+$$\max z_1=6x_1+3x_2+x_3,\qquad \max z_2=x_1+3x_2+6x_3,$$
+sous les contraintes
+$$x_1+x_2+x_3\le1,\qquad x_1,x_2,x_3\in\mathbb{R}_+.$$
+\begin{enumerate}\item Représenter l'ensemble des solutions admissibles dans l'espace des critères.\item Trouver géométriquement l'ensemble des solutions efficaces et l'ensemble des solutions non-dominées.\item Ajouter les contraintes $x_1,x_2,x_3\in\mathbb{Z}$ et représenter les solutions efficaces dans l'espace de décision et l'ensemble des solutions non-dominées dans l'espace des critères.\item La caractérisation de Geoffrion est-elle valable ? Justifier.\end{enumerate}
+\source{\emph{\small Université Badji Mokhtar - Annaba, 2015, Épreuve~n\textsuperscript{o}~02.}}\end{problem}

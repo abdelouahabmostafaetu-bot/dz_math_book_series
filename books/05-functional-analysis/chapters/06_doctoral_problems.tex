@@ -85,3 +85,26 @@ $$\int_{\Omega}\nabla u\cdot\nabla v+u^2v\,dx=\int_{\Omega}f(u)v\,dx,\quad\foral
 $$\begin{cases}-\Delta u_n+u_{n-1}u_n=f(u_{n-1}) & \text{dans } \Omega,\\ u_n=0 & \text{sur } \Gamma,\end{cases}$$
 de sorte que $u_n\in H_0^1(\Omega)$, $u_n\geq0$ p.p. et qu'il existe une constante $C>0$ indépendante de $n$ telle que $\|u_n\|_{H^1(\Omega)}\leq C$.\item En déduire que la suite $(u_n)$ admet une sous-suite qui converge fortement dans $L^2(\Omega)$ vers une limite $u\in H^1(\Omega)$.\end{enumerate}
 \source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2016, Épreuve~n\textsuperscript{o}~15.}}\end{problem}
+\newpage
+
+\section{Université Ahmed Ben Bella --- Oran 1}
+\begin{problem}{(Oran 1) — Épreuve N°01}{fa:oran1-2015-e1-p1}
+\begin{enumerate}\item Rappeler l'énoncé du lemme de partition de l'unité dans un ouvert $\Omega$ de $\mathbb{R}^n$.\item Soient $K_1$ et $K_2$ deux compacts disjoints de $\Omega$. Montrer qu'il existe $\varphi\in\mathcal{D}(\Omega)$ telle que
+$$\varphi(x)=\begin{cases}1, & \text{si } x\in K_1,\\ -1, & \text{si } x\in K_2,\end{cases}$$
+et $|\varphi(x)|\leq1$ pour tout $x\in\Omega$.\end{enumerate}
+\source{\emph{\small Université Ahmed Ben Bella - Oran 1, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(Oran 1) — Épreuve N°01}{fa:oran1-2015-e1-p2}
+\begin{enumerate}\item Rappeler la définition d'un opérateur fermé sur un espace de Hilbert $H$.\item Montrer que l'adjoint d'un opérateur non borné sur $H$ à domaine dense est un opérateur fermé.\end{enumerate}
+Soit $(A,D(A))$ un opérateur symétrique de domaine $D(A)$ dense dans un espace de Hilbert $H$, qui vérifie $\langle x,Ax\rangle\geq0$ pour tout $x\in D(A)$.
+\begin{enumerate}\setcounter{enumi}{2}\item Montrer que $\|(A+I)x\|^2\geq\|x\|^2+\|Ax\|^2$, pour tout $x\in D(A)$, où $I$ désigne l'opérateur identité sur $H$.\item Si $A$ est fermé, montrer que $\mathrm{Im}(A+I)$ est fermé dans $H$.\item Montrer que $A$ est auto-adjoint si et seulement si $A$ est fermé et l'équation $A^*x=-x$ n'a pas de solution non triviale.\item Application : on considère l'opérateur $A=-\dfrac{d^2}{dx^2}$ sur $L^2(\mathbb{R})$ de domaine $C_0^{\infty}(\mathbb{R})$. Quel est son adjoint $A^*$ ?\end{enumerate}
+\source{\emph{\small Université Ahmed Ben Bella - Oran 1, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+
+\section{Université Batna 1 --- Hadj Lakhdar}
+\begin{problem}{(Batna 1) — Épreuve N°01}{fa:batna1-2015-e1-p1}
+Considérons le système suivant sur $L^2(0,1)$ :
+$$\begin{cases}\dfrac{\partial y}{\partial t}(x,t)=\dfrac{\partial^2y}{\partial x^2}(x,t), & 0<x<1,\ t>0,\\[1ex] y(0,t)=y(1,t)=0, & t>0,\\[1ex] z(t)=\displaystyle\int_0^1c(x)y(x,t)\,dx, & t>0,\end{cases}$$
+où $c(x)=\mathbf{1}_{[1-\varepsilon,\,1]}(x)$ et $\varepsilon>0$ est tel que $0<1-\varepsilon<1$.
+\begin{enumerate}\item Réécrire ce système sous la forme $y'(t)=Ay(t)$, $z(t)=Cy(t)$.\item Préciser l'espace d'état $Y$ et l'espace de sorties $Z$.\item Montrer que $A$ est un opérateur spectral de Riesz. En déduire que $A$ engendre un $C_0$-semi-groupe $S(t)$ sur $Y$. Donner l'expression de ce semi-groupe.\item Montrer que $C\in\mathcal{L}(Y,Z)$.\item Étudier l'observabilité approchée du système.\end{enumerate}
+\source{\emph{\small Université Batna 1 - Hadj Lakhdar, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}

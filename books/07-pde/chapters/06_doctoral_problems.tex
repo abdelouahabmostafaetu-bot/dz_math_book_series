@@ -66,6 +66,21 @@ $$\varphi(x)=\begin{cases}1, & \lvert x\rvert<1,\\ 0, & \lvert x\rvert\geq1,\end
 sachant que $\operatorname{Erf}(x)=\frac{2}{\sqrt{\pi}}\int_0^xe^{-s^2}\,ds$. Indication : $\int_{\mathbb{R}}e^{-u^2}\,du=\sqrt{\pi}$.\end{enumerate}
 \source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~04.}}\end{problem}
 \newpage
+\begin{problem}{(M'Sila) — Épreuve N°01}{pde:msila-2015-e1-p1}
+On considère le problème d'évolution suivant :
+$$\begin{cases}\partial_tu-\partial_{xx}u+f(u)=0, & (t,x)\in\,]0,+\infty[\times]0,1[,\\ u(t,0)=u(t,1)=0, & \forall t>0,\\ u(0,x)=g(x), & \forall x\in\,]0,1[,\end{cases}$$
+où $f:\mathbb{R}\to\mathbb{R}$ est une fonction continue telle que $f(u)\cdot u\geq0$ et $g\in L^2(0,1)$. On note $P(t)=\lVert u(t)\rVert_{L^2(0,1)}^2$ et on veut obtenir des estimations de plus en plus fines pour $P(t)$, sans résoudre l'EDP.
+\begin{enumerate}\item Démontrer que $P'(t)\leq0$ et déduire que $P(t)\leq\lVert g\rVert_{L^2(0,1)}^2$ pour tout $t>0$.\item En utilisant l'inégalité de Poincaré, démontrer que $P'(t)\leq-2\pi^2P(t)$ et déduire que $P(t)\leq P(0)e^{-2\pi^2t}$.\item On prend maintenant $f(u)=u^3$. En utilisant l'inégalité de Cauchy-Schwarz pour estimer $\int_0^1u^4(t)\,dx$, démontrer que $P'(t)\leq-2\pi^2P(t)-2P^2(t)$ et déduire que
+$$P(t)\leq\left(\frac{\pi^2P(0)}{\pi^2+P(0)\left(1-e^{-2\pi^2t}\right)}\right)e^{-2\pi^2t}.$$\end{enumerate}
+Aide : la constante de Poincaré est $\frac1\pi$. Le changement de variable $Z(t)=\frac1{P(t)}$ peut être utile dans l'inégalité précédente.
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°01}{pde:msila-2015-e1-p2}
+On considère le problème de diffusion suivant :
+$$\begin{cases}\partial_tu=k\,\partial_{xx}u, & x\in\mathbb{R},\ t>0,\\ u(x,0)=\varphi(x), & x\in\mathbb{R}.\end{cases}$$
+\begin{enumerate}\item Vérifier que la fonction $G(x,t)=\frac{1}{\sqrt{4\pi kt}}e^{-\frac{x^2}{4kt}}$ est solution du problème. Comment appelle-t-on cette fonction ?\item La solution du problème s'écrit comme $u(x,t)=\int_{\mathbb{R}}\varphi(y)G(x-y,t)\,dy$. Quelles sont les conditions d'existence de cette solution ?\item Montrer que la solution $u(x,t)$ est $C^\infty$.\item Écrire la solution pour $\varphi(x)=e^{-x}$, sachant que $\int_{\mathbb{R}}G(y,t)\,dy=1$.\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
 
 \section{Université Djilali Liabès --- Sidi Bel Abbès}
 \begin{problem}{(Sidi Bel Abbès) — Épreuve N°12}{pde:sba-2016-e12-p1}
@@ -90,3 +105,20 @@ En utilisant la méthode de séparation de variables de Fourier, déterminer la 
 $$\begin{cases}u_{tt}=g\left(xu_{xx}+u_x\right) & 0<x<L,\ t>0,\\ u(x,0)=f(x),\ u_t(x,0)=h(x) & 0\le x\le L,\\ u(L,t)=0,\ |u(0,t)| \text{ bornée} & t\ge0,\end{cases}$$
 où $g$ est une constante positive.
 \source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2016, Épreuve~n\textsuperscript{o}~12.}}\end{problem}
+\newpage
+
+\section{Université Badji Mokhtar --- Annaba}
+\begin{problem}{(Annaba) — Épreuve N°01}{pde:annaba-2015-e1-p1}
+Soit $\Omega\subset\mathbb{R}^n$ un ouvert borné avec frontière $\partial\Omega$ assez régulière et $f\in L^2(\Omega)$. On dit que $u\in H^1(\Omega)$ est solution faible du problème de Neumann
+$$\begin{cases}-\Delta u=f & \text{sur } \Omega,\\ \dfrac{\partial u}{\partial\nu}=0 & \text{sur } \partial\Omega,\end{cases}$$
+si
+$$\int_\Omega\nabla u\cdot\nabla v\,dx=\int_\Omega f(x)v(x)\,dx,\quad\forall v\in H^1(\Omega).$$
+\begin{enumerate}\item Montrer que si $u\in H^2(\Omega)$ est solution forte alors la formulation faible est vérifiée.\item Si $u$ est solution faible et $u\in H^2(\Omega)$, montrer que : (a) $-\Delta u=f$ dans $L^2(\Omega)$ ; (b) $\partial u/\partial\nu=0$ dans $L^2(\partial\Omega)$ au sens des traces.\item Montrer que la condition $\int_\Omega f(x)\,dx=0$ est nécessaire pour l'existence d'une solution faible.\item Soit $H=\{v\in H^1(\Omega) : \int_\Omega v(x)\,dx=0\}$. En supposant la condition précédente satisfaite, montrer que si $u\in H$ vérifie la formulation faible pour tout $v\in H$, alors elle est vérifiée pour tout $v\in H^1(\Omega)$.\item Utiliser Lax-Milgram dans l'espace de Hilbert $H$ et déduire que la condition de compatibilité est suffisante pour l'existence d'une solution faible.\end{enumerate}
+\source{\emph{\small Université Badji Mokhtar - Annaba, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(Annaba) — Épreuve N°01}{pde:annaba-2015-e1-p2}
+Étant donnée l'équation aux dérivées partielles du second ordre
+$$u_{xx}+2u_{xy}-3u_{yy}=2.$$
+\begin{enumerate}\item Déterminer son type.\item Déterminer les lignes caractéristiques.\item Transformer l'équation à l'aide du changement de variables $\theta=x+y$, $\xi=-3x+y$.\item En déduire la solution générale puis résoudre le problème de Cauchy :
+$$\begin{cases}u_{xx}+2u_{xy}-3u_{yy}=2,\\ u(x,0)=0,\\ u_y(x,0)=x+\cos x.\end{cases}$$\end{enumerate}
+\source{\emph{\small Université Badji Mokhtar - Annaba, 2015, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
