@@ -35,3 +35,93 @@ Soit le problème à valeurs initiales suivant :
 $$(P):\begin{cases}y''+4y'+5y=\delta(t),\\ y(0)=0,\quad y'(0)=0,\end{cases}$$
 où $\delta(t)$ est la fonction de Dirac. Résoudre le problème $(P)$ en utilisant la transformation de Laplace $\mathcal L$. La transformation de Laplace $\mathcal L$ de $f(t)$, notée $F(s)=[\mathcal Lf](s)$, est définie par $F(s)=[\mathcal Lf](s)=\int_0^\infty e^{-st}f(t)\,dt$.
 \source{\emph{\small Université Frères Mentouri - Constantine 1, 2013, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+
+\newpage
+\section{Université Djilali Liabès --- Sidi Bel Abbès}
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°01}{ds:sba-2021-e1-p2}
+Soit $A : ]0, +\infty[ \to M_n(\mathbb{R})$ une application continue. On considère l'équation différentielle linéaire
+$$
+x'(t) = A x(t), \qquad t \in ]0, +\infty[, \tag{3}
+$$
+et on note $R(t, t_0)$ sa résolvante.
+\begin{enumerate}
+\item Montrer que $S(t, t_0) = R(t_0, t)^T$ est la résolvante de l'équation différentielle
+$$z'(t) = -A(t)^T z(t).$$
+\item Dans cette équation on choisit
+$$
+A(t) = \begin{pmatrix} 2t + \frac{1}{t} & 0 & \frac{1}{t} - t \\ t - \frac{1}{t} & 3t & t - \frac{1}{t} \\ \frac{2}{t} - 2t & 0 & \frac{2}{t} + t \end{pmatrix}.
+$$
+Montrer que $A(t)$ possède une base de vecteurs propres indépendante de $t$. En déduire la résolvante $R(t, t_0)$ de l'équation (3).
+\item Résoudre à l'aide des questions précédentes le système
+$$
+\begin{cases} x_1' = -(2t + \frac{1}{t}) x_1 + (\frac{1}{t} - t) x_2 + 2(t - \frac{1}{t}) x_3, \\ x_2' = -3t\, x_2, \\ x_3' = (t - \frac{1}{t}) x_1 + (\frac{1}{t} - t) x_2 - (\frac{2}{t} + t) x_3. \end{cases}
+$$
+\end{enumerate}
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2021, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°03}{ds:sba-2021-e3-p1}
+Une population constante $N$ est infectée par une épidémie ; le modèle décrivant l'évolution des compartiments $S$ (sains, susceptibles) et $I$ (infectés) est
+$$S'=-\frac{\beta}{N}SI+(d+\lambda)I,\quad t\in\mathbb{R}_+,\tag{1}$$
+$$I'=\frac{\beta}{N}SI-(d+\lambda)I,\quad t\in\mathbb{R}_+,\tag{2}$$
+où $d$ est le taux de mortalité, $\lambda$ le taux de guérison et $\beta$ le taux d'infection.
+\begin{enumerate}
+\item Quel est le type du modèle (1)-(2) ?
+\item En déduire le taux de naissance de la population $N$.
+\item Montrer que le système (1)-(2) admet une unique solution positive globale, pour toute condition initiale $N(0)\ge0$, $I(0)\ge0$.
+\item Écrire l'équation différentielle (2) en fonction de $I$ et des paramètres du modèle.
+\item Calculer $I$, et en déduire la limite de $I(t)$ quand $t\to+\infty$.
+\end{enumerate}
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2021, Épreuve~n\textsuperscript{o}~03.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°12347}{ds:sba-2026-e12347-p1}
+Pour le système linéaire $\dot{x}=Ax$, on considère les matrices
+$$
+A_1=\begin{pmatrix}2&1\\0&-1\end{pmatrix},\quad A_2=\begin{pmatrix}-1&2\\-2&-1\end{pmatrix},\quad A_3=\begin{pmatrix}0&1\\-1&0\end{pmatrix},\quad A_4=\begin{pmatrix}-2&0\\0&-3\end{pmatrix}.
+$$
+\begin{enumerate}
+\item Calculer les valeurs propres de chaque matrice.
+\item Classifier chaque équilibre (nœud, foyer, col, centre).
+\item Préciser la stabilité de chaque équilibre.
+\item Esquisser le portrait de phase pour $A_2$ et $A_4$.
+\end{enumerate}
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2026, Épreuve~n\textsuperscript{o}~12347.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°12347}{ds:sba-2026-e12347-p2}
+Bien que discret, ce modèle illustre les concepts de la dynamique hôte-parasitoïde. On étudie ici la version continue approchée :
+$$
+\dot H=rH-aHP,\qquad \dot P=caHP-dP,
+$$
+où $H$ désigne les hôtes, $P$ les parasitoïdes, $a$ le taux de parasitisme, $c$ l’efficacité de conversion, $r$ le taux de croissance des hôtes et $d$ le taux de mortalité des parasitoïdes, avec $a,c,r,d$ strictement positifs.
+\begin{enumerate}
+\item Calculer les équilibres et comparer avec Lotka--Volterra.
+\item Analyser la nature de l’équilibre (centre, foyer, nœud ?).
+\item Ajouter une densité-dépendance pour les hôtes :
+$$
+\dot H=rH\left(1-\frac{H}{K}\right)-aHP.
+$$
+Étudier la stabilité.
+\item Interpréter biologiquement dans le contexte de la lutte biologique.
+\end{enumerate}
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2026, Épreuve~n\textsuperscript{o}~12347.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°12347}{ds:sba-2026-e12347-p3}
+Le modèle SEIR avec délai discret représentant la période d’incubation est
+$$
+\dot S=\Lambda-\beta SI-\mu S,
+$$
+$$
+\dot E=\beta SI-\beta S(t-\tau)I(t-\tau)e^{-\mu\tau}-\mu E,
+$$
+$$
+\dot I=\beta S(t-\tau)I(t-\tau)e^{-\mu\tau}-(\gamma+\mu)I,
+$$
+$$
+\dot R=\gamma I-\mu R.
+$$
+\begin{enumerate}
+\item Calculer $R_0$ et l’équilibre sans maladie $E_0$.
+\item Montrer que $R_0$ décroît avec $\tau$.
+\item Calculer l’équilibre endémique $E^*=(S^*,E^*,I^*,R^*)$ pour $R_0>1$.
+\item Analyser qualitativement l’effet du retard sur la dynamique transitoire.
+\end{enumerate}
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2026, Épreuve~n\textsuperscript{o}~12347.}}\end{problem}
