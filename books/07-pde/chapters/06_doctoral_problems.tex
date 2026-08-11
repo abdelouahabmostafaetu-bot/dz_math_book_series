@@ -46,3 +46,47 @@ Soient $c,\alpha>0$. Pour l'équation des ondes amortie
 $$u_{tt}-c^2u_{xx}+\alpha u_t=0$$
 sur $\mathbb R$, avec données initiales régulières à support compact, montrer que l'énergie $E(t)=\int_{\mathbb R}(u_t^2+c^2u_x^2)\,dx$ décroît et en déduire l'unicité.
 \source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~03.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°04}{pde:msila-2016-e4-p1}
+Soit $v(x,t)$ la température au temps $t$ au point $x$, avec $-L\leq x\leq L$, et $\varphi\in L^2(-L,L)$. On suppose qu'elle satisfait l'équation de la chaleur
+$$\begin{cases}\partial_tv-\partial_{xx}v=0, & -L<x<L,\ t>0,\\ v(-L,t)=v(L,t)=0, & t>0,\\ v(x,0)=\varphi(x), & -L<x<L.\end{cases}$$
+\begin{enumerate}\item Démontrer que la fonction $E(t)=\frac12\int_{-L}^{L}v^2(x,t)\,dx$ est une fonction décroissante en $t$.\item Soient $f$ et $g$ des fonctions données. Utiliser le résultat précédent pour démontrer l'unicité de la solution du problème suivant :
+$$\begin{cases}\partial_tw-\partial_{xx}w=0, & -L<x<L,\ t>0,\\ w(-L,t)=f(t),\quad w(L,t)=g(t), & t>0,\\ w(x,0)=\psi(x), & -L<x<L.\end{cases}$$
+\item Déduire que si $\psi(x)$ est une fonction impaire et $w(-L,t)=w(L,t)$, alors la température $w(x,t)$ est aussi une fonction impaire en $x$.\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~04.}}\end{problem}
+\newpage
+\begin{problem}{(M'Sila) — Épreuve N°04}{pde:msila-2016-e4-p2}
+Soit le problème de Cauchy pour l'équation de la chaleur :
+$$\begin{cases}\partial_tu=c\,\partial_{xx}u, & x\in\mathbb{R},\ t>0,\ c>0,\\ u(x,0)=\varphi(x), & x\in\mathbb{R}.\end{cases}$$
+La solution du problème s'écrit comme $u(x,t)=\int_{\mathbb{R}}\varphi(y)K(x,y,t)\,dy$, où
+$$K(x,y,t)=\frac{1}{\sqrt{4\pi ct}}e^{-\frac{(y-x)^2}{4ct}}$$
+est le noyau de Gauss, solution fondamentale.
+\begin{enumerate}\item Montrer que $K(x,y,t)>0$ et $K(x,y,t)\in C^\infty$.\item Montrer que $K(x,y,t)$ est également solution de l'équation, c'est-à-dire $\partial_tK=c\,\partial_{xx}K$.\item Des questions précédentes, que peut-on déduire pour la solution $u(x,t)$ ?\item Montrer que $\int_{\mathbb{R}}K(x,y,t)\,dy=1$.\item Déduire que si $0<\varphi(x)<M$, alors $0<u(x,t)<M$, pour une constante positive $M$.\item Calculer la solution pour
+$$\varphi(x)=\begin{cases}1, & \lvert x\rvert<1,\\ 0, & \lvert x\rvert\geq1,\end{cases}$$
+sachant que $\operatorname{Erf}(x)=\frac{2}{\sqrt{\pi}}\int_0^xe^{-s^2}\,ds$. Indication : $\int_{\mathbb{R}}e^{-u^2}\,du=\sqrt{\pi}$.\end{enumerate}
+\source{\emph{\small Université Mohamed Boudiaf - M'Sila, 2016, Épreuve~n\textsuperscript{o}~04.}}\end{problem}
+\newpage
+
+\section{Université Djilali Liabès --- Sidi Bel Abbès}
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°12}{pde:sba-2016-e12-p1}
+Trouver la solution générale des E.D.P. suivantes
+$$2u_{xx}+5u_{xy}+3u_{yy}+u_x+u_y=0,$$
+$$u_{yy}-2u_{xy}+2u_x-u_y=4e^x.$$
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2016, Épreuve~n\textsuperscript{o}~12.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°12}{pde:sba-2016-e12-p2}
+En utilisant les coordonnées polaires et la méthode de séparation de variables de Fourier, déterminer la solution formelle de l'équation de Laplace
+$$\begin{cases}u_{xx}+u_{yy}=0 & \text{pour } 0<x^2+y^2<12,\\ u(x,y)=y^2-x & \text{pour } x^2+y^2=12.\end{cases}$$
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2016, Épreuve~n\textsuperscript{o}~12.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°12}{pde:sba-2016-e12-p3}
+Soient $\Omega\subset\mathbb{R}^2$ un ouvert borné régulier et $\Omega_e=\mathbb{R}^2\setminus\Omega$. Prouver que le problème de Robin suivant
+$$\begin{cases}\Delta u=0 & \text{dans } \Omega_e,\\ \partial_{\nu}u+\alpha u=g & \text{sur } \partial\Omega_e,\ \text{avec } g \text{ continue et } \alpha\ge0,\\ u \text{ bornée} & \text{sur } \partial\Omega_e,\end{cases}$$
+admet au moins une solution dans $C^2(\Omega_e)\cap C^1(\overline{\Omega_e})$.
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2016, Épreuve~n\textsuperscript{o}~12.}}\end{problem}
+\newpage
+\begin{problem}{(Sidi Bel Abbès) — Épreuve N°12}{pde:sba-2016-e12-p4}
+En utilisant la méthode de séparation de variables de Fourier, déterminer la solution formelle de l'équation
+$$\begin{cases}u_{tt}=g\left(xu_{xx}+u_x\right) & 0<x<L,\ t>0,\\ u(x,0)=f(x),\ u_t(x,0)=h(x) & 0\le x\le L,\\ u(L,t)=0,\ |u(0,t)| \text{ bornée} & t\ge0,\end{cases}$$
+où $g$ est une constante positive.
+\source{\emph{\small Université Djilali Liabès - Sidi Bel Abbès, 2016, Épreuve~n\textsuperscript{o}~12.}}\end{problem}

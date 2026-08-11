@@ -54,3 +54,34 @@ pour toute suite à support fini. Montrer la convergence et la borne de l'opéra
 \begin{problem}{(Skikda) — Épreuve N°01}{fa:skikda-2017-e1-p1}
 Un opérateur $T:X\to Y$ entre espaces de Banach est de Dunford--Pettis si l'image par $T$ de toute suite faiblement convergente converge en norme. Montrer que tout opérateur compact est de Dunford--Pettis; si $X$ est réflexif, que tout opérateur de Dunford--Pettis est compact; et appliquer ces résultats à l'opérateur de Volterra $V:L^1([0,1])\to C([0,1])$, $Vf(x)=\int_0^x f(t)\,dt$.
 \source{\emph{\small Université 20 Août 1955 - Skikda, 2017, Épreuve~n\textsuperscript{o}~01.}}\end{problem}
+\newpage
+
+\section{Université des Sciences et de la Technologie Houari Boumediène (USTHB)}
+\begin{problem}{(USTHB) — Épreuve N°14}{fa:usthb-2016-e14-p1}
+\begin{enumerate}\item Soit $\varphi$ une fonction numérique $\in\mathcal{C}^{\infty}(\mathbb{R})$. En utilisant la formule de Taylor, montrer que
+$$\psi(x)=\begin{cases}\dfrac{\varphi(x)-\varphi(0)}{x} & \text{si } x\neq0,\\[2mm] \varphi'(0) & \text{si } x=0,\end{cases}$$
+est dans $\mathcal{C}^{\infty}(\mathbb{R})$.
+\item Pour $\varphi\in\mathcal{C}_0^{\infty}(\mathbb{R})$, on pose
+$$\left\langle PV\frac{1}{x},\varphi\right\rangle:=\lim_{\varepsilon\downarrow0}\int_{|x|\geq\varepsilon}\frac{\varphi(x)}{x}\,dx.$$
+\begin{enumerate}\item Soit $\varepsilon>0$. Montrer que $\left\langle PV\frac{1}{x},\varphi\right\rangle=\int_{-m}^{m}\psi(x)\,dx$, où $\psi$ est la fonction définie dans la première question et $m$ est tel que $\mathrm{supp}\,\varphi\subset[-m,+m]$.\item En déduire que $PV\dfrac{1}{x}$ est une distribution.\end{enumerate}
+\item Soit $i$ le nombre imaginaire tel que $i^2=-1$. Montrer de même que $\dfrac{1}{x+i0}$ et $\dfrac{1}{x-i0}$ définies par
+$$\left\langle\frac{1}{x+i0},\varphi\right\rangle:=\lim_{\varepsilon\downarrow0}\int_{\mathbb{R}}\frac{\varphi(x)}{x+i\varepsilon}\,dx,\qquad\left\langle\frac{1}{x-i0},\varphi\right\rangle:=\lim_{\varepsilon\downarrow0}\int_{\mathbb{R}}\frac{\varphi(x)}{x-i\varepsilon}\,dx$$
+sont des distributions.\end{enumerate}
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2016, Épreuve~n\textsuperscript{o}~14.}}\end{problem}
+\newpage
+\begin{problem}{(USTHB) — Épreuve N°15}{fa:usthb-2016-e15-p1}
+On s'intéresse à la recherche, par une méthode variationnelle, de la fonction $u$ vérifiant le problème aux limites $(P)$ suivant :
+$$(P)\ \begin{cases}-\dfrac{d^2u}{dx^2}(x)=f(x), & x\in\,]0,1[,\\ u(0)=u(1)=0,\end{cases}$$
+où $f$ est donnée dans $L^2(]0,1[)$.
+\begin{enumerate}\item On cherche $u\in H_0^1(]0,1[)$ solution de $(P)$. Montrer que $u$ est solution du problème variationnel $(PV)$ : trouver $u\in H_0^1(]0,1[)$ tel que $a(u,v)=L(v)$ pour tout $v\in H_0^1(]0,1[)$. On explicitera, pour tout $(u,v)\in H_0^1\times H_0^1$, la forme bilinéaire $a(\cdot,\cdot)$ et la forme linéaire $L(\cdot)$.\item Montrer que la forme bilinéaire $a(\cdot,\cdot)$ est continue, symétrique sur $H_0^1\times H_0^1$, coercive sur $H_0^1$, et que la forme linéaire $L(\cdot)$ est continue sur $H_0^1(]0,1[)$.\item Montrer que l'application $v\mapsto\sqrt{a(v,v)}$ est une norme équivalente à la norme usuelle de $H^1(]0,1[)$; on notera $|||v|||=\sqrt{a(v,v)}$.\item Soit le produit scalaire défini par $(u,v)_1=a(u,v)$. Montrer que $(H_0^1(]0,1[),|||\cdot|||)$ est un espace de Hilbert.\item Rappeler le théorème de représentation de Riesz. En déduire l'existence et l'unicité (sans faire appel au théorème de Lax-Milgram) de la solution du problème variationnel.\end{enumerate}
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2016, Épreuve~n\textsuperscript{o}~15.}}\end{problem}
+\newpage
+\begin{problem}{(USTHB) — Épreuve N°15}{fa:usthb-2016-e15-p2}
+Soient $\Omega$ un ouvert borné régulier de $\mathbb{R}^2$ de bord $\Gamma$ et $f\in L^{\infty}(\mathbb{R})$, $f\geq0$ p.p. On suppose que $f$ est lipschitzienne. On considère le problème non linéaire suivant :
+$$\begin{cases}-\Delta u+u^2=f(u) & \text{dans } \Omega,\\ u=0 & \text{sur } \Gamma.\end{cases}$$
+La solution faible est $u\in H_0^1(\Omega)$ telle que $u\geq0$ p.p. et
+$$\int_{\Omega}\nabla u\cdot\nabla v+u^2v\,dx=\int_{\Omega}f(u)v\,dx,\quad\forall v\in H_0^1(\Omega).$$
+\begin{enumerate}\item Montrer qu'on peut définir par récurrence une suite de fonctions $(u_n)$ telle que $u_0=0$ et, pour $n\geq1$, $u_n$ est la solution du problème linéaire
+$$\begin{cases}-\Delta u_n+u_{n-1}u_n=f(u_{n-1}) & \text{dans } \Omega,\\ u_n=0 & \text{sur } \Gamma,\end{cases}$$
+de sorte que $u_n\in H_0^1(\Omega)$, $u_n\geq0$ p.p. et qu'il existe une constante $C>0$ indépendante de $n$ telle que $\|u_n\|_{H^1(\Omega)}\leq C$.\item En déduire que la suite $(u_n)$ admet une sous-suite qui converge fortement dans $L^2(\Omega)$ vers une limite $u\in H^1(\Omega)$.\end{enumerate}
+\source{\emph{\small Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2016, Épreuve~n\textsuperscript{o}~15.}}\end{problem}

@@ -1,14 +1,59 @@
 {
-  "schema_version":1,
-  "run_id":"docmathdz-full-corpus-2026-08-10",
-  "status":"in_progress",
-  "database":{"source":"DocMath DZ MCP","mode":"read_only","last_exam_list_checkpoint":"edp-offset-40-limit-20","total_exams_discovered":257,"exam_records_read_this_batch":60,"problem_payloads":"60 EDP records read; 39 queued"},
-  "books":{"05-functional-analysis":{"status":"created_from_existing_structure","added_this_run":9},"07-pde":{"status":"created_this_run","added_this_run":10},"01-linear-algebra":{"status":"existing","added_this_run":0},"06-algebra":{"status":"existing","added_this_run":0}},
-  "items":{"edp_batch_first_20":{"processing_status":"completed","exam_records":20,"problems_imported":4},"edp_batch_second_20":{"processing_status":"completed","exam_records":20,"problems_imported":2},"edp_batch_third_20":{"processing_status":"completed","exam_records":20,"problems_imported":4,"destination_book":"07-pde","mixed_subjects_routed_individually":true}},
-  "duplicates":["Repeated heat, transport, wave, Neumann, variational and distribution templates detected; global fingerprint reconciliation ongoing"],
-  "errors":[],
-  "needs_review":["Some records contain summaries, OCR warnings, mixed subjects or incomplete statements; excluded from exact import until review"],
-  "checkpoints":[{"timestamp":"2026-08-10T17:28:00+01:00","name":"edp-batch-first-20-import","details":"Read first 20 EDP records and imported 4 unique statements."},{"timestamp":"2026-08-10T17:29:00+01:00","name":"edp-batch-second-20-import","details":"Read next 20 EDP records and imported 2 unique statements."},{"timestamp":"2026-08-10T20:00:00+01:00","name":"edp-batch-third-20-import","details":"Read next 20 EDP records read-only and imported 4 unique PDE statements. No database writes."}],
-  "last_processed_item":"universite-mohamed-boudiaf-m-sila-2016-specialty-3#3",
-  "updated_at":"2026-08-10T20:00:00+01:00"
+  "schema_version": 1,
+  "run_id": "docmathdz-full-corpus-2026-08-10",
+  "status": "in_progress",
+  "database": {
+    "source": "DocMath DZ MCP",
+    "mode": "read_only",
+    "last_exam_list_checkpoint": "edp-offset-60-limit-20 (6 of 20 consumed)",
+    "total_exams_discovered": 257,
+    "exam_records_read_total": 66,
+    "problem_payloads": "66 EDP records read; 14 remaining in the current page"
+  },
+  "books": {
+    "05-functional-analysis": { "status": "existing", "added_this_run": 12 },
+    "07-pde": { "status": "created_this_run", "added_this_run": 16 },
+    "01-linear-algebra": { "status": "existing", "added_this_run": 0 },
+    "06-algebra": { "status": "existing", "added_this_run": 0 }
+  },
+  "items": {
+    "edp_batch_first_20": { "processing_status": "completed", "exam_records": 20, "problems_imported": 4 },
+    "edp_batch_second_20": { "processing_status": "completed", "exam_records": 20, "problems_imported": 2 },
+    "edp_batch_third_20": { "processing_status": "completed", "exam_records": 20, "problems_imported": 4, "destination_book": "07-pde", "mixed_subjects_routed_individually": true },
+    "edp_batch_offset_60_part_1": {
+      "processing_status": "completed",
+      "exam_records": 6,
+      "problems_read": 14,
+      "problems_imported": 9,
+      "duplicates_skipped": 3,
+      "needs_review": 2,
+      "records": [
+        { "slug": "universite-mohamed-boudiaf-m-sila-2016-specialty-4", "problems": [ { "id": "universite-mohamed-boudiaf-m-sila-2016-specialty-4#1", "fingerprint": "msila2016e4-chaleur-energie-decroissante-unicite-imparite", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2016-e4-p1", "duplicate": false }, { "id": "universite-mohamed-boudiaf-m-sila-2016-specialty-4#2", "fingerprint": "msila2016e4-cauchy-chaleur-noyau-gauss-erf", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:msila-2016-e4-p2", "duplicate": false, "note": "variant of the heat-kernel template already present as pde:msila-2017-e3-p1; kept as a distinct variant" } ] },
+        { "slug": "universite-mohamed-boudiaf-m-sila-2016-specialty-5", "problems": [ { "id": "universite-mohamed-boudiaf-m-sila-2016-specialty-5#1", "status": "needs_review", "reason": "one-line summary, no usable statement", "classification": "pde (provisional)", "destination": null, "duplicate": false }, { "id": "universite-mohamed-boudiaf-m-sila-2016-specialty-5#2", "status": "skipped_duplicate", "duplicate_of": "pde:msila-2016-e2-p2", "reason": "summary of an already imported statement" }, { "id": "universite-mohamed-boudiaf-m-sila-2016-specialty-5#3", "status": "skipped_duplicate", "duplicate_of": "pde:msila-2016-e3-p3", "reason": "summary of an already imported statement" } ] },
+        { "slug": "universite-mohamed-boudiaf-m-sila-2016-specialty-6", "problems": [ { "id": "universite-mohamed-boudiaf-m-sila-2016-specialty-6#1", "status": "skipped_duplicate", "duplicate_of": "pde:msila-2016-e4-p1", "reason": "summary of the same statement" }, { "id": "universite-mohamed-boudiaf-m-sila-2016-specialty-6#2", "status": "needs_review", "reason": "one-line summary of the Gauss-kernel Cauchy problem; overlaps pde:msila-2016-e4-p2", "destination": null } ] },
+        { "slug": "universite-djilali-liabes-sidi-bel-abbes-2016-specialty-12", "problems": [ { "id": "universite-djilali-liabes-sidi-bel-abbes-2016-specialty-12#1", "fingerprint": "sba2016e12-solution-generale-edp-second-ordre", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:sba-2016-e12-p1", "duplicate": false }, { "id": "universite-djilali-liabes-sidi-bel-abbes-2016-specialty-12#2", "fingerprint": "sba2016e12-laplace-polaire-separation-variables", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:sba-2016-e12-p2", "duplicate": false }, { "id": "universite-djilali-liabes-sidi-bel-abbes-2016-specialty-12#3", "fingerprint": "sba2016e12-probleme-robin-domaine-exterieur", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:sba-2016-e12-p3", "duplicate": false }, { "id": "universite-djilali-liabes-sidi-bel-abbes-2016-specialty-12#4", "fingerprint": "sba2016e12-ondes-separation-variables-bessel", "status": "imported", "classification": "pde", "destination": "books/07-pde/chapters/06_doctoral_problems.tex", "label": "pde:sba-2016-e12-p4", "duplicate": false } ] },
+        { "slug": "universite-des-sciences-et-de-la-technologie-houari-boumediene-usthb-2016-specialty-14", "problems": [ { "id": "universite-des-sciences-et-de-la-technologie-houari-boumediene-usthb-2016-specialty-14#1", "fingerprint": "usthb2016e14-valeur-principale-vp-1surx-distributions", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:usthb-2016-e14-p1", "duplicate": false, "note": "filed under EDP in the database; distributions row of the router wins" } ] },
+        { "slug": "universite-des-sciences-et-de-la-technologie-houari-boumediene-usthb-2016-specialty-15", "problems": [ { "id": "universite-des-sciences-et-de-la-technologie-houari-boumediene-usthb-2016-specialty-15#1", "fingerprint": "usthb2016e15-formulation-variationnelle-riesz-h01", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:usthb-2016-e15-p1", "duplicate": false }, { "id": "universite-des-sciences-et-de-la-technologie-houari-boumediene-usthb-2016-specialty-15#2", "fingerprint": "usthb2016e15-edp-non-lineaire-suite-sobolev-rellich", "status": "imported", "classification": "functional-analysis", "destination": "books/05-functional-analysis/chapters/06_doctoral_problems.tex", "label": "fa:usthb-2016-e15-p2", "duplicate": false, "note": "Sobolev/Lax-Milgram row of the router precedes the EDP row" } ] }
+      ]
+    }
+  },
+  "duplicates": [
+    "Repeated heat, transport, wave, Neumann, variational and distribution templates detected; global fingerprint reconciliation ongoing",
+    "M'Sila 2016 épreuves 5 and 6 are summary restatements of épreuves 2, 3 and 4"
+  ],
+  "errors": [],
+  "needs_review": [
+    "Some records contain summaries, OCR warnings, mixed subjects or incomplete statements; excluded from exact import until review",
+    "universite-mohamed-boudiaf-m-sila-2016-specialty-5#1 — summary only: classification/canonical form EDP, statement not usable",
+    "universite-mohamed-boudiaf-m-sila-2016-specialty-6#2 — summary only, overlaps pde:msila-2016-e4-p2"
+  ],
+  "checkpoints": [
+    { "timestamp": "2026-08-10T17:28:00+01:00", "name": "edp-batch-first-20-import", "details": "Read first 20 EDP records and imported 4 unique statements." },
+    { "timestamp": "2026-08-10T17:29:00+01:00", "name": "edp-batch-second-20-import", "details": "Read next 20 EDP records and imported 2 unique statements." },
+    { "timestamp": "2026-08-10T20:00:00+01:00", "name": "edp-batch-third-20-import", "details": "Read next 20 EDP records read-only and imported 4 unique PDE statements. No database writes." },
+    { "timestamp": "2026-08-11T09:55:00+01:00", "name": "edp-offset-60-part-1-import", "details": "Read EDP exams 61-66 read-only, imported 6 PDE statements and 3 functional-analysis statements, skipped 3 summary duplicates and flagged 2 needs_review. No database writes." }
+  ],
+  "last_processed_item": "universite-des-sciences-et-de-la-technologie-houari-boumediene-usthb-2016-specialty-15#2",
+  "next_checkpoint": "list_exams(specialty=EDP, limit=20, offset=66) — resume at universite-ahmed-ben-bella-oran-1-2015-specialty-01-2",
+  "updated_at": "2026-08-11T09:55:00+01:00"
 }
