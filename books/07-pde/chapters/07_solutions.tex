@@ -2,3 +2,37 @@
 \label{ch:solutions}
 
 Solutions are maintained in problem order. Database access is read-only.
+
+\section{Université des Sciences et de la Technologie Houari Boumediène (USTHB), 2026, Épreuve N°01}
+\begin{solution}{pde:usthb-2026-e1-p1}
+On pose
+\[
+a(u,v)=\int_\Omega \nabla u\cdot\nabla v\,dx+
+\int_\Omega (\nabla u\cdot F)v\,dx,
+\qquad
+L(v)=\int_\Omega f\cdot\nabla v\,dx.
+\]
+Since $F\in L^\infty(\Omega)^2$, both terms are continuous on $H_0^1(\Omega)$. For $v\in H_0^1(\Omega)$, using $\operatorname{div}F=0$ and the zero trace of $v$,
+\[
+\int_\Omega (\nabla v\cdot F)v\,dx
+=\frac12\int_\Omega F\cdot\nabla(v^2)\,dx
+=\frac12\int_{\partial\Omega}v^2F\cdot n\,dS-
+\frac12\int_\Omega (\operatorname{div}F)v^2\,dx=0.
+\]
+Hence $a(v,v)=\|\nabla v\|_{L^2(\Omega)}^2$. Poincaré's inequality gives coercivity on $H_0^1(\Omega)$, while Cauchy--Schwarz gives continuity of $L$. The Lax--Milgram theorem therefore yields a unique $u\in H_0^1(\Omega)$ satisfying $a(u,v)=L(v)$ for every $v\in H_0^1(\Omega)$.
+
+The product rule gives
+\[
+\operatorname{div}(uF)=\nabla u\cdot F+u\operatorname{div}F=\nabla u\cdot F.
+\]
+Taking $v=u$ in the weak formulation also gives
+\[
+\int_\Omega u(F\cdot\nabla u)\,dx=0.
+\]
+Finally, if $u\in H^2(\Omega)$ and $\operatorname{div}f\in L^2(\Omega)$, integration by parts identifies the strong equation
+\[
+-\Delta u+F\cdot\nabla u=-\operatorname{div}f\quad\text{in }\Omega,
+\qquad u=0\quad\text{on }\partial\Omega,
+\]
+with the boundary condition understood in the trace sense.
+\end{solution}
